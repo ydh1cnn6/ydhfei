@@ -1,0 +1,1140 @@
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[笔记]]></title><description><![CDATA[Obsidian digital garden]]></description><link>http://github.com/dylang/node-rss</link><image><url>lib\media\favicon.png</url><title>笔记</title><link/></image><generator>Webpage HTML Export plugin for Obsidian</generator><lastBuildDate>Fri, 25 Jul 2025 10:00:00 GMT</lastBuildDate><atom:link href="lib\rss.xml" rel="self" type="application/rss+xml"/><pubDate>Fri, 25 Jul 2025 09:58:51 GMT</pubDate><ttl>60</ttl><dc:creator/><item><title><![CDATA[导航]]></title><description><![CDATA[ 
+ <br><br>Arthas是一款基于Java开发的诊断工具，它可以帮助开发人员快速定位和解决Java应用程序中的各种问题，如内存泄漏、死锁、CPU过高等。Arthas可以在不停止应用程序的情况下进行在线诊断，通过命令行界面提供了丰富的诊断功能，如查看线程堆栈、分析GC日志、监控方法执行等。同时，Arthas也提供了Web界面和IDE插件，方便开发人员集成到自己的开发环境中使用。<br><br>]]></description><link>BigSea\工具\导航.html</link><guid isPermaLink="false">BigSea/工具/导航.md</guid><pubDate>Mon, 09 Jun 2025 01:38:26 GMT</pubDate></item><item><title><![CDATA[Beyond_Compare]]></title><description><![CDATA[ 
+ <br>文本、文件等比较工具]]></description><link>BigSea\工具\Beyond_Compare.html</link><guid isPermaLink="false">BigSea/工具/Beyond_Compare.md</guid><pubDate>Mon, 09 Jun 2025 01:38:26 GMT</pubDate></item><item><title><![CDATA[svn忘记密码、查看密码]]></title><description><![CDATA[ 
+ <br>
+<br>打开 TortoiseSVN 的设置（Settings）。
+<br>点击“已保存数据”（Saved Data）。
+<br>选择“认证数据”（Authentication Data）。
+<br>点击“清除…”（Clear…）。
+<br>在弹出的窗口中，按住 Ctrl + Shift 并双击表格，显示密码列
+]]></description><link>BigSea\工具\svn忘记密码、查看密码.html</link><guid isPermaLink="false">BigSea/工具/svn忘记密码、查看密码.md</guid><pubDate>Mon, 09 Jun 2025 01:38:26 GMT</pubDate></item><item><title><![CDATA[vim]]></title><description><![CDATA[ 
+ <br>d	删除单个字母<br>dw	删除一个单词<br>d$	删除到行末尾<br>d2w	删除两个单词<br>dd	删除整行<br>d2d	删除两行<br>0	跳转到行首<br>w	跳转到下一个单词开始<br>e	跳转到下一个单词结束<br>nw	跳转到第几个单词开始<br>ne	跳转到第几个单词结束（算上当前单词的结束）<br>u	撤销命令<br>CTRL-R	撤销-撤销命令<br>p	粘贴到下一行（d其实是剪切，会被放入寄存器中）<br>r+字母，替换当前字母<br>ce	改变文本直到单词末尾<br>c2w	修改两个单词<br>c$	修改到末尾<br>/+字符串	查找指定字符串<br>n	查找下一个<br>N	查找上一个<br>CTRL-O	回到您之前的位置<br>% 	查找配对的括号 )、]、}<br>:s/thee/the &lt;回车&gt;	只改变光标所在行的第一个匹配串。<br> :s/old/new/g 	替换 old 为 new]]></description><link>BigSea\工具\vim.html</link><guid isPermaLink="false">BigSea/工具/vim.md</guid><pubDate>Mon, 09 Jun 2025 01:38:26 GMT</pubDate></item><item><title><![CDATA[服务调用]]></title><description><![CDATA[ 
+ <br>1、导入依赖<br>2、启动类加注解 &lt;font style="color:rgb(0, 0, 0);"&gt;@EnableFeignClients&lt;/font&gt;<br>3、编写接口。@FeignClient(name="服务名")<br>4、控制器调用接口&lt;font style="color:rgb(0, 0, 0);"&gt;导入接口，使用服务&lt;/font&gt;<br><br><br>warning
+补充：设置超时时间<br>可以参考在FeignClientProperties中的数据，主要是其内部类FeignClientConfiguration<br><br><br>feign:
+  client:
+    config:
+      GOODS:  #指定服务
+        connectTimeout: 1000
+        readTimeout: 1000
+<br>调用方式：<br><br>success
+方式1、通过restTemplate配置url和服务的类<br>方式2、在Service接口中，添加&lt;font style="color:rgb(0, 0, 0);"&gt;@EnableFeignClients&lt;/font&gt;设置类和回滚。并使用getMapping等调用服务<br><br>]]></description><link>BigSea\后端\微服务\服务调用.html</link><guid isPermaLink="false">BigSea/后端/微服务/服务调用.md</guid><pubDate>Mon, 09 Jun 2025 01:38:26 GMT</pubDate></item><item><title><![CDATA[负载均衡]]></title><description><![CDATA[ 
+ <br>默认的策略是轮询，还有一个是随机。可以自定义策略。<br>使用方式：在RestTemplate对象上加入@LoadBalanced<br><br>1、定义一个类（不能使用@Configuration注解），在此类当中增加一个@Bean注解的方法。返回RactorLoadbalancer接口的对象<br>2、配置类或者主启动类上使用@@LoadBalancerClients或者@LoadBalancerClient<br><br>（轮询方式访问服务器，每个服务器访问三次之后换下一个服务器）<br>1、定义负载均衡策略类，实现ReactorServiceInstanceLoadBalancer接口<br>2、随机策略第一步，但返回的是刚定义的负载均衡策略对象<br>3、同上]]></description><link>BigSea\后端\微服务\负载均衡.html</link><guid isPermaLink="false">BigSea/后端/微服务/负载均衡.md</guid><pubDate>Mon, 09 Jun 2025 01:38:26 GMT</pubDate></item><item><title><![CDATA[容错保护、断路器]]></title><description><![CDATA[ 
+ <br><br>Hystrix，用于隔离远程访问、服务以及第三方的库，防止级联失败，从而提升系统的可用性以及容错性。<br>CAP:	C: 一致性		 A：可用性	P: 分区容错性<br>服务降级： 假设系统比较忙或者不可用的情况下，给一个友好提示或者默认处理。触发降级的场合：程序运行异常、超时、服务熔断触发服务降级，线程池当中并发量达到阈值也可能导致服务降级。<br>服务熔断：达到最大服务访问量以后，直接拒绝访问，然后调用服务降级的方法给出友好提示。<br>服务限流：秒杀，抢红包等一系列高并发操作，严控一窝蜂的过来拥挤，让大家排队有序进行。<br><a data-tooltip-position="top" aria-label="https://blog.csdn.net/2301_79354153/article/details/134642873" rel="noopener nofollow" class="external-link" href="https://blog.csdn.net/2301_79354153/article/details/134642873" target="_blank">Spring Cloud入门教程(四)：微服务容错保护(Hystrix)_hystrix开启dashboard-CSDN博客</a><br><br><br>1、添加依赖<br>2、启动类添加注解&lt;font style="color:rgb(0, 0, 0);"&gt;@EnableHystrix&lt;/font&gt; 启动Hystrix断路器<br>或者 &lt;font style="color:rgb(0, 0, 0);"&gt;@EnableCircuitBreake&lt;/font&gt;启用容错保护组件<br>3、service中,添加注解@HystrixCommand(fallbackMethod = "fallback")<br>4、实现fallback方法<br><br>1、Service类上使用@DefaultProperties注解，指定降级处理方法<br>2、实现降级方法（不能带参数）<br>2、需要降级处理的方法上，添加@HystrixCommand<br>（需要降级处理的方法上，不指定降级目标方法（回退方法），但是@HystrixCommand注解需要保留）<br><br>1、yml中开启Hystrix<br>2、设置fallback<br>3、设置fallbackFactory]]></description><link>BigSea\后端\微服务\容错保护、断路器.html</link><guid isPermaLink="false">BigSea/后端/微服务/容错保护、断路器.md</guid><pubDate>Mon, 09 Jun 2025 01:38:26 GMT</pubDate></item><item><title><![CDATA[注册中心]]></title><description><![CDATA[ 
+ <br><br>1、添加服务器依赖<br>2、eureka-server的端口，服务名等配置<br>3、启动类@EnableEurekaServe<br><br>1、添加eureka客户端依赖<br>2、eureka客户端端口、服务名等配置<br>3、启动类@EnbleEurekaClient或@EnableDiscoveryClient <br><br>1、添加eureka客户端依赖<br>2、eureka客户端端口、服务名等配置<br>3、启动类@EnbleEurekaClient <br>4、定义restTemplate，添加负载均衡<br>5、host=“http://&lt;font style="color:rgb(0, 0, 0);"&gt;服务名&lt;/font&gt;”，restTemplate.getForObject(url,Book.class) 调用服务<br><br><br>使用eureka.instance.prefer-ip-address=true显示ip<br>eureka.instance.ip-address=127.0.0.1来指定ip地址<br><br>&lt;font style="color:rgb(0, 0, 0);"&gt;eureka.client.refresh.enable=fals&lt;/font&gt;<br><br>在短时间内失去过多的客户端的时候，进入自我保护模式。不再删除服务注册列表中的数据]]></description><link>BigSea\后端\微服务\注册中心.html</link><guid isPermaLink="false">BigSea/后端/微服务/注册中心.md</guid><pubDate>Mon, 09 Jun 2025 01:38:26 GMT</pubDate></item><item><title><![CDATA[版本依赖]]></title><description><![CDATA[ 
+ <br><br>
+<br>2023.X 分支对应的是 Spring Cloud 2023 与 Spring Boot 3.2. X，最低支持 JDK 17。
+<br>2022.X 分支对应的是 Spring Cloud 2022 与 Spring Boot 3.0. X，最低支持 JDK 17。
+<br>2021.X 分支对应的是 Spring Cloud 2021 与 Spring Boot 2.6. X，最低支持 JDK 1.8。
+<br>2020.0 分支对应的是 Spring Cloud 2020 与 Spring Boot 2.4. X，最低支持 JDK 1.8。
+<br>2.2. X 分支对应的是 Spring Cloud Hoxton 与 Spring Boot 2.2. X，最低支持 JDK 1.8。
+<br>Greenwich 分支对应的是 Spring Cloud Greenwich 与 Spring Boot 2.1. X，最低支持 JDK 1.8。
+<br>Finchley 分支对应的是 Spring Cloud Finchley 与 Spring Boot 2.0. X，最低支持 JDK 1.8。
+<br>
+
+<br>X 分支对应的是 Spring Cloud Edgware 与 Spring Boot 1. X，最低支持 JDK 1.7。
+Tip
+[版本依赖关系]( <a rel="noopener nofollow" class="external-link" href="https://github.com/alibaba/spring-cloud-alibaba/blob/2023.x/README-zh.md##" target="_blank">https://github.com/alibaba/spring-cloud-alibaba/blob/2023.x/README-zh.md##</a> 如何构建)
+
+
+
+
+<br><br><br>不能使用@value注解，而要使用@nacosvalue注解，且autorefreshed=true<br><br>需要指定nacos的ip端口
+需要指定配置文件名，配置文件 <a data-footref="[inline0" href="about:blank#fn-1-fc346f3a7d2de88c" class="footnote-link" target="_self" rel="noopener nofollow">[1]</a>，或启动类上加注解<br><br>不能用@nacosvalue，而要用value
+如果指定了application.name，可以不要配置文件名
+自动刷新：需要注入的类添加@refreshscope注解（一般直接把要注入的属性写在配置类了，直接在配置类上加就行）<br><br>按先后：
+1、拉取name配置文件
+2、拉取name.properties (若指定yaml则为yaml)
+3、拉取name-${spring.profile.active}.properties<br><br>有个参数可以配置，分别指定配置文件名extension-configs：本应用特有
+shared-configs：多个应用共享<br><br>数组下标从大往小依次读取
+优先级（主配置最高）：主配置&gt;extension-configs&gt;shared-configs<br><br>解析文件时按照files-extension解析，不一致时会报错<br><br>resttemplate，配置的loadbalance是ribbon提供的轮训。可以加个bean，nacosrule，<br><br>通过在消费者中指定集群名实现<br><br>1、集群要共用一个数据库存储配置信息，否则要在启动命令加参数 -m。。。
+2、消费者和提供者把集群所有节点列出来，逗号分隔。或者，集群用NGINX代理，节点使用nginx的ip端口+路径（nginx代理nacos的路径）<br><br>sentinal依赖+指定降级处理类和方法，feith或者resttempl'te调用接口遇到报错，会执行降级处理，比如扔到消息队列，后续做补偿<br><br>1、<br>
+<br>
+<br>写在配置文件中，需要同时开启bootstrap=true<a href="about:blank#fnref-1-fc346f3a7d2de88c" class="footnote-backref footnote-link" target="_self" rel="noopener nofollow">↩︎</a>
+]]></description><link>BigSea\后端\微服务\Nacos.html</link><guid isPermaLink="false">BigSea/后端/微服务/Nacos.md</guid><pubDate>Fri, 25 Jul 2025 06:58:48 GMT</pubDate></item><item><title><![CDATA[springCloud]]></title><description><![CDATA[ 
+ <br>1、SOA 服务治理
+2、Dubbo 基于rpc 协议，面向接口远程调用、负载均衡、服务注册和发现
+springcloud 基于 http 协议
+3、SpringBoot 、SpringCloud版本控制
+<a data-href="maven.md#版本依赖" href="BigSea\框架\maven.html#版本依赖" class="internal-link" target="_self" rel="noopener nofollow">maven.md &gt; 版本依赖</a><br>4、默认只开启了 health, 所以 404
+<a data-tooltip-position="top" aria-label="http://localhost:6104/actuator/info" rel="noopener nofollow" class="external-link" href="http://localhost:6104/actuator/info" target="_blank">localhost:6104/actuator/info</a><br>#开启所有端点  
+management:  
+  endpoints:  
+    web:  
+      exposure:  
+        include: "*"
+<br><br>也要注册到注册中心
+主要功能：路由、断言、过滤<br>spring:  
+  application:  
+    name: GATEWAY  
+  cloud:  
+    gateway:  
+      routes:  
+        - id: goods-route  
+          uri: lb://GOODS  
+          predicates:  
+            - Path=/goods/**  
+        - id: order-route  
+          uri: lb://ORDER  
+          predicates:  
+            - Path=/order/**
+<br><br><a data-tooltip-position="top" aria-label="https://docs.spring.io/spring-cloud-gateway/docs/3.1.9/reference/html/#the-after-route-predicate-factory" rel="noopener nofollow" class="external-link" href="https://docs.spring.io/spring-cloud-gateway/docs/3.1.9/reference/html/#the-after-route-predicate-factory" target="_blank">Spring Cloud Gateway-断言谓词</a><br><br>After: After= datetime ZonedDateTime<br><br>Before: Before datetime ZonedDateTime<br><br>Between: Between datetime1 ZonedDateTime, datetime2 ZonedDateTime<br><br>Cookie: Cookie name,regexp<br><br>Header:  Header header regexp<br><br>Host: ``<br><br>Method：Method=GET,POST<br><br>Path： ``<br><br>Query：``<br><br><br><br><br><br><br>package javax.servlet;
+import java.io.IOException;
+public interface Filter {  
+    default void init(FilterConfig filterConfig) throws ServletException {  
+    }  
+  
+    void doFilter(ServletRequest var1, ServletResponse var2, FilterChain var3) throws IOException, ServletException;  
+  
+    default void destroy() {  
+    }  
+}
+<br><br>1、引入依赖<br>&lt;dependency&gt;  
+    &lt;groupId&gt;com.alibaba.cloud&lt;/groupId&gt;  
+    &lt;artifactId&gt;spring-cloud-starter-alibaba-nacos-discovery&lt;/artifactId&gt;  
+    &lt;version&gt;2023.0.3.2&lt;/version&gt;  
+&lt;/dependency&gt;
+<br> <a class="internal-link" data-href="BigSea/后端/微服务/Nacos.md#版本依赖" href="BigSea\后端\微服务\Nacos.html#版本依赖" target="_self" rel="noopener nofollow">Nacos版本依赖</a><br>2、配置文件<br>spring:
+ cloud:  
+  nacos:  
+    discovery:  
+     server-addr: http://169.254.83.107:8848/
+<br>3、启动类<br>@SpringBootApplication
+@EnableDiscoveryClient
+public class NacosGoodsApplication {
+	.....
+}
+<br>错误：
+nacos版本错误导致的报错信息：
+<img alt="nacos版本错误导致的报错信息" src="https://raw.githubusercontent.com/ydh1cnn6/pic/master/2025-07-22-202507221738167.png" referrerpolicy="no-referrer">
+错误原因：2023.0.3.2，支持Spring Boot 3.2. X，最低支持 JDK 17
+解决方案：降低版本到2021.x.x]]></description><link>BigSea\后端\微服务\springCloud.html</link><guid isPermaLink="false">BigSea/后端/微服务/springCloud.md</guid><pubDate>Wed, 23 Jul 2025 15:37:07 GMT</pubDate><enclosure url="https://raw.githubusercontent.com/ydh1cnn6/pic/master/2025-07-22-202507221738167.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src="https://raw.githubusercontent.com/ydh1cnn6/pic/master/2025-07-22-202507221738167.png"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[启动]]></title><description><![CDATA[ 
+ <br>1、SOA 服务治理
+2、Dubbo 基于rpc 协议，面向接口远程调用、负载均衡、服务注册和发现
+springcloud 基于 http 协议
+3、SpringBoot 、SpringCloud版本控制
+<a data-href="maven.md#版本依赖" href="BigSea\框架\maven.html#版本依赖" class="internal-link" target="_self" rel="noopener nofollow">maven.md &gt; 版本依赖</a><br>4、默认只开启了 health, 所以 404
+<a data-tooltip-position="top" aria-label="http://localhost:6104/actuator/info" rel="noopener nofollow" class="external-link" href="http://localhost:6104/actuator/info" target="_blank">localhost:6104/actuator/info</a><br>#开启所有端点  
+management:  
+  endpoints:  
+    web:  
+      exposure:  
+        include: "*"
+<br><br>也要注册到注册中心
+主要功能：路由、断言、过滤<br>spring:  
+  application:  
+    name: GATEWAY  
+  cloud:  
+    gateway:  
+      routes:  
+        - id: goods-route  
+          uri: lb://GOODS  
+          predicates:  
+            - Path=/goods/**  
+        - id: order-route  
+          uri: lb://ORDER  
+          predicates:  
+            - Path=/order/**
+<br><br><a data-tooltip-position="top" aria-label="https://docs.spring.io/spring-cloud-gateway/docs/3.1.9/reference/html/#the-after-route-predicate-factory" rel="noopener nofollow" class="external-link" href="https://docs.spring.io/spring-cloud-gateway/docs/3.1.9/reference/html/#the-after-route-predicate-factory" target="_blank">Spring Cloud Gateway-断言谓词</a><br><br>After: After= datetime ZonedDateTime<br><br>Before: Before datetime ZonedDateTime<br><br>Between: Between datetime1 ZonedDateTime, datetime2 ZonedDateTime<br><br>Cookie: Cookie name,regexp<br><br>Header:  Header header regexp<br><br>Host: ``<br><br>Method：Method=GET,POST<br><br>Path： ``<br><br>Query：``<br><br><br><br><br><br><br>package javax.servlet;
+import java.io.IOException;
+public interface Filter {  
+    default void init(FilterConfig filterConfig) throws ServletException {  
+    }  
+  
+    void doFilter(ServletRequest var1, ServletResponse var2, FilterChain var3) throws IOException, ServletException;  
+  
+    default void destroy() {  
+    }  
+}
+<br><br>1、引入依赖<br>&lt;dependency&gt;  
+    &lt;groupId&gt;com.alibaba.cloud&lt;/groupId&gt;  
+    &lt;artifactId&gt;spring-cloud-starter-alibaba-nacos-discovery&lt;/artifactId&gt;  
+    &lt;version&gt;2023.0.3.2&lt;/version&gt;  
+&lt;/dependency&gt;
+<br> <a class="internal-link" data-href="BigSea/后端/微服务/Nacos.md#版本依赖" href="BigSea\后端\微服务\Nacos.html#版本依赖" target="_self" rel="noopener nofollow">Nacos版本依赖</a><br>2、配置文件<br>spring:
+ cloud:  
+  nacos:  
+    discovery:  
+     server-addr: http://169.254.83.107:8848/
+<br>3、启动类<br>@SpringBootApplication
+@EnableDiscoveryClient
+public class NacosGoodsApplication {
+	.....
+}
+<br>错误：
+nacos版本错误导致的报错信息：
+<img alt="nacos版本错误导致的报错信息" src="https://raw.githubusercontent.com/ydh1cnn6/pic/master/2025-07-22-202507221738167.png" referrerpolicy="no-referrer">
+错误原因：2023.0.3.2，支持Spring Boot 3.2. X，最低支持 JDK 17
+解决方案：降低版本到2021.x.x]]></description><link>BigSea\后端\docker\启动.html</link><guid isPermaLink="false">BigSea/后端/docker/启动.md</guid><pubDate>Mon, 09 Jun 2025 01:38:26 GMT</pubDate><enclosure url="https://raw.githubusercontent.com/ydh1cnn6/pic/master/2025-07-22-202507221738167.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src="https://raw.githubusercontent.com/ydh1cnn6/pic/master/2025-07-22-202507221738167.png"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[宿主机端口与容器端口]]></title><description><![CDATA[ 
+ <br>简单来说，就是访问宿主机端口跳转到容器端口<br>首先需要注意：<br>宿主机的一个端口只能映射到容器内部的某一个端口上，比如：8080-&gt;80之后，就不能8080-&gt;81   <br>容器内部的某个端口可以被宿主机的多个端口映射,比如：8080-&gt;80，8090-&gt;80,8099-&gt;80<br>1）启动容器时， 选择一个端口映射到容器内部开放端口上<br>-p  小写p表示docker会选择一个具体的宿主机端口映射到容器内部开放的网络端口上。<br>-P  大写P表示docker会随机选择一个宿主机端口映射到容器内部开放的网络端口上。很少用P，都是指定的宿主机端口<br>2）启动创建时，绑定外部的ip和端口（宿主机ip是192.168.0.134）<br>可以根据不同网卡的IP来绑定宿主机的IP地址<br><a data-tooltip-position="top" aria-label="https://blog.csdn.net/qq_42402854/article/details/108583021" rel="noopener nofollow" class="external-link" href="https://blog.csdn.net/qq_42402854/article/details/108583021" target="_blank">Docker端口映射与容器互联_容器和宿主机之间端口映射的作用-CSDN博客</a>]]></description><link>BigSea\后端\docker\宿主机端口与容器端口.html</link><guid isPermaLink="false">BigSea/后端/docker/宿主机端口与容器端口.md</guid><pubDate>Mon, 09 Jun 2025 01:38:26 GMT</pubDate></item><item><title><![CDATA[导入时-不调用invoke方法]]></title><description><![CDATA[ 
+ <br>根据设置的headerRowNumber进行解析，如果头为1，excel只有一行，则不调用]]></description><link>BigSea\后端\easyexcel\导入时-不调用invoke方法.html</link><guid isPermaLink="false">BigSea/后端/easyexcel/导入时-不调用invoke方法.md</guid><pubDate>Mon, 09 Jun 2025 01:38:26 GMT</pubDate></item><item><title><![CDATA[读取sql时]]></title><description><![CDATA[ 
+ ]]></description><link>BigSea\后端\easyexcel\读取sql时.html</link><guid isPermaLink="false">BigSea/后端/easyexcel/读取sql时.md</guid><pubDate>Mon, 09 Jun 2025 01:38:26 GMT</pubDate></item><item><title><![CDATA[poi]]></title><description><![CDATA[ 
+ <br><br><br>实现比较复杂，看教程 <br><br>easypoi起因就是Excel的导入导出,最初的模板是实体和Excel的对应,model–row,filed–col 这样利用注解我们可以和容易做到excel到导入导出 经过一段时间发展,现在注解有5个类分别是<br>@Excel 作用到filed上面,是对Excel一列的一个描述<br>@ExcelCollection 表示一个集合,主要针对一对多的导出,比如一个老师对应多个科目,科目就可以用集合表示<br>@ExcelEntity 表示一个继续深入导出的实体,但他没有太多的实际意义,只是告诉系统这个对象里面同样有导出的字段<br>@ExcelIgnore 和名字一样表示这个字段被忽略跳过这个导导出<br>@ExcelTarget 这个是作用于最外层的对象,描述这个对象的id,以便支持一个对象可以针对不同导出做出不同处理<br><br>会有EasyExcel、监听器，invoke等标志<br>//写
+// 这里 需要指定写用哪个class去写，然后写到第一个sheet，名字为模板 然后文件流会自动关闭
+EasyExcel.write(fileName, DemoData.class)
+    .sheet("模板")
+    .doWrite(() -&gt; {
+        // 分页查询数据
+        return data();
+});
+//或者（不用箭头函数了）
+EasyExcel.write(fileName, DemoData.class).sheet("模板").doWrite(data());
+//或者
+try (ExcelWriter excelWriter = EasyExcel.write(fileName, DemoData.class).build()) {
+    WriteSheet writeSheet = EasyExcel.writerSheet("模板").build();
+    excelWriter.write(data(), writeSheet);
+}
+
+//读
+EasyExcel.read(fileName, DemoData.class, new PageReadListener&lt;DemoData&gt;(dataList -&gt; {
+    for (DemoData demoData : dataList) {
+        System.out.println("读取到一条数据{}"+JSON.toJSONString(demoData));
+    }
+})).sheet().doRead();
+//或者（不用箭头函数）
+EasyExcel.read(fileName, DemoData.class, new DemoDataListener()).sheet().doRead();
+
+//或者
+try (ExcelReader excelReader = EasyExcel.read(fileName, DemoData.class, new DemoDataListener()).build()) {
+    // 构建一个sheet 这里可以指定名字或者no
+    ReadSheet readSheet = EasyExcel.readSheet(0).build();
+    // 读取一个sheet
+    excelReader.read(readSheet);
+}
+<br><a data-tooltip-position="top" aria-label="https://blog.csdn.net/qq_57581439/article/details/126006206" rel="noopener nofollow" class="external-link" href="https://blog.csdn.net/qq_57581439/article/details/126006206" target="_blank">JAVA操作Excel（POI、easyPOI、easyExcel）<em></em>我认不到你的博客-CSDN博客</a>easypoi easyexcel]]></description><link>BigSea\后端\easyexcel\区分poi、easypoi、easyexcel.html</link><guid isPermaLink="false">BigSea/后端/easyexcel/区分poi、easypoi、easyexcel.md</guid><pubDate>Mon, 09 Jun 2025 01:38:26 GMT</pubDate></item><item><title><![CDATA[excel-poi]]></title><description><![CDATA[ 
+ <br>1、文件格式兼容+密码<br>	FileInputStream fis = new FileInputStream(path_excel);
+	Workbook workbook =WorkbookFactory.create(fis);
+	if(workbook==null){
+		workbook =WorkbookFactory.create(fis,passwd);
+	}
+<br>2、excel 工具类是如何中间操作<br>函数式编程，把sheet当做入参,扔给外部方法加工完，再写回到excel
+
+]]></description><link>BigSea\后端\excel\excel-poi.html</link><guid isPermaLink="false">BigSea/后端/excel/excel-poi.md</guid><pubDate>Thu, 03 Jul 2025 01:17:55 GMT</pubDate></item><item><title><![CDATA[登录问题]]></title><description><![CDATA[ 
+ <br><a data-tooltip-position="top" aria-label="https://blog.csdn.net/Blueeyedboy521/article/details/125181963" rel="noopener nofollow" class="external-link" href="https://blog.csdn.net/Blueeyedboy521/article/details/125181963" target="_blank">Git所有操作指南及问题解决_git 指南_Blueeyedboy521的博客-CSDN博客</a><br><a data-tooltip-position="top" aria-label="https://blog.csdn.net/m0_66501633/article/details/128723401" rel="noopener nofollow" class="external-link" href="https://blog.csdn.net/m0_66501633/article/details/128723401" target="_blank">在IDEA中配置git本地仓库并提交远程仓库_idea配置git并获取远程仓库-CSDN博客</a>]]></description><link>BigSea\后端\git\登录问题.html</link><guid isPermaLink="false">BigSea/后端/git/登录问题.md</guid><pubDate>Mon, 09 Jun 2025 01:38:26 GMT</pubDate></item><item><title><![CDATA[使用1]]></title><description><![CDATA[ 
+ <br>Ls_files，Plumbing Commands，底层命令<br><a rel="noopener nofollow" class="external-link" href="https://cloud.tencent.com/developer/doc/1096" target="_blank">https://cloud.tencent.com/developer/doc/1096</a><br>Git 全部命令<br><a rel="noopener nofollow" class="external-link" href="https://git-scm.com/docs" target="_blank">https://git-scm.com/docs</a><br>1、git add . 添加所有文件到暂存区<br>2、git restore --staged 目录取消该目录的文件到暂存区<br>3、git commmit -m "消息" 提交代码<br>4、git push origin 本地分支名本地分支代码提交到远程分支<br>5、git status 看文件状态<br><br>git ls-files 命令用于列出 Git 仓库中的所有文件，包括已追踪（tracked）和未追踪（untracked）、被修改（modified）、暂存（staged）等状态的文件 <a data-tooltip-position="top" aria-label="https://geek-docs.com/git/git-questions/91_tk_1706850873.html" rel="noopener nofollow" class="external-link" href="https://geek-docs.com/git/git-questions/91_tk_1706850873.html" target="_blank"><strong></strong></a>1<br><br>$ git ls-files
+file1.txt
+file2.txt
+folder/file3.txt
+<br><br><br>$ git ls-files --cached
+file1.txt
+file2.txt
+<br><br>$ git ls-files -m
+file1.txt
+file2.txt
+<br><br>$ git ls-files -o
+file3.txt
+<br><br>$ git ls-files --exclude="*.txt"
+file1.png
+file2.jpg
+folder/file4.png
+<br><br>git log 命令用于查看 Git 版本演变历史（提交历史），可以通过不同的参数和选项来定制显示效果。以下是一些常用的 git log 参数及其功能：<br><br>
+<br>无参数：列出所有历史记录，最近的排在最上方，显示提交对象的哈希值、作者、提交日期和提交说明。按 q 键退出历史记录列表 <a data-tooltip-position="top" aria-label="https://blog.csdn.net/hlsxjh/article/details/135532818" rel="noopener nofollow" class="external-link" href="https://blog.csdn.net/hlsxjh/article/details/135532818" target="_blank"><strong></strong></a>1。
+<br><br>
+<br>-p：按补丁格式显示每个更新的差异，比 --stat 命令信息更全 <a data-tooltip-position="top" aria-label="https://blog.csdn.net/hlsxjh/article/details/135532818" rel="noopener nofollow" class="external-link" href="https://blog.csdn.net/hlsxjh/article/details/135532818" target="_blank"><strong></strong></a>1。
+<br>--stat：显示每次提交修改文件的统计信息，包括修改过的文件及其添加和移除的行数 <a data-tooltip-position="top" aria-label="https://blog.csdn.net/helloxiaozhe/article/details/80563427" rel="noopener nofollow" class="external-link" href="https://blog.csdn.net/helloxiaozhe/article/details/80563427" target="_blank"><strong></strong></a>2。
+<br>--shortstat：只显示 --stat 中最后的行数添加、修改、删除的统计 <a data-tooltip-position="top" aria-label="https://blog.csdn.net/helloxiaozhe/article/details/80563427" rel="noopener nofollow" class="external-link" href="https://blog.csdn.net/helloxiaozhe/article/details/80563427" target="_blank"><strong></strong></a>2。
+<br>--name-only：仅在提交信息后显示已修改的文件清单 <a data-tooltip-position="top" aria-label="https://blog.csdn.net/helloxiaozhe/article/details/80563427" rel="noopener nofollow" class="external-link" href="https://blog.csdn.net/helloxiaozhe/article/details/80563427" target="_blank"><strong></strong></a>2。
+<br>--name-status：显示新增、修改、删除的文件清单 <a data-tooltip-position="top" aria-label="https://blog.csdn.net/helloxiaozhe/article/details/80563427" rel="noopener nofollow" class="external-link" href="https://blog.csdn.net/helloxiaozhe/article/details/80563427" target="_blank"><strong></strong></a>2。
+<br>--abbrev-commit：仅显示 SHA-1 校验和的前几个字符 <a data-tooltip-position="top" aria-label="https://blog.csdn.net/hlsxjh/article/details/135532818" rel="noopener nofollow" class="external-link" href="https://blog.csdn.net/hlsxjh/article/details/135532818" target="_blank"><strong></strong></a>1。
+<br>--relative-date：使用较短的相对时间显示日期（如 “2 weeks ago”）<a data-tooltip-position="top" aria-label="https://blog.csdn.net/hlsxjh/article/details/135532818" rel="noopener nofollow" class="external-link" href="https://blog.csdn.net/hlsxjh/article/details/135532818" target="_blank"><strong></strong></a>1。
+<br>--graph：在日志旁以 ASCII 图形显示分支与合并历史 <a data-tooltip-position="top" aria-label="https://blog.csdn.net/hlsxjh/article/details/135532818" rel="noopener nofollow" class="external-link" href="https://blog.csdn.net/hlsxjh/article/details/135532818" target="_blank"><strong></strong></a>1。
+<br>--oneline：列表形式查看历史版本记录，等同于 --pretty=oneline --abbrev-commit<a data-tooltip-position="top" aria-label="https://blog.csdn.net/helloxiaozhe/article/details/80563427" rel="noopener nofollow" class="external-link" href="https://blog.csdn.net/helloxiaozhe/article/details/80563427" target="_blank"><strong></strong></a>2。
+<br>--pretty：使用其他格式显示历史提交信息，可用选项包括 oneline、short、full、fuller 和 format<a data-tooltip-position="top" aria-label="https://blog.csdn.net/hlsxjh/article/details/135532818" rel="noopener nofollow" class="external-link" href="https://blog.csdn.net/hlsxjh/article/details/135532818" target="_blank"><strong></strong></a>1。
+<br>--decorate：显示每个提交的引用，包括分支、标签等
+<br>--all：显示所有分支的提交历史，包括远程分支和分离头指针
+<br><br>
+<br>-n：显示前 n 条提交信息 <a data-tooltip-position="top" aria-label="https://blog.csdn.net/helloxiaozhe/article/details/80563427" rel="noopener nofollow" class="external-link" href="https://blog.csdn.net/helloxiaozhe/article/details/80563427" target="_blank"><strong></strong></a>2。
+<br>--after：显示指定时间之后的提交 <a data-tooltip-position="top" aria-label="https://blog.csdn.net/helloxiaozhe/article/details/80563427" rel="noopener nofollow" class="external-link" href="https://blog.csdn.net/helloxiaozhe/article/details/80563427" target="_blank"><strong></strong></a>2。
+<br>--before：显示指定时间之前的提交 <a data-tooltip-position="top" aria-label="https://blog.csdn.net/helloxiaozhe/article/details/80563427" rel="noopener nofollow" class="external-link" href="https://blog.csdn.net/helloxiaozhe/article/details/80563427" target="_blank"><strong></strong></a>2。
+<br>--author：仅显示作者匹配指定字符串的提交 <a data-tooltip-position="top" aria-label="https://blog.csdn.net/helloxiaozhe/article/details/80563427" rel="noopener nofollow" class="external-link" href="https://blog.csdn.net/helloxiaozhe/article/details/80563427" target="_blank"><strong></strong></a>2。
+<br>--committer：仅显示提交者匹配指定字符串的提交 <a data-tooltip-position="top" aria-label="https://blog.csdn.net/helloxiaozhe/article/details/80563427" rel="noopener nofollow" class="external-link" href="https://blog.csdn.net/helloxiaozhe/article/details/80563427" target="_blank"><strong></strong></a>2。
+<br>--grep：仅显示提交说明中包含指定字符串的提交 <a data-tooltip-position="top" aria-label="https://blog.csdn.net/helloxiaozhe/article/details/80563427" rel="noopener nofollow" class="external-link" href="https://blog.csdn.net/helloxiaozhe/article/details/80563427" target="_blank"><strong></strong></a>2。
+<br>-S：仅显示添加或删除内容匹配指定字符串的提交 <a data-tooltip-position="top" aria-label="https://blog.csdn.net/helloxiaozhe/article/details/80563427" rel="noopener nofollow" class="external-link" href="https://blog.csdn.net/helloxiaozhe/article/details/80563427" target="_blank"><strong></strong></a>2。
+<br><br># 显示最近的 5 条提交记录
+git log -n 5
+# 显示某个文件的提交历史
+git log -- filename
+# 显示包含特定关键词的提交
+git log --grep="fix bug"
+# 显示某个时间段内的提交
+git log --after="2023-01-01" --before="2023-12-31"
+<br><br>最近一个提交回退重写<br><br>git commit --amend -m "新的提交信息"
+<br>让“本次 Amend Commit 的提交”覆盖掉最近一次提交的错误信息。并且 gitk 图形化界面上看不到被覆盖掉的错误信息记录，git log 上也看不到被覆盖掉的错误信息记录。<br>如果想要查看“覆盖掉最近一次提交的错误信息”，可以使用 git log 加强版命令 git reflog。如果想跳回“被覆盖掉的错误提交”，可以使用命令 git reset --hard "commit_id"。让“本次 Amend Commit 的提交”覆盖掉最近一次提交的错误信息。并且 gitk 图形化界面上看不到被覆盖掉的错误信息记录，git log 上也看不到被覆盖掉的错误信息记录。<br>
+<br>
+使用场景
+
+<br>
+代码提交后有 bug，重新提交（这样可以少一条提交记录）
+
+<br>
+代码已经提交远程仓库，发现代码有 bug，也可以这样操作，正常 push 就行（可能会导致问题，与团队协作，确保每个人都了解历史记录已经改变，并且可能需要重新基于新的提交进行工作）
+
+<br>git commit --amend
+<br><br>Git Fetch: git fetch命令用于从远程仓库获取最新的代码变更，但它不会自动合并到本地分支。它仅仅是将远程仓库的最新信息更新到本地的远程跟踪分支上。这意味着，执行git fetch后，你可以查看远程仓库的变更，但本地分支的代码不会受到影响。如果你决定将这些变更合并到你的工作分支，你需要手动执行git merge命令。<br>例如，执行git fetch origin会从名为"origin"的远程仓库获取最新代码到本地的远程跟踪分支，但不会影响你当前的工作分支。<br>Git Pull: 相比之下，git pull命令则会从远程仓库获取最新的代码变更，并自动合并到当前的本地分支。实际上，git pull是git fetch和git merge两个命令的结合。当你执行git pull时，Git 会自动下载最新的变更，并尝试将这些变更合并到你当前的工作分支。<br>例如，执行_git pull origin master**会从"origin"远程仓库的"master"分支获取最新代码，并尝试将其合并到你当前的工作分支。<br><br>指定版本创建分支<br>git branch &lt;branchName&gt; &lt;hash&gt;<br><br><br>git tag
+git tag -l
+git tag --list
+
+
+# 通配符号只能用-l 或 --list
+git tag -l "v1.8.5*"
+<br><br><br>git tag -a v1.4 -m "my version 1.4"
+
+# 输出显示了打标签者的信息、打标签的日期时间、附注信息，然后显示具体的提交信息。
+git show v1.4
+tag v1.4
+Tagger: Ben Straub &lt;ben@straub.cc&gt;
+Date:   Sat May 3 20:19:12 2014 -0700
+
+my version 1.4
+
+commit ca82a6dff817ec66f44342007202690a93763949
+Author: Scott Chacon &lt;schacon@gee-mail.com&gt;
+Date:   Mon Mar 17 21:52:11 2008 -0700
+
+    changed the version number
+<br><br>git tag v1.4-lw
+
+# 命令只会显示出提交信息：
+git show v1.4-lw
+commit ca82a6dff817ec66f44342007202690a93763949
+Author: Scott Chacon &lt;schacon@gee-mail.com&gt;
+Date:   Mon Mar 17 21:52:11 2008 -0700
+
+    changed the version number
+<br><br>git tag -a v1.2 &lt;提交hash&gt;
+<br><br># 提交指定tag
+git push origin &lt;tagname&gt;
+
+# 提交全部
+git push origin --tags
+<br>使用 git push &lt;remote&gt; --tags 推送标签并不会区分轻量标签和附注标签，没有简单的选项能够让你只选择推送一种标签。<br><br># 删除掉你本地仓库上的标签
+git tag -d &lt;tagname&gt;
+
+# 更新你的远程仓库
+## 第一种变体
+git push &lt;remote&gt; :refs/tags/&lt;tagname&gt;
+## 更直观的删除远程标签的方式
+git push origin --delete &lt;tagname&gt;
+<br><br>直接 checkout 会导致仓库处于“分离头指针（detached HEAD）”的状态<br>在“分离头指针”状态下，如果你做了某些更改然后提交它们，标签不会发生变化，但你的新提交将不属于任何分支，并且将无法访问，除非通过确切的提交哈希才能访问。因此，如果你需要进行更改，比如你要修复旧版本中的错误，那么通常需要创建一个新分支：<br>git checkout -b version2 v2.0.0
+<br><br>$ git config --global alias.co checkout
+$ git config --global alias.br branch
+$ git config --global alias.ci commit
+$ git config --global alias.st status
+<br><br>1、git stash 或 git stash push：
+恢复暂存区和工作区（仅被追踪的文件）为最近一次提交，将修改放到栈中。<br>2、git stash list：<br>3、git stash apply
+--index 选项<br>4、git stash drop stash@{0}<br>5、git stash pop
+Pop=apply+drop<br>6、git stash show
+场景：分支改一半要切换到另一个分支<br>7、git stash -u/--include-untracked
+贮藏包括为已跟踪的文件+未跟踪的文件（不包括明确忽略的文件）<br>8、git stash -a/--all
+贮藏包括为已跟踪的文件+未跟踪的文件（包括明确忽略的文件）<br>9、git stash --patch
+Git 不会贮藏所有修改过的任何东西，但是会交互式地提示哪些改动想要贮藏、哪些改动需要保存在工作目录中。<br><br><br>仅恢复工作目录的修改
+将存储的所有改动（包括原本暂存区和工作目录的修改）恢复到当前工作目录，但**所有改动都会以未暂存状态**（Unstaged Changes） 存在。
+<br>示例：<br>如果你在 &nbsp;git stash&nbsp; 前有：
+文件 A：已暂存（&nbsp;git add A&nbsp;）
+文件 B：未暂存（仅修改）
+执行 &nbsp;git stash apply&nbsp; 后：
+文件 A 和 B 的修改都会出现在工作目录，但均处于未暂存状态。
+<br><br>恢复暂存区和工作目录的原始状态
+尝试将存储时的 **暂存区改动恢复到暂存区，工作目录的修改恢复到未暂存状态。**
+<br>示例：
+同样的场景（A 已暂存，B 未暂存）：
+执行 &nbsp;git stash apply --index&nbsp; 后：
+文件 A 的修改处于暂存状态（与存储前一致）。
+文件 B 的修改处于未暂存状态。<br><br>移除工作区中**未跟踪的（且没被忽略的）**文件, 不好找回，可以用 git stash -a 移除更安全，因为还能从栈中恢复
+<br><br>移除工作目录中所有未追踪的文件以及空的子目录
+<br>--dry-run 或 -n 选项
+这意味着“做一次演习然后告诉你将要移除什么”<br><br>以交互模式运行 clean 命令。
+默认情况下，`git clean` 命令只会移除没有忽略的未跟踪文件。任何与 `.gitignore` 或其他忽略文件中的模式匹配的文件都不会被移除。如果你也想要移除那些文件，例如为了做一次完全干净的构建而移除所有由构建生成的 `.o` 文件，可以给 clean 命令增加一个 `-x` 选项。
+<br><br>从提交历史、工作目录、甚至索引中查找一个字符串或者正则表达式
+<br><br>
+<br>-n 或 --line-number 输出 Git 找到的匹配行的行号
+<br>-c 或 --count 仅包括那些包含匹配字符串的文件，以及每个文件中包含了多少个匹配。
+<br>-p 或 --show-function 每一个匹配的字符串所在的方法或函数
+<br>--and 标志来查看复杂的字符串组合，它确保了多个匹配出现在同一文本行中
+<br>--break 和 --heading 选项来使输出更加容易阅读
+<br><br>修改 HEAD 指向新的分支引用，将索引填充为该次提交的快照，然后将索引的内容复制到工作目录中。
+
+1、soft：仅修改 head 指向
+
+2、mix：修改 head 指向后，将 HEAD 指向的当前快照的内容来更新索引。
+
+3、hard：修改 head 指向后，将 HEAD 指向的当前快照的内容来更新索引，覆盖编辑区（未跟踪的文件有丢失风险）
+
+Git reset 路径对该文件或路径从 head 中取覆盖暂存区（或加上编辑区）
+
+Git reset hash 跳转到指定版本
+
+Git reset branchname 将分支指向另一个提交（**不清楚逻辑，可能是两个分支名指向同一个提交，但这样会导致原来的分支丢失吧**）
+<br>问题：<br>1、git branch 时，暂存区是取的哪个分支，是不是复制原分支；编辑区，已追踪的文件和暂存区一致吗？为追踪应该不修改吧？<br>解答：<br>1、暂存区：复制原分区的暂存区<br>2、编辑区：已跟踪暂存区都复制了肯定一致；未跟踪不会改变（不然不就丢失代码了嘛）]]></description><link>BigSea\后端\git\使用1.html</link><guid isPermaLink="false">BigSea/后端/git/使用1.md</guid><pubDate>Wed, 02 Jul 2025 03:28:56 GMT</pubDate></item><item><title><![CDATA[git]]></title><description><![CDATA[ 
+ <br>1、merge时有两条merge记录]]></description><link>BigSea\后端\git\git.html</link><guid isPermaLink="false">BigSea/后端/git/git.md</guid><pubDate>Mon, 09 Jun 2025 01:38:26 GMT</pubDate></item><item><title><![CDATA[git放弃当前修改]]></title><description><![CDATA[ 
+ <br>有多种方法可以放弃当前修改。<br>方法一：使用git checkout命令<br>git checkout .
+<br>该命令会将当前工作目录中所有修改的文件回滚到最近的一次提交状态。<br>方法二：使用git reset命令<br>git reset --hard HEAD
+<br>该命令会将当前分支的HEAD指针和索引都重置为最近的一次提交状态，丢弃所有的修改。<br>方法三：使用git stash命令<br>git stash save --include-untracked
+<br>该命令会将当前修改的文件保存到一个临时的存储区（stash），并将工作目录恢复到最近的一次提交状态。可以使用git stash list命令查看存储区的内容，再使用git stash apply或者git stash pop命令将修改恢复出来。<br>这些方法可以根据具体需求选择，注意在执行前确认没有重要的修改未提交，因为这些操作会永久丢弃未提交的修改。]]></description><link>BigSea\后端\git\git放弃当前修改.html</link><guid isPermaLink="false">BigSea/后端/git/git放弃当前修改.md</guid><pubDate>Mon, 09 Jun 2025 01:38:26 GMT</pubDate></item><item><title><![CDATA[git命令]]></title><description><![CDATA[ 
+ <br>第一次拉取代码，git pull<br>拉取新代码，先merge再pull<br><img src="https://cdn.nlark.com/yuque/0/2023/png/39031477/1701250454342-0254d3c3-8cb2-4623-b5a5-f0764b56c517.png" referrerpolicy="no-referrer"><br><img src="https://cdn.nlark.com/yuque/0/2023/png/39031477/1701250560302-586462bb-4148-433c-b9d8-669b324322c3.png" referrerpolicy="no-referrer">]]></description><link>BigSea\后端\git\git命令.html</link><guid isPermaLink="false">BigSea/后端/git/git命令.md</guid><pubDate>Mon, 09 Jun 2025 01:38:26 GMT</pubDate><enclosure url="https://cdn.nlark.com/yuque/0/2023/png/39031477/1701250454342-0254d3c3-8cb2-4623-b5a5-f0764b56c517.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src="https://cdn.nlark.com/yuque/0/2023/png/39031477/1701250454342-0254d3c3-8cb2-4623-b5a5-f0764b56c517.png"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[git提交代码失败汇总]]></title><description><![CDATA[ 
+ <br>1、git版本问题<br>解决方案：在git生成的./ssh/config文件中，末尾添加如下代码<br>Host *
+HostkeyAlgorithms +ssh-rsa
+PubkeyAcceptedKeyTypes +ssh-rsa
+<br>参考：<a data-tooltip-position="top" aria-label="https://www.jianshu.com/p/764249229bc4" rel="noopener nofollow" class="external-link" href="https://www.jianshu.com/p/764249229bc4" target="_blank">记一次使用git报错，解决Unable to negotiate with **** port 22: no matching host key type found. Their offer:... - 简书 (jianshu.com)</a>]]></description><link>BigSea\后端\git\git提交代码失败汇总.html</link><guid isPermaLink="false">BigSea/后端/git/git提交代码失败汇总.md</guid><pubDate>Mon, 09 Jun 2025 01:38:26 GMT</pubDate></item><item><title><![CDATA[git中文乱码]]></title><description><![CDATA[ 
+ <br>1、<br>git config --global core.quotepath false
+<br><a data-tooltip-position="top" aria-label="https://zhuanlan.zhihu.com/p/133706032" rel="noopener nofollow" class="external-link" href="https://zhuanlan.zhihu.com/p/133706032" target="_blank">git 显示中文和解决中文乱码</a>]]></description><link>BigSea\后端\git\git中文乱码.html</link><guid isPermaLink="false">BigSea/后端/git/git中文乱码.md</guid><pubDate>Mon, 09 Jun 2025 01:38:26 GMT</pubDate></item><item><title><![CDATA[gitLab]]></title><description><![CDATA[ 
+ <br>1、申请gitlab账号<br>2、下载git，配置git邮箱<br>3、生成ssh秘钥<br>4、添加到gitlab管理]]></description><link>BigSea\后端\git\gitLab.html</link><guid isPermaLink="false">BigSea/后端/git/gitLab.md</guid><pubDate>Mon, 09 Jun 2025 01:38:26 GMT</pubDate></item><item><title><![CDATA[查看报错信息]]></title><description><![CDATA[ 
+ <br>ctrl+p	在红色波浪线处ctrl+p,查看需要什么]]></description><link>BigSea\后端\idea\查看报错信息.html</link><guid isPermaLink="false">BigSea/后端/idea/查看报错信息.md</guid><pubDate>Mon, 09 Jun 2025 01:38:26 GMT</pubDate></item><item><title><![CDATA[返回上一步]]></title><description><![CDATA[ 
+ <br>Ctrl + Alt + 左方向键：返回上一个位置<br>Ctrl + Alt + 右方向键：前往下一个位置]]></description><link>BigSea\后端\idea\返回上一步.html</link><guid isPermaLink="false">BigSea/后端/idea/返回上一步.md</guid><pubDate>Mon, 09 Jun 2025 01:38:26 GMT</pubDate></item><item><title><![CDATA[黄色波浪线]]></title><description><![CDATA[ 
+ <br>是代码检查的问题，好像不太方便自定义，都是模版或者插件，也可能是我没仔细翻看。<br>
+<br>打开 IntelliJ IDEA，点击顶部菜单中的 "File" -&gt; "Settings"（Windows/Linux）或 "IntelliJ IDEA" -&gt; "Preferences"（Mac）。
+<br>在设置窗口中，选择 "Editor" -&gt; "Inspections"。
+<br>在搜索框中输入 "Nullable problems" 并选择 "Java" 下的 "Nullable problems"。
+<br>在右侧的窗格中，找到 "Declaration has problems" 一栏，点击旁边的加号 "+"，然后选择 "Custom Annotation"。
+<br>在弹出的对话框中，输入你的自定义注解名字（例如 PermissionRequired），点击 "OK"。<br>
+
+<br><br><a data-tooltip-position="top" aria-label="https://www.cnblogs.com/q1359720840/p/15776873.html" rel="noopener nofollow" class="external-link" href="https://www.cnblogs.com/q1359720840/p/15776873.html" target="_blank">idea inspections的解释说明1</a>]]></description><link>BigSea\后端\idea\黄色波浪线.html</link><guid isPermaLink="false">BigSea/后端/idea/黄色波浪线.md</guid><pubDate>Mon, 09 Jun 2025 01:38:26 GMT</pubDate></item><item><title><![CDATA[解决idea在debug模式下变得非常慢的问题]]></title><description><![CDATA[ 
+ <br><br><br>danger
+问题：运行可以，debug运行了1个多小时<br><br><br><br><br>color2
+解决方案，不要再方法头断点，想办法取消<br><br><br><a data-tooltip-position="top" aria-label="https://blog.csdn.net/xc9711/article/details/126035319" rel="noopener nofollow" class="external-link" href="https://blog.csdn.net/xc9711/article/details/126035319" target="_blank">解决idea在debug模式下变得非常慢的问题_idea debug启动很慢-CSDN博客</a>]]></description><link>BigSea\后端\idea\解决idea在debug模式下变得非常慢的问题.html</link><guid isPermaLink="false">BigSea/后端/idea/解决idea在debug模式下变得非常慢的问题.md</guid><pubDate>Mon, 09 Jun 2025 02:26:56 GMT</pubDate></item><item><title><![CDATA[拉项目时默认maven仓库设置]]></title><description><![CDATA[ 
+ <br>问题：拉取项目时，用的是默认仓库配置，每次都要手动配置<br>设置：File-&gt;New Projects SetUp -&gt;Settings for New Projects]]></description><link>BigSea\后端\idea\拉项目时默认maven仓库设置.html</link><guid isPermaLink="false">BigSea/后端/idea/拉项目时默认maven仓库设置.md</guid><pubDate>Mon, 09 Jun 2025 01:38:26 GMT</pubDate></item><item><title><![CDATA[修改水平移动快捷键为alt+滚轮]]></title><description><![CDATA[ 
+ <br><a data-tooltip-position="top" aria-label="https://blog.csdn.net/qq_38188725/article/details/80629061" rel="noopener nofollow" class="external-link" href="https://blog.csdn.net/qq_38188725/article/details/80629061" target="_blank">Intellij Idea如何快捷地使窗口左右横向滚动_idea窗口横向设置-CSDN博客</a>]]></description><link>BigSea\后端\idea\修改水平移动快捷键为alt+滚轮.html</link><guid isPermaLink="false">BigSea/后端/idea/修改水平移动快捷键为alt+滚轮.md</guid><pubDate>Mon, 09 Jun 2025 01:38:26 GMT</pubDate></item><item><title><![CDATA[IntelliJ IDEA 中如何将 POM 中的版本号快速提出为属性]]></title><description><![CDATA[ 
+ <br>Ctrl+Alt+v
+将光标移动到版本号的数字上面，然后使用上面的快捷键<br><a data-tooltip-position="top" aria-label="https://cloud.tencent.com/developer/article/1872530" rel="noopener nofollow" class="external-link" href="https://cloud.tencent.com/developer/article/1872530" target="_blank">IntelliJ IDEA 中如何将 POM 中的版本号快速提出为属性</a>]]></description><link>BigSea\后端\idea\IntelliJ IDEA 中如何将 POM 中的版本号快速提出为属性.html</link><guid isPermaLink="false">BigSea/后端/idea/IntelliJ IDEA 中如何将 POM 中的版本号快速提出为属性.md</guid><pubDate>Wed, 23 Jul 2025 08:19:13 GMT</pubDate></item><item><title><![CDATA[Unicode编码]]></title><description><![CDATA[ 
+ <br>idea，Unicode编码怎么转为中文？<br>
+<br>启用「透明转换」功能
+<br>进入 &nbsp;File -&gt; Settings -&gt; Editor -&gt; File Encodings&nbsp;（Windows/Linux）或 &nbsp;IntelliJ IDEA -&gt; Preferences -&gt; Editor -&gt; File Encodings&nbsp;（macOS）。<br>勾选 Transparent native-to-ascii conversion 选项。此功能会在编辑时自动将 Unicode 编码转换为可读的中文，并在保存时还原为 Unicode 格式。<br>确保 Default encoding for properties files 设置为 &nbsp;UTF-8&nbsp;，以保证中文正常解析。]]></description><link>BigSea\后端\idea\Unicode编码.html</link><guid isPermaLink="false">BigSea/后端/idea/Unicode编码.md</guid><pubDate>Mon, 09 Jun 2025 01:38:26 GMT</pubDate></item><item><title><![CDATA[函数式接口与 Lambda 表达式详细教程]]></title><description><![CDATA[ 
+ <br><br>定义：<br>
+函数式接口是 有且只有一个抽象方法 的接口（可以有默认方法、静态方法或 Object 类中的方法）。Java 8 中通过 @FunctionalInterface 注解显式标识，编译器会强制检查其合法性。<br><br><br>Java 8 在 java.util.function 包中提供了以下核心接口：<br><br><br><br>@FunctionalInterface
+interface StringProcessor {
+    String process(String input);
+    
+    // 允许默认方法
+    default void log() {
+        System.out.println("Processing string");
+    }
+}
+<br><br><br>定义：<br>
+Lambda 是匿名函数，用于简洁地实现函数式接口的抽象方法。语法如下：<br>
+(参数列表) -&gt; { 方法体 }<br><br><br>// 无参
+Runnable task = () -&gt; System.out.println("Hello!");
+
+// 单参数（可省略括号）
+Consumer&lt;String&gt; print = s -&gt; System.out.println(s);
+
+// 多参数
+Comparator&lt;Integer&gt; comp = (a, b) -&gt; a.compareTo(b);
+
+// 复杂逻辑（使用代码块）
+Function&lt;Integer, Integer&gt; square = x -&gt; {
+    int result = x * x;
+    return result;
+};
+<br><br><br>传统写法：<br>new Thread(new Runnable() {
+    @Override
+    public void run() {
+        System.out.println("Old way");
+    }
+}).start();
+<br>Lambda 简化：<br>new Thread(() -&gt; System.out.println("Lambda way")).start();
+<br><br><br>Lambda 的简写形式，语法为 类名/对象::方法名。<br><br>// 静态方法
+Function&lt;String, Integer&gt; parser = Integer::parseInt;
+
+// 实例方法
+List&lt;String&gt; list = Arrays.asList("a", "b", "c");
+list.forEach(System.out::println);
+
+// 特定对象的实例方法
+String str = "Hello";
+Supplier&lt;String&gt; supplier = str::toUpperCase;
+
+// 构造器引用
+Supplier&lt;List&lt;String&gt;&gt; listSupplier = ArrayList::new;
+<br><br><br><br>List&lt;String&gt; names = Arrays.asList("Alice", "Bob", "Charlie");
+names.stream()
+     .filter(name -&gt; name.startsWith("A")) // Predicate
+     .map(String::toUpperCase)             // Function
+     .forEach(System.out::println);        // Consumer
+<br><br>Predicate&lt;Integer&gt; isEven = num -&gt; num % 2 == 0;
+List&lt;Integer&gt; numbers = Arrays.asList(1, 2, 3, 4);
+List&lt;Integer&gt; evens = numbers.stream().filter(isEven).toList();
+<br><br>new Thread(() -&gt; {
+    // 执行耗时操作
+    System.out.println("Running in background");
+}).start();
+<br><br><br>Lambda 可访问外层作用域的变量，但要求变量是 final 或等效 final（未被修改）。<br>int count = 0; // 等效 final
+Runnable counter = () -&gt; {
+    System.out.println(count); // ✅ 允许访问
+    // count++; ❌ 错误，不能修改
+};
+<br><br><br>
+<br>函数式接口必须有且仅有一个抽象方法。
+<br>@FunctionalInterface 注解非强制，但建议添加以保证接口规范。
+<br>Lambda 表达式无法独立存在，必须依附于函数式接口。
+<br><br><br>import java.util.function.Function;
+
+public class Demo {
+    public static void main(String[] args) {
+        // 自定义函数式接口
+        StringProcessor processor = s -&gt; s + " processed";
+        System.out.println(processor.process("Data")); // 输出: Data processed
+
+        // 使用内置 Function
+        Function&lt;String, Integer&gt; lengthGetter = String::length;
+        System.out.println(lengthGetter.apply("Hello")); // 输出: 5
+    }
+}
+
+@FunctionalInterface
+interface StringProcessor {
+    String process(String input);
+}
+<br>通过结合函数式接口和 Lambda，Java 实现了更简洁的函数式编程能力，极大提升了代码可读性和开发效率。<br><br>]]></description><link>BigSea\后端\java\函数式接口与_Lambda_表达式详细教程\函数式接口与 Lambda 表达式详细教程.html</link><guid isPermaLink="false">BigSea/后端/java/函数式接口与_Lambda_表达式详细教程/函数式接口与 Lambda 表达式详细教程.md</guid><pubDate>Wed, 02 Jul 2025 01:42:40 GMT</pubDate></item><item><title><![CDATA[Java函数式接口的终极奥义]]></title><description><![CDATA[ 
+ <br><a rel="noopener nofollow" class="external-link" href="https://juejin.cn/post/7502349133345767475" target="_blank">https://juejin.cn/post/7502349133345767475</a>]]></description><link>BigSea\后端\java\函数式接口与_Lambda_表达式详细教程\Java函数式接口的终极奥义.html</link><guid isPermaLink="false">BigSea/后端/java/函数式接口与_Lambda_表达式详细教程/Java函数式接口的终极奥义.md</guid><pubDate>Mon, 09 Jun 2025 01:38:26 GMT</pubDate></item><item><title><![CDATA[查询接口并发量非常高，怎么办_]]></title><description><![CDATA[ 
+ <br><br><br>
+<br>将非实时性查询请求转为异步处理：上游系统发送MQ消息，下游消费消息后返回结果，避免高频直接调用1。
+<br>适用场景：数据变动频率低（如历史订单查询）、批量数据导出。
+<br><br>
+<br>将定制化查询（如运营报表、实时看板）迁移至数仓平台，通过离线计算或实时流处理（如Flink）生成结果，减轻核心业务库压力1**3**。
+<br>示例：大促期间用户行为分析通过实时数仓计算，业务系统仅提供基础数据接口。
+<br><br>
+<br>短期缓存：调用方本地缓存数据（如5秒），减少重复请求，适合低频变动的数据1。
+<br>长期缓存：数据变更时通过MQ同步至关联系统（如支付金额变动同步至钱包系统），实现跨服务缓存一致性1。
+<br><br><br><br>
+<br>算法选择：
+<br>
+<br>令牌桶算法：允许突发流量（如秒杀场景），通过Redis + Lua实现分布式限流3**7**。
+<br>滑动窗口算法：避免固定窗口的临界峰值问题（如Nginx限流模块）3**8**。
+<br>
+<br>层级控制：
+<br>
+<br>网关层限流（如Spring Cloud Gateway集成Sentinel）2**7**。
+<br>接口级限流（如Semaphore控制单机并发量）3**6**。
+<br><br>
+<br>策略：
+<br>
+<br>非核心功能降级（如关闭商品详情页的推荐模块）3。
+<br>返回兜底数据（如默认库存值、缓存快照）5**8**。
+<br>
+<br>触发条件：监控QPS突增、错误率飙升时自动降级7。
+<br><br><br><br>
+<br>全量缓存：定时任务预热静态数据（如商品分类、配置信息）1**5**。
+<br>热数据缓存：异步加载高频访问数据（如活跃用户持仓）1。
+<br>本地缓存：应对热Key问题（如Guava Cache），通过MQ广播机制保证集群一致性1**5**。
+<br><br><br><br><br><br>数据库采用一主多从架构，查询请求路由到从库26。<br><br>
+<br>避免&lt;font style="color:rgba(0, 0, 0, 0.9);background-color:rgb(252, 252, 252);"&gt;SELECT *&lt;/font&gt;、覆盖索引减少回表、分页场景用游标替代&lt;font style="color:rgba(0, 0, 0, 0.9);background-color:rgb(252, 252, 252);"&gt;OFFSET&lt;/font&gt;2。
+<br><br>
+<br>动态调整连接数（如HikariCP监控线程等待时间）6。
+<br><br><br>
+<br>实时监控
+<br>
+<br>关键指标：QPS、缓存命中率、慢查询比例、限流触发次数（通过Prometheus+Granfa可视化）7**8**。
+<br>
+<br>动态扩缩容
+<br>
+<br>基于流量预测自动扩容Pod（K8s HPA）或数据库只读实例8。
+<br><br><br>核心原则：分流 → 限流 → 缓存 → 降级 → 扩容。<br>
+<br>10万QPS以下：优先通过 缓存预热+令牌桶限流+本地缓存 解决1**5**7。
+<br>更高并发：需结合 MQ异步化+数仓分流+分布式限流集群 138。
+实际落地需根据业务特性（如数据实时性要求）选择组合策略，并持续监控调优。
+]]></description><link>BigSea\后端\java\问题汇总\查询接口并发量非常高，怎么办_.html</link><guid isPermaLink="false">BigSea/后端/java/问题汇总/查询接口并发量非常高，怎么办_.md</guid><pubDate>Wed, 25 Jun 2025 03:16:12 GMT</pubDate></item><item><title><![CDATA[InpuStream边界中文乱码问题]]></title><description><![CDATA[ 
+ <br>
+<br>出现场景：公司代码，JSch 获取linux 返回数据（类型：InpuStream），使用 new int[1024] 接收时，边界的中文被处理
+<br>出现原因：猜测是中文本来是 3 个字符，边界刚好只能读取一个字符，导致 3 个 ?
+<br>解决方案：改用 new char[1024] 接收，实测边界中文没问题
+<br>排查过程：①以为是 UTF-8 编码的问题，改 utf-8，但不起作用（本来也不应该是这个问题，如果是这个问题该是所有中文都有问题）；②debug 测试时，对 buffer 进行查看，刚好前后都是 ?，排查出问题 <br><a data-tooltip-position="top" aria-label="https://blog.csdn.net/weixin_52116015/article/details/130405309" rel="noopener nofollow" class="external-link" href="https://blog.csdn.net/weixin_52116015/article/details/130405309" target="_blank">使用InputStream读取文件时部分中文乱码（厦大��、福州���站）</a>]]></description><link>BigSea\后端\java\问题汇总\InpuStream边界中文乱码问题.html</link><guid isPermaLink="false">BigSea/后端/java/问题汇总/InpuStream边界中文乱码问题.md</guid><pubDate>Thu, 26 Jun 2025 01:44:12 GMT</pubDate></item><item><title><![CDATA[_SneakyThrows]]></title><description><![CDATA[ 
+ <br>SneakyThrows 是 Lombok 提供的一个注解，用于简化异常处理代码。它可以自动将受检异常（Checked Exception）转换为非受检异常（Unchecked Exception），从而避免在方法签名中显式声明 throws 或者使用 try-catch 块。]]></description><link>BigSea\后端\java\_SneakyThrows.html</link><guid isPermaLink="false">BigSea/后端/java/_SneakyThrows.md</guid><pubDate>Mon, 09 Jun 2025 01:38:26 GMT</pubDate></item><item><title><![CDATA[1、获取oss-xml文件]]></title><description><![CDATA[ 
+ <br><br>ByteArrayOutPutStream outPutStream = new ByteArrayOutPutStream();
+byte[] buffer = new buffer[1024];
+InputStream inputStream = oss.Client.getObject(ossbukcetname,filePath).getObjectContent()
+int byteRead;
+while( (byteRead =inputStream.read(buffer)) !=-1){
+    outPutStream.write(buffer,0,byteRead);
+}
+outPutStream.toString("UTF-8");//获取xml字符串
+]]></description><link>BigSea\后端\java\读取文件.html</link><guid isPermaLink="false">BigSea/后端/java/读取文件.md</guid><pubDate>Mon, 09 Jun 2025 01:38:26 GMT</pubDate></item><item><title><![CDATA[分页]]></title><description><![CDATA[ 
+ <br>引入springboot的pagehelper，不用写配置文件和配置类，否则需要。<br>偏移量计算中start中，传入分页从1开始，送0是查全表]]></description><link>BigSea\后端\java\分页.html</link><guid isPermaLink="false">BigSea/后端/java/分页.md</guid><pubDate>Mon, 09 Jun 2025 01:38:26 GMT</pubDate></item><item><title><![CDATA[过滤器、拦截器、监听器对比与使用笔记]]></title><description><![CDATA[ 
+ <br><br><br><br><br>
+<br>作用：监听 Servlet 上下文、HTTP 会话、请求对象的事件（创建、销毁、属性变更）。
+<br>常见类型：
+
+<br>ServletContextListener：监听应用启动/关闭。
+<br>HttpSessionListener：统计在线用户数。
+<br>ServletRequestListener：监听请求生命周期。
+
+
+<br>使用场景：
+
+<br>初始化全局配置（如数据库连接池）。
+<br>记录用户访问日志。
+<br>统计在线人数。
+
+
+<br><br><br><br><br><br><br>
+<br>方式一：通过 FilterRegistrationBean 注册
+<br>java
+@Configuration
+public class FilterConfig {
+@Bean
+public FilterRegistrationBean registrationBean() {
+FilterRegistrationBean bean = new FilterRegistrationBean&lt;&gt;(new MyFilter());
+bean.addUrlPatterns("/*");
+bean.setOrder(1); // 执行顺序，值越小优先级越高
+return bean;
+}
+}<br>
+<br>方式二：使用 @WebFilter 注解
+<br>java
+@Component
+@WebFilter(filterName = "myFilter", urlPatterns = "/*")
+public class MyFilter implements Filter {
+// 实现 init(), doFilter(), destroy()
+}<br><br>java
+@Configuration
+public class InterceptorConfig implements WebMvcConfigurer {
+@Override
+public void addInterceptors(InterceptorRegistry registry) {
+registry.addInterceptor(new MyInterceptor())
+.addPathPatterns("/**") // 拦截路径
+.excludePathPatterns("/login"); // 排除路径
+}
+}<br><br>
+<br>Servlet 监听器：
+<br>java
+@WebListener
+public class MySessionListener implements HttpSessionListener {
+// 实现 sessionCreated(), sessionDestroyed()
+}<br>
+<br>Spring 事件监听（异步处理）：
+<br>java
+@Component
+public class MyEventListener implements ApplicationListener {
+@Override
+@Async // 开启异步
+public void onApplicationEvent(MyEvent event) {
+// 处理事件
+}
+}<br><br><br>
+<br>过滤器链：按 @Order 从小到大执行，返回时逆序。
+<br>拦截器链：
+
+<br>preHandle() 按声明顺序执行。
+<br>postHandle() 和 afterCompletion() 逆序执行（源码中 applyPostHandle 反向遍历拦截器数组）。
+
+
+<br><br><br><br>选择建议：<br>
+<br>非 Spring 项目优先使用过滤器。
+<br>需要操作 Spring Bean 或细粒度控制时使用拦截器。
+<br>监听器用于初始化资源或跟踪全局状态。
+]]></description><link>BigSea\后端\java\过滤器、拦截器、监听器对比与使用笔记.html</link><guid isPermaLink="false">BigSea/后端/java/过滤器、拦截器、监听器对比与使用笔记.md</guid><pubDate>Mon, 09 Jun 2025 02:23:07 GMT</pubDate></item><item><title><![CDATA[函数式接口与_Lambda_表达式详细教程]]></title><description><![CDATA[ 
+ <br><br>定义：<br>
+函数式接口是 有且只有一个抽象方法 的接口（可以有默认方法、静态方法或 Object 类中的方法）。Java 8 中通过 @FunctionalInterface 注解显式标识，编译器会强制检查其合法性。<br><br><br>Java 8 在 java.util.function 包中提供了以下核心接口：<br><br><br><br>@FunctionalInterface
+interface StringProcessor {
+    String process(String input);
+    
+    // 允许默认方法
+    default void log() {
+        System.out.println("Processing string");
+    }
+}
+<br><br><br>定义：<br>
+Lambda 是匿名函数，用于简洁地实现函数式接口的抽象方法。语法如下：<br>
+(参数列表) -&gt; { 方法体 }<br><br><br>// 无参
+Runnable task = () -&gt; System.out.println("Hello!");
+
+// 单参数（可省略括号）
+Consumer&lt;String&gt; print = s -&gt; System.out.println(s);
+
+// 多参数
+Comparator&lt;Integer&gt; comp = (a, b) -&gt; a.compareTo(b);
+
+// 复杂逻辑（使用代码块）
+Function&lt;Integer, Integer&gt; square = x -&gt; {
+    int result = x * x;
+    return result;
+};
+<br><br><br>传统写法：  <br>new Thread(new Runnable() {
+    @Override
+    public void run() {
+        System.out.println("Old way");
+    }
+}).start();
+<br>Lambda 简化：  <br>new Thread(() -&gt; System.out.println("Lambda way")).start();
+<br><br><br>Lambda 的简写形式，语法为 类名/对象::方法名。<br><br>// 静态方法
+Function&lt;String, Integer&gt; parser = Integer::parseInt;
+
+// 实例方法
+List&lt;String&gt; list = Arrays.asList("a", "b", "c");
+list.forEach(System.out::println);
+
+// 特定对象的实例方法
+String str = "Hello";
+Supplier&lt;String&gt; supplier = str::toUpperCase;
+
+// 构造器引用
+Supplier&lt;List&lt;String&gt;&gt; listSupplier = ArrayList::new;
+<br><br><br><br>List&lt;String&gt; names = Arrays.asList("Alice", "Bob", "Charlie");
+names.stream()
+     .filter(name -&gt; name.startsWith("A")) // Predicate
+     .map(String::toUpperCase)             // Function
+     .forEach(System.out::println);        // Consumer
+<br><br>Predicate&lt;Integer&gt; isEven = num -&gt; num % 2 == 0;
+List&lt;Integer&gt; numbers = Arrays.asList(1, 2, 3, 4);
+List&lt;Integer&gt; evens = numbers.stream().filter(isEven).toList();
+<br><br>new Thread(() -&gt; {
+    // 执行耗时操作
+    System.out.println("Running in background");
+}).start();
+<br><br><br>Lambda 可访问外层作用域的变量，但要求变量是 final 或等效 final（未被修改）。<br>int count = 0; // 等效 final
+Runnable counter = () -&gt; {
+    System.out.println(count); // ✅ 允许访问
+    // count++; ❌ 错误，不能修改
+};
+<br><br><br>
+<br>函数式接口必须有且仅有一个抽象方法。
+<br>@FunctionalInterface 注解非强制，但建议添加以保证接口规范。
+<br>Lambda 表达式无法独立存在，必须依附于函数式接口。
+<br><br><br>import java.util.function.Function;
+
+public class Demo {
+    public static void main(String[] args) {
+        // 自定义函数式接口
+        StringProcessor processor = s -&gt; s + " processed";
+        System.out.println(processor.process("Data")); // 输出: Data processed
+
+        // 使用内置 Function
+        Function&lt;String, Integer&gt; lengthGetter = String::length;
+        System.out.println(lengthGetter.apply("Hello")); // 输出: 5
+    }
+}
+
+@FunctionalInterface
+interface StringProcessor {
+    String process(String input);
+}
+<br>通过结合函数式接口和 Lambda，Java 实现了更简洁的函数式编程能力，极大提升了代码可读性和开发效率。<br><br><br>]]></description><link>BigSea\后端\java\函数式接口与_Lambda_表达式详细教程.html</link><guid isPermaLink="false">BigSea/后端/java/函数式接口与_Lambda_表达式详细教程.md</guid><pubDate>Mon, 09 Jun 2025 01:44:13 GMT</pubDate></item><item><title><![CDATA[全局异常处理执行顺序]]></title><description><![CDATA[ 
+ <br><a data-tooltip-position="top" aria-label="https://stackoverflow.com/questions/19498378" rel="noopener nofollow" class="external-link" href="https://stackoverflow.com/questions/19498378" target="_blank">Just a moment...</a>]]></description><link>BigSea\后端\java\全局异常处理执行顺序.html</link><guid isPermaLink="false">BigSea/后端/java/全局异常处理执行顺序.md</guid><pubDate>Mon, 09 Jun 2025 01:38:26 GMT</pubDate></item><item><title><![CDATA[锁]]></title><description><![CDATA[ 
+ <br><br>
+偏向锁使用了一种等到竞争出现才释放锁的机制。一个线程访问同步块并获取锁时，会在对象头和栈帧中的锁记录里存储锁偏向的线程ID，以后该线程在进入和退出同步块时不需要进行CAS操作来加锁和解锁，只需简单地测试一下对象头的Mark Word里是否存储着指向当前线程的偏向锁。如果测试成功，表示线程已经获得了锁。如果测试失败，则需要再测试一下Mark Word中偏向锁的标识是否设置成1（表示当前是偏向锁）：如果没有设置，则使用CAS竞争锁；如果设置了，则尝试使用CAS将对象头的偏向锁指向当前线程。
+<br><br>
+线程在执行同步块之前，JVM会先在当前线程的栈桢中创建用于存储锁记录的空间，并将对象头中的Mark Word复制到锁记录中，官方称为Displaced Mark Word。然后线程尝试使用CAS将对象头中的Mark Word替换为指向锁记录的指针。如果成功，当前线程获得锁，如果失败，表示其他线程竞争锁，当前线程便尝试使用自旋来获取锁。
+<br><img alt="画板" src="https://cdn.nlark.com/yuque/0/2025/jpeg/39031477/1747807835892-da811478-355e-4a62-8dbb-2d73c78c005c.jpeg" referrerpolicy="no-referrer"><br><br><br>使用处理器提供的一个LOCK＃信号，当一个处理器在总线上输出此信号时，其他处理器的请求将被阻塞住，那么该处理器可以独占共享内存。<br><br>指内存区域如果被缓存在处理器的缓存行中，并且在Lock操作期间被锁定，那么当它执行锁操作回写到内存时，处理器不在总线上声言LOCK＃信号，而是修改内部的内存地址，并允许它的缓存一致性机制来保证操作的原子性，因为缓存一致性机制会阻止同时修改由两个以上处理器缓存的内存区域数据，当其他处理器回写已被锁定的缓存行的数据时，会使缓存行无效<br><br>第一种情况是：当操作的数据不能被缓存在处理器内部，或操作的数据跨多个缓存行（cache line）时，则处理器会调用总线锁定。<br>第二种情况是：有些处理器不支持缓存锁定。对于Intel 486和Pentium处理器，就算锁定的内存区域在处理器的缓存行中也会调用总线锁定。<br><br><br><br>run是runable的普通方法<br>start用来创建线程的<br><br>1、latch.countDown();	latch减1<br>2、latch.await();	等到latch减到0，继续后续代码<br><a data-tooltip-position="top" aria-label="https://gitee.com/clearpp/multiDatabase/blob/master/learn/src/main/java/com/example/learn/thread/CountDownLatchTest.java" rel="noopener nofollow" class="external-link" href="https://gitee.com/clearpp/multiDatabase/blob/master/learn/src/main/java/com/example/learn/thread/CountDownLatchTest.java" target="_blank">CountDownLatchTest.java案例</a><br><br>Java虚拟机中不存在非Daemon线程的时候，Java虚拟机将会退出<br>
+Java虚拟机退出时Daemon线程中的finally块并不一定会执行。main线程（非Daemon线程）在启动了线程DaemonRunner之后随着main方法执行完毕而终止，而此时Java虚拟机中已经没有非Daemon线程，虚拟机需要退出。Java虚拟机中的所有Daemon线程都需要立即终止，因此DaemonRunner立即终止，但是DaemonRunner中的finally块并没有执行。
+<br><br>
+<br>程序终止或 JVM 崩溃
+<br>守护线程中的finally
+<br>系统崩溃
+<br><br>
+<br>主动打断的是true
+<br>睡眠等终结状态，哪怕打断也是false
+<br><br>
+<br>Thread.sleep(5000);		需要try..catch
+<br>TimeUnit.SECONDS.sleep(5);	需要try..catch
+<br>ThreadUtil.sleep(5, TimeUnit.SECONDS);	hutool工具包
+<br>手动释放
+
+<br>**&lt;font style="color:rgba(0, 0, 0, 0.9);background-color:rgb(252, 252, 252);"&gt;Object.wait/notify&lt;/font&gt;**	
+<br>**&lt;font style="color:rgba(0, 0, 0, 0.9);background-color:rgb(252, 252, 252);"&gt;Condition.await/signal&lt;/font&gt;**
+<br>**&lt;font style="color:rgba(0, 0, 0, 0.9);background-color:rgb(252, 252, 252);"&gt;LockSupport.park/unpark&lt;/font&gt;**
+
+
+<br>
+&lt;font style="color:rgba(0, 0, 0, 0.9);background-color:rgb(252, 252, 252);"&gt;wait&lt;/font&gt;和&lt;font style="color:rgba(0, 0, 0, 0.9);background-color:rgb(252, 252, 252);"&gt;Condition.await&lt;/font&gt;会释放锁
+<br><br>]]></description><link>BigSea\后端\java\锁.html</link><guid isPermaLink="false">BigSea/后端/java/锁.md</guid><pubDate>Mon, 09 Jun 2025 01:38:26 GMT</pubDate><enclosure url="https://cdn.nlark.com/yuque/0/2025/jpeg/39031477/1747807835892-da811478-355e-4a62-8dbb-2d73c78c005c.jpeg" length="0" type="image/jpeg"/><content:encoded>&lt;figure&gt;&lt;img src="https://cdn.nlark.com/yuque/0/2025/jpeg/39031477/1747807835892-da811478-355e-4a62-8dbb-2d73c78c005c.jpeg"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[线程共享和线程安全]]></title><description><![CDATA[ 
+ <br>1、共享：synchronized<br>见到的使用方式<br>
+//当现场进入这块代码时，锁定整个DriverManager类，确保同一时间只有一个线程执行同步代码块
+synchronized (DriverManager.class){
+    if(callerCl=null){
+        callerCl = Thread.currentThread().getContextClassLoader();
+    
+    }
+}
+<br>2、线程间独立：<br>//ThreadLocal对每个线程独立
+//（也可能存在线程安全问题，因为线程池会复用,如果不释放资源就会有线程安全问题
+// 解决方案：使用完后及时清除）
+private static final ThreadLocal&lt;String&gt; contextHolder = new ThreadLocal&lt;&gt;();
+]]></description><link>BigSea\后端\java\线程共享和线程安全.html</link><guid isPermaLink="false">BigSea/后端/java/线程共享和线程安全.md</guid><pubDate>Mon, 09 Jun 2025 01:38:26 GMT</pubDate></item><item><title><![CDATA[CompletableFuture]]></title><description><![CDATA[ 
+ <br><br><br><br>
+<br>作用：get () 方法会阻塞当前线程，直到 CompletableFuture 完成并返回结果。
+<br>异常：get () 方法会抛出 InterruptedException 和 ExecutionException，因此需要处理这些异常。
+<br>使用场景：当你需要等待异步任务完成并获取结果时使用。
+<br><br>
+<br>作用：join () 方法也会阻塞当前线程，直到 CompletableFuture 完成并返回结果。
+<br>异常：join () 方法会抛出 CompletionException，这是 RuntimeException 的子类，因此不需要显式捕获。
+<br>使用场景：当你需要等待异步任务完成并获取结果时使用，且不需要处理受检异常。
+<br><br><br><br><br>
+<br>作用：thenApply 用于对前一个 CompletableFuture 的结果进行处理，并返回一个新的结果。
+<br>返回值：返回一个新的 CompletableFuture，其结果是 thenApply 中函数的返回值。
+<br>使用场景：当你需要对前一个任务的结果进行处理并生成一个新的结果时使用。
+<br><br>
+<br>作用：thenAccept 用于对前一个 CompletableFuture 的结果进行处理，但不返回新的结果。
+<br>返回值：返回一个新的 CompletableFuture&lt;Void&gt;，表示没有结果。
+<br>用场景：当你需要对前一个任务的结果进行处理但不需要生成新的结果时使用
+<br><br><br><br>
+<br>作用：thenApplyAsync 用于对前一个 CompletableFuture 的结果进行处理，并返回一个新的结果。
+<br>线程：thenApplyAsync 中的处理任务会在一个不同的线程中执行（通常是 ForkJoinPool.CommonPool () 中的一个线程）。
+<br>返回值：返回一个新的 CompletableFuture，其结果是 thenApplyAsync 中函数的返回值。
+<br>使用场景：当你希望在不同的线程中处理前一个任务的结果时使用。
+<br><br><br><br><br>1、原因：链式执行实际是串行执行<br>2、解决方式：分别创建，并行执行<br><br>java<br>java<br>javaLong l = System.CurrentTimeMillis ();
+CompletableFuture&lt;String&gt; tokenFuture = CompletableFuture.SupplyAsync (() -&gt; {
+    System.Out.Println ("future 1: 第   " + (new Date (). GetTime () - l) + "  毫秒：" + Thread.CurrentThread (). GetName ());
+    Try {
+        TimeUnit.SECONDS.Sleep (1);
+    } catch (InterruptedException e) {
+        e.printStackTrace ();
+    }
+    Return "ABC";
+});
+CompletableFuture&lt;String&gt; signFuture = CompletableFuture.SupplyAsync (() -&gt; {
+    System.Out.Println ("future 2: 第   " + (new Date (). GetTime () - l) + "  毫秒：" + Thread.CurrentThread (). GetName ());
+    Try {
+        TimeUnit.SECONDS.Sleep (1);
+    } catch (InterruptedException e) {
+        e.printStackTrace ();
+    }
+    Return "DEF";
+});
+//future 2 和 future 1 并行随机,      future 3 在并行之后执行
+CompletableFuture.AllOf (tokenFuture, signFuture). ThenApplyAsync (x -&gt; {
+    System.Out.Println ("future 3: 第 " + (new Date (). GetTime () - l) + " 毫秒：" + Thread.CurrentThread (). GetName ());
+    System.Out.Println (tokenFuture);
+    System.Out.Println (signFuture);
+    Return "XYZ";
+});
+//future 2 和 future 1 并行随机
+List&lt;CompletableFuture&lt;String&gt;&gt; completableFutureList = new ArrayList&lt;&gt;();
+CompletableFutureList.Add (tokenFuture);
+CompletableFutureList.Add (signFuture);
+CompletableFuture.AllOf (
+        CompletableFutureList.ToArray (new CompletableFuture[]{})). ThenApplyAsync (x -&gt; {
+    Return completableFutureList.Stream (). Map (future -&gt; {
+        Try {
+            Return future.Get ();//获取执行结果
+        } catch (InterruptedException e) {
+            Throw new RuntimeException (e);
+        } catch (ExecutionException e) {
+            Throw new RuntimeException (e);
+        }
+
+    });
+});
+<br><br><br><br>计数器，为0时latch.await结束等待<br><br>线程，join会等待，run普通方法顺序执行，start开启线程异步执行]]></description><link>BigSea\后端\java\异步.html</link><guid isPermaLink="false">BigSea/后端/java/异步.md</guid><pubDate>Thu, 17 Jul 2025 02:32:20 GMT</pubDate></item><item><title><![CDATA[阅览记录]]></title><description><![CDATA[ 
+ <br>1、反射的概念、用法、实践<br><a data-tooltip-position="top" aria-label="https://cloud.tencent.com/developer/article/2454533" rel="noopener nofollow" class="external-link" href="https://cloud.tencent.com/developer/article/2454533" target="_blank">深入探讨Java反射：Reflect的使用详解-腾讯云开发者社区-腾讯云</a><br>使用场景：<br>1、数据库连接<br>2、spring依赖注入<br>3、动态代理，如aop<br>4、扫描注解<br>jmx<br>1、启动配置项追加，jmx服务器地址、端口等,（需要认证用户及密码文件路径，不需要则不用配置）<br>2、netstat -an | grep JMX_PORT	<br>xxl-job<br><br>为什么pojo类布尔类型不要用iS开头<br>Spring boot可以同时处理多少条请求<br>一亿数字基于1m内存排序并输出<br>jvm有哪些执行引擎<br>synchronizer的实现原理<br>kafka消息积压怎么处理<br>使用消息队列还是线程池异步处理<br>将对象给spring容器管理的几种方式<br><br>nacos是什么，和eureka有什么区别？核心原理是什么<br><br>netstat |findstr ano 23008<br>2025-07-11
+1、<br>Discovery:
+        Locator:
+          enabled: true #开启从注册中心动态创建路由的功能 ，利用微服务名进行路由
+<br>2、全局过滤器怎么配置、局部过滤器怎么配置<br>多技术笔记：
+<a data-tooltip-position="top" aria-label="https://www.lumin.tech/posts/" rel="noopener nofollow" class="external-link" href="https://www.lumin.tech/posts/" target="_blank">Posts // 圆方 (lumin.tech)</a>]]></description><link>BigSea\后端\java\阅览记录.html</link><guid isPermaLink="false">BigSea/后端/java/阅览记录.md</guid><pubDate>Fri, 11 Jul 2025 07:26:18 GMT</pubDate></item><item><title><![CDATA[指定jar启动类]]></title><description><![CDATA[ 
+ ]]></description><link>BigSea\后端\java\指定jar启动类.html</link><guid isPermaLink="false">BigSea/后端/java/指定jar启动类.md</guid><pubDate>Mon, 09 Jun 2025 01:38:26 GMT</pubDate></item><item><title><![CDATA[ascii表（windows特殊字符不展示）]]></title><description><![CDATA[ 
+ <br><br>atl + 小键盘数字键的“十进制编号”<br>Unicode<br><br><a data-tooltip-position="top" aria-label="https://www.jyshare.com/front-end/6318/" rel="noopener nofollow" class="external-link" href="https://www.jyshare.com/front-end/6318/" target="_blank">ASCII 表 | 菜鸟工具</a> 或 <a data-tooltip-position="top" aria-label="https://c.biancheng.net/c/ascii/" rel="noopener nofollow" class="external-link" href="https://c.biancheng.net/c/ascii/" target="_blank">ASCII码对照表，ASCII码一览表（非常详细） - C语言中文网</a><br><a data-href="Linux 根据ascii 分隔符查看指定列" href="BigSea\后端\linux\Linux 根据ascii 分隔符查看指定列.html" class="internal-link" target="_self" rel="noopener nofollow">Linux 根据ascii 分隔符查看指定列</a>]]></description><link>BigSea\后端\java\ascii表（windows特殊字符不展示）.html</link><guid isPermaLink="false">BigSea/后端/java/ascii表（windows特殊字符不展示）.md</guid><pubDate>Tue, 15 Jul 2025 09:58:18 GMT</pubDate></item><item><title><![CDATA[bat，纯后台运行]]></title><description><![CDATA[ 
+ <br>用powershell ]]></description><link>BigSea\后端\java\bat，纯后台运行.html</link><guid isPermaLink="false">BigSea/后端/java/bat，纯后台运行.md</guid><pubDate>Mon, 09 Jun 2025 01:38:26 GMT</pubDate></item><item><title><![CDATA[1<strong><font style="color:rgba(0, 0, 0, 0.9);background-color:rgb(252, 252, 252);">十进制小数无法精确表示为二进制浮点数</font></strong>]]></title><description><![CDATA[ 
+ <br><br>
+<br>根本原因：double 基于 IEEE 754 双精度浮点数标准，使用二进制存储。许多常见的十进制小数（如 0.1、0.2）在二进制中是无限循环小数，无法用有限的 52 位尾数精确表示。double
+<br>安全范围：当字符串表示的整数绝对值 ≤ 2⁵³（即 9007199254740992） 时，double 可以精确表示。
+<br>超出范围：若字符串整数超过 ±2⁵³，转换为 double 时会丢失精度（无法精确存储每一位数字）。
+<br><br>String safeIntStr = "9007199254740992"; // 2⁵³
+double d = Double.parseDouble(safeIntStr);
+System.out.println(d); // 输出 9007199254740992.0（精确）
+<br><br>String unsafeIntStr = "9007199254740993"; // 2⁵³ + 1
+double d = Double.parseDouble(unsafeIntStr);
+System.out.println(d); // 输出 9007199254740992.0（末尾的 3 丢失）
+<br><br><br>
+<br>double 的 52 位尾数 只能唯一表示最多 2⁵³ + 1 个连续整数。超过此范围后，相邻两个 double 值的间隔超过 1，导致无法区分相邻整数。
+<br>例如：9007199254740993 和 9007199254740994 转换为 double 后可能存储为同一个值。
+<br><br><br><br><br>
+<br>字符串整数转** **double** **是否会丢精度？
+
+<br>否：当整数绝对值 ≤ 2⁵³（如 "9007199254740992"）。
+<br>是：当整数绝对值 &gt; 2⁵³（如 "9007199254740993"）。
+
+
+<br>关键建议：若需处理超大整数，优先使用 BigInteger 或 BigDecimal，避免使用浮点数。
+<br><br>
+<br>原因：double 最多能表示 15~17 位有效数字，超出的部分会被截断或舍入。
+<br><br>
+<br>原因：double 的指数范围为 -1022 到 1023，超出此范围的值会溢出为 ±Infinity 或下溢为 0.0。
+<br><br>]]></description><link>BigSea\后端\java\double丢失精度.html</link><guid isPermaLink="false">BigSea/后端/java/double丢失精度.md</guid><pubDate>Wed, 11 Jun 2025 12:36:35 GMT</pubDate></item><item><title><![CDATA[dubbo，本地测试运行]]></title><description><![CDATA[ 
+ <br><a data-tooltip-position="top" aria-label="https://blog.csdn.net/qq_21187515/article/details/110086746" rel="noopener nofollow" class="external-link" href="https://blog.csdn.net/qq_21187515/article/details/110086746" target="_blank">springboot项目dubbo禁止本地服务向zk、nacos注册中心注册并且能调测试环境的dubbo服务_dubbo.registry.register-CSDN博客</a><br>2、20250307，我成功了<br> <img src="https://cdn.nlark.com/yuque/0/2025/jpeg/39031477/1741334135637-c3f5bec8-85f7-4302-bde2-61a111c336ce.jpeg" referrerpolicy="no-referrer">]]></description><link>BigSea\后端\java\dubbo，本地测试运行.html</link><guid isPermaLink="false">BigSea/后端/java/dubbo，本地测试运行.md</guid><pubDate>Mon, 09 Jun 2025 01:38:26 GMT</pubDate><enclosure url="https://cdn.nlark.com/yuque/0/2025/jpeg/39031477/1741334135637-c3f5bec8-85f7-4302-bde2-61a111c336ce.jpeg" length="0" type="image/jpeg"/><content:encoded>&lt;figure&gt;&lt;img src="https://cdn.nlark.com/yuque/0/2025/jpeg/39031477/1741334135637-c3f5bec8-85f7-4302-bde2-61a111c336ce.jpeg"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[Gradle_build]]></title><description><![CDATA[ 
+ <br><br><br>
+<br>定位到Project根目录下的.idea文件夹。
+<br>在该文件夹中找到modules.xml和所有与Gradle有关的XML文件（例如gradle.xml）。
+<br>删除这些文件以移除IDEA对Gradle项目的记忆。
+<br>刷新Maven项目即可。
+<br><img src="https://cdn.nlark.com/yuque/0/2025/png/39031477/1747964290135-ef7eec43-9e0a-4f31-9b7d-a79bed72a62f.png" referrerpolicy="no-referrer">]]></description><link>BigSea\后端\java\Gradle_build.html</link><guid isPermaLink="false">BigSea/后端/java/Gradle_build.md</guid><pubDate>Mon, 09 Jun 2025 01:38:26 GMT</pubDate><enclosure url="https://cdn.nlark.com/yuque/0/2025/png/39031477/1747964280966-0fa005b5-a5a1-4836-9d52-c498a8b6e9fe.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src="https://cdn.nlark.com/yuque/0/2025/png/39031477/1747964280966-0fa005b5-a5a1-4836-9d52-c498a8b6e9fe.png"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[groovy]]></title><description><![CDATA[ 
+ <br>在 Groovy 中，{ ... } 代表的是闭包。这意味着你不可以像下面这样创建数组字面量：<br>int[] array = { 1, 2, 3}
+<br>正确的创建方法像下面这样：<br>int[] array = [1,2,3]
+<br>groovy和java区别<br><a data-tooltip-position="top" aria-label="https://blog.csdn.net/qq_26886929/article/details/86615237" rel="noopener nofollow" class="external-link" href="https://blog.csdn.net/qq_26886929/article/details/86615237" target="_blank">Groovy 与 Java 的区别_groovy和java的区别-CSDN博客</a>]]></description><link>BigSea\后端\java\groovy.html</link><guid isPermaLink="false">BigSea/后端/java/groovy.md</guid><pubDate>Mon, 09 Jun 2025 01:38:26 GMT</pubDate></item><item><title><![CDATA[mybatis查看sql]]></title><description><![CDATA[ 
+ <br>SimpleExecutor	-&gt; doQuery	-&gt;	stmt变量]]></description><link>BigSea\后端\java\mybatis查看sql.html</link><guid isPermaLink="false">BigSea/后端/java/mybatis查看sql.md</guid><pubDate>Mon, 09 Jun 2025 01:38:26 GMT</pubDate></item><item><title><![CDATA[mybatis数据库]]></title><description><![CDATA[ 
+ <br>1、连接多数据库<br><a data-tooltip-position="top" aria-label="https://gitee.com/clearpp/multiDatabase.git" rel="noopener nofollow" class="external-link" href="https://gitee.com/clearpp/multiDatabase.git" target="_blank">空白/mybatis多数据连接</a><br>2、多数据库连接druid<br>3、druid详解<br><a data-tooltip-position="top" aria-label="https://www.cnblogs.com/ivictor/p/18776392" rel="noopener nofollow" class="external-link" href="https://www.cnblogs.com/ivictor/p/18776392" target="_blank"><font style="color:rgb(7, 93, 179);background-color:rgb(254, 254, 242);"></font></a>深入解析 Druid 连接池：连接有效性检测与 Keep-Alive 机制<br><br>
+]]></description><link>BigSea\后端\java\mybatis数据库.html</link><guid isPermaLink="false">BigSea/后端/java/mybatis数据库.md</guid><pubDate>Mon, 09 Jun 2025 01:38:26 GMT</pubDate></item><item><title><![CDATA[一、tk-mybatis]]></title><description><![CDATA[ 
+ <br><br>1、使用<br>]]></description><link>BigSea\后端\java\mybatisplus___TkMybatis___Hibernate___JPA.html</link><guid isPermaLink="false">BigSea/后端/java/mybatisplus___TkMybatis___Hibernate___JPA.md</guid><pubDate>Mon, 09 Jun 2025 01:38:26 GMT</pubDate></item><item><title><![CDATA[splict陷阱]]></title><description><![CDATA[ 
+ <br>1、<br>String str = "|||||||||";
+String[] split = str.split("\\|");//limit默认=0，split按
+]]></description><link>BigSea\后端\java\splict陷阱.html</link><guid isPermaLink="false">BigSea/后端/java/splict陷阱.md</guid><pubDate>Mon, 09 Jun 2025 01:38:26 GMT</pubDate></item><item><title><![CDATA[springboot接口传参]]></title><description><![CDATA[ 
+ <br><br><br>@RequestParam("id") Integer id
+@RequestParam String[] name
+@RequestParam List name
+@RequestParam("myFile") MultipartFile file
+<br>1、String[],get可以，post可以<br>2、List，get可以，post可以<br><br>@RequestBody User user
+@RequestBody Map userMap
+@RequestBody JSONObject jsonObject
+@RequestBody String jsonStr
+<br>1、String[] ,post可以<br>2、List,	post不可以	必须指定类型<br>3、List&lt;类型&gt;	post可以  <br><br> User user
+<br><br>@RequestHeader String token,@RequestHeader String uui
+<br><br>HttpServletRequest request
+    Stringid= request.getParameter("id");//方式1
+
+    Map&lt;String, String[]&gt; parameterMap = request.getParameterMap();//方式2
+    String[] ids = parameterMap.get("id");
+
+    BufferedReader reader = new BufferedReader(//方式3
+        new InputStreamReader(request.getInputStream()));
+    String str = "";
+    String wholeStr = "";
+    //一行一行的读取body体里面的内容
+    while((str = reader.readLine()) != null){
+        wholeStr += str;
+    }
+    //转化成JSONObject
+    JSONObject jsonObject=JSONObject.parseObject(wholeStr);
+    Integer id =  jsonObject.getInteger("id");
+<br><a data-tooltip-position="top" aria-label="https://blog.csdn.net/qq_35387940/article/details/100151992" rel="noopener nofollow" class="external-link" href="https://blog.csdn.net/qq_35387940/article/details/100151992" target="_blank">Springboot 最细节全面的接口传参接参介绍，总有你喜欢的一种方式_srpingboot getmapping传值-CSDN博客</a>]]></description><link>BigSea\后端\java\springboot接口传参.html</link><guid isPermaLink="false">BigSea/后端/java/springboot接口传参.md</guid><pubDate>Wed, 02 Jul 2025 01:53:01 GMT</pubDate></item><item><title><![CDATA[springboot启动时执行代码]]></title><description><![CDATA[ 
+ <br><br>自定义类实现 `ApplicationListener&lt;ContextRefreshedEvent&gt;`，重写onApplicationEvent 方法。
+<br>在 Spring Boot 应用启动时自动执行 HTTP 请求（例如调用外部接口、初始化数据或预加载资源），可以通过利用 Spring 的​​生命周期回调机制​​实现。以下是具体实现方式和场景说明：<br><br>Spring Boot 提供了多种组件生命周期回调接口或注解，可在应用启动的不同阶段触发代码执行。针对“启动时执行 HTTP 请求”的需求，常用以下方案：<br><br>这两个接口的作用是在 ​​Spring 应用上下文完全初始化后、主线程结束前​​ 执行代码（此时嵌入式 Servlet 容器已启动）。适合需要在应用启动完成后立即执行的场景（如调用外部服务初始化数据）。<br><br>
+<br>​​步骤 1​​：定义一个 Bean 实现&nbsp;CommandLineRunner&nbsp;或&nbsp;ApplicationRunner。
+<br>​​步骤 2​​：在&nbsp;run&nbsp;方法中编写 HTTP 请求逻辑（使用&nbsp;RestTemplate、WebClient&nbsp;等客户端）。
+<br>​​步骤 3​​：通过&nbsp;@Order&nbsp;注解指定执行顺序（多个 Bean 时生效）。
+<br>​​示例代码（使用&nbsp;CommandLineRunner）：​​<br>import org.springframework.context.ApplicationListener;
+import org.springframework.context.event.ContextRefreshedEvent;
+import org.springframework.stereotype.Component;
+import org.springframework.web.client.RestTemplate;
+
+@Component
+public class ContextRefreshedListener implements ApplicationListener&lt;ContextRefreshedEvent&gt; {
+
+    private final RestTemplate restTemplate;
+
+    public ContextRefreshedListener(RestTemplate restTemplate) {
+        this.restTemplate = restTemplate;
+    }
+
+    @Override
+    public void onApplicationEvent(ContextRefreshedEvent event) {
+        // 注意：避免在 Root ApplicationContext 时重复执行（可能触发多次）
+        if (event.getApplicationContext().getParent() == null) {
+            String url = "https://api.example.com/init";
+            String response = restTemplate.getForObject(url, String.class);
+            System.out.println("上下文刷新完成，执行 HTTP 请求结果：" + response);
+        }
+    }
+}
+<br>​​关键说明：​​<br>
+<br>CommandLineRunner&nbsp;的&nbsp;run&nbsp;方法参数是&nbsp;String[] args（可获取启动命令行参数）。
+<br>ApplicationRunner&nbsp;的&nbsp;run&nbsp;方法参数是&nbsp;ApplicationArguments（支持更灵活的参数解析，如&nbsp;--key=value）。
+<br><br>此方式监听 Spring 上下文刷新完成的事件（ContextRefreshedEvent），在 ​​整个应用上下文初始化完成后​​ 触发（早于&nbsp;CommandLineRunner，但此时 Servlet 容器可能尚未完全启动）。<br><br>
+<br>​​步骤 1​​：定义一个 Bean 实现&nbsp;ApplicationListener&lt;ContextRefreshedEvent&gt;。
+<br>​​步骤 2​​：在&nbsp;onApplicationEvent&nbsp;方法中编写 HTTP 请求逻辑。
+<br>​​示例代码：​​
+<br>import org.springframework.stereotype.Component;
+import javax.annotation.PostConstruct;
+import org.springframework.web.client.RestTemplate;
+
+@Component
+public class InitService {
+
+    private final RestTemplate restTemplate;
+
+    public InitService(RestTemplate restTemplate) {
+        this.restTemplate = restTemplate;
+    }
+
+    @PostConstruct
+    public void init() {
+        String url = "https://api.example.com/init-config";
+        String config = restTemplate.getForObject(url, String.class);
+        System.out.println("Bean 初始化时加载配置：" + config);
+    }
+}
+<br>​​注意事项：​​<br>
+<br>ContextRefreshedEvent&nbsp;可能在父子上下文中多次触发（如 Spring Boot 的&nbsp;DispatcherServlet&nbsp;上下文），需通过&nbsp;getParent() == null&nbsp;过滤根上下文。
+<br><br>@PostConstruct&nbsp;注解标记的方法会在 ​​Bean 初始化完成后立即执行​​（早于&nbsp;CommandLineRunner&nbsp;和上下文刷新事件）。适合在单个 Bean 初始化时触发关联的 HTTP 请求（如初始化某个服务前调用外部配置）。<br><br>
+<br>​​步骤 1​​：在 Bean 的方法上添加&nbsp;@PostConstruct&nbsp;注解。
+<br>​​步骤 2​​：在方法中编写 HTTP 请求逻辑。
+<br>​​示例代码：​​<br>import org.springframework.stereotype.Component;
+import javax.annotation.PostConstruct;
+import org.springframework.web.client.RestTemplate;
+
+@Component
+public class InitService {
+
+    private final RestTemplate restTemplate;
+
+    public InitService(RestTemplate restTemplate) {
+        this.restTemplate = restTemplate;
+    }
+
+    @PostConstruct
+    public void init() {
+        String url = "https://api.example.com/init-config";
+        String config = restTemplate.getForObject(url, String.class);
+        System.out.println("Bean 初始化时加载配置：" + config);
+    }
+}
+<br>​​注意：​​<br>
+<br>@PostConstruct&nbsp;属于 JSR-250 规范，需确保类路径包含&nbsp;javax.annotation-api（Spring Boot 已默认引入）。
+<br>执行时机早于&nbsp;CommandLineRunner，适合 Bean 自身的初始化依赖外部数据。
+<br><br>Spring Boot 推荐使用以下客户端发送 HTTP 请求（需添加对应依赖）：<br><br><br>import org.springframework.stereotype.Component;
+import org.springframework.web.reactive.function.client.WebClient;
+import reactor.core.publisher.Mono;
+
+@Component
+public class WebClientExample {
+
+    private final WebClient webClient;
+
+    public WebClientExample(WebClient.Builder webClientBuilder) {
+        this.webClient = webClientBuilder.baseUrl("https://api.example.com").build();
+    }
+
+    // 在 CommandLineRunner 中调用
+    public Mono&lt;String&gt; fetchData() {
+        return webClient.get()
+                .uri("/init")
+                .retrieve()
+                .bodyToMono(String.class);
+    }
+}
+<br>​​注意：​​ 使用&nbsp;WebClient&nbsp;需添加依赖：<br>&lt;dependency&gt;
+    &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+    &lt;artifactId&gt;spring-boot-starter-webflux&lt;/artifactId&gt;
+&lt;/dependency&gt;
+<br><br>
+<br>
+​​启动耗时​​：HTTP 请求可能耗时较长，若请求阻塞会导致应用启动延迟。建议：
+
+<br>对非关键请求异步执行（使用&nbsp;@Async&nbsp;注解 + 启用异步支持）。
+<br>设置超时时间（如&nbsp;RestTemplate&nbsp;的&nbsp;setConnectTimeout）。
+
+
+<br>
+​​依赖顺序​​：确保 HTTP 客户端（如&nbsp;RestTemplate）在 Spring 上下文初始化完成后可用（通过构造注入或&nbsp;@Autowired）。
+
+<br>
+​​异常处理​​：启动时的 HTTP 请求失败可能导致应用无法启动（默认行为）。可通过&nbsp;try-catch&nbsp;捕获异常并记录日志，避免阻塞启动：
+
+<br>@Override
+public void run(String... args) {
+	try {
+		// 执行 HTTP 请求
+	} catch (Exception e) {
+		System.err.println("启动时 HTTP 请求失败：" + e.getMessage());
+		// 可选：抛出异常终止启动（根据业务需求）
+		// throw new RuntimeException("初始化失败", e);
+	}
+}
+<br>
+<br>​​生产环境验证​​：在测试环境验证启动请求的稳定性，避免因外部服务不可用导致生产环境启动失败。
+<br><br>根据需求选择合适的生命周期回调方式：<br>
+<br>​​通用场景​​：优先使用&nbsp;CommandLineRunner（简单易用，支持顺序控制）。
+<br>​​Bean 初始化依赖​​：使用&nbsp;@PostConstruct（单个 Bean 内部逻辑）。
+<br>​​上下文全局事件​​：使用&nbsp;ApplicationListener&lt;ContextRefreshedEvent&gt;（需处理多上下文问题）。
+<br>结合异步执行和异常处理，可确保应用启动的稳定性和效率。]]></description><link>BigSea\后端\java\springboot启动时执行代码.html</link><guid isPermaLink="false">BigSea/后端/java/springboot启动时执行代码.md</guid><pubDate>Tue, 01 Jul 2025 06:48:14 GMT</pubDate></item><item><title><![CDATA[String.format]]></title><description><![CDATA[ 
+ <br>2、问题：
+String.Format ("%05 d"，a)，怎么补 0 的？
+String. Format ("%-5 d"，a)，后面补空格
+String. Format ("%+5 d"，a)，格式为"   +5"，3 个空格加“+”加数字（总体占 5 位）
+String.Format ("%15 d"，a)，前面补空格<br>来源:Formatter.Java - print (long)
+private void print(long value, Locale l) throws IOException {  
+  
+    StringBuilder sb = new StringBuilder();  
+    ...
+    ...
+     else if (c == Conversion.HEXADECIMAL_INTEGER) {  
+       ...
+       ...
+        //补充"0"的位置
+        if (f.contains(Flags.ZERO_PAD))  
+            for (int i = 0; i &lt; width - len; i++) sb.append('0');  
+        ...
+        ...
+        sb.append(s);  
+    }  
+  
+    // 补充""的位置justify()
+    a.append(justify(sb.toString()));  
+}
+
+private String justify(String s) {  
+    if (width == -1)  
+        return s;  
+    StringBuilder sb = new StringBuilder();  
+    //f:待插入的格式，不写时f="",0时f=0
+    boolean pad = f.contains(Flags.LEFT_JUSTIFY);  
+    int sp = width - s.length();  
+    if (!pad)  
+        for (int i = 0; i &lt; sp; i++) sb.append(' ');  
+    sb.append(s);  
+    if (pad)  
+        for (int i = 0; i &lt; sp; i++) sb.append(' ');  
+    return sb.toString();  
+}
+<br>补充 0
+<img alt="image.png" src="https://raw.githubusercontent.com/ydh1cnn6/pic/master/2025-06-27-202506271513895.png" referrerpolicy="no-referrer" style="width: 600px; max-width: 100%;"><br>补充空格：（负数：后缀；正数：前缀）
+<img alt="image.png" src="https://raw.githubusercontent.com/ydh1cnn6/pic/master/2025-06-27-202506271516687.png" referrerpolicy="no-referrer" style="width: 600px; max-width: 100%;">]]></description><link>BigSea\后端\java\String.format.html</link><guid isPermaLink="false">BigSea/后端/java/String.format.md</guid><pubDate>Thu, 17 Jul 2025 06:09:23 GMT</pubDate><enclosure url="https://raw.githubusercontent.com/ydh1cnn6/pic/master/2025-06-27-202506271513895.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src="https://raw.githubusercontent.com/ydh1cnn6/pic/master/2025-06-27-202506271513895.png"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[swagger]]></title><description><![CDATA[ 
+ <br><br> @ApiModel  注解用于实体类，表示对类进行说明，用于参数用实体类接收。<br>
+@ApiModelProperty 注解用于类中属性，表示对 model 属性的说明或者数据操作更改。<br><br>@Api 注解用于类上，表示标识这个类是 swagger 的资源。<br>
+
+@ApiOperation 注解用于方法，表示一个 http 请求的操作。<br>
+
+@ApiParam 注解用于参数上，用来标明参数信息。<br>@ApiOperationSupport(order =1)方法级别排序，数字越小越优先]]></description><link>BigSea\后端\java\swagger.html</link><guid isPermaLink="false">BigSea/后端/java/swagger.md</guid><pubDate>Mon, 09 Jun 2025 01:52:09 GMT</pubDate></item><item><title><![CDATA[无标题文档]]></title><description><![CDATA[ 
+ <br>1、JMS（java message service）结构<br>消息头<br>消息属性<br>主题内容<br>2、消费方式<br>p2p，单个消费者<br>ps，发布订阅模型，根据topic主题消费，订阅主题的都能消费<br>3、消费量级<br>10万级，高吞吐，ms级时效，可以做的0丢失，社区活跃，支持消息队列<br>4、作用<br>解耦、削峰填谷<br>5、组件<br>1）Producer<br>2）Broker<br>3）Consumer<br>6、启动<br>/home/kafka/kafka_2.12-3.9.0/bin<br>zookeeper-server-start.sh	zookeeper.properties<br>kafka-server-start.sh	 	server.properties<br>zookeeper-server-stop.sh<br>kafka-server-stop.sh<br>7、创建主题<br>kafka-topics.sh<br>$ bin/kafka-topics.sh --bootstrap-server localhost:9092 --create --topic my-topic --partitions 1 \
+  --replication-factor 1 --config max.message.bytes=64000 --config flush.messages=1
+<br>--bootstrap-server	localhost:9092			kafka服务器<br>--create --topic my-topic				创建主题<br>--partitions 1 \<br>--list 	查看主题<br>--describe	主题描述<br>--later 修改<br>--delete 删除<br>bin/kafka-console-producer.sh --topic quickstart-events --bootstrap-server localhost:9092
+]]></description><link>BigSea\后端\kafka\无标题文档.html</link><guid isPermaLink="false">BigSea/后端/kafka/无标题文档.md</guid><pubDate>Mon, 09 Jun 2025 01:38:26 GMT</pubDate></item><item><title><![CDATA[Obsidian]]></title><description><![CDATA[ 
+ <br><br>Obsidian git仓库]]></description><link>BigSea\后端\linux\查看特地程序位置.html</link><guid isPermaLink="false">BigSea/后端/linux/查看特地程序位置.md</guid><pubDate>Fri, 04 Jul 2025 02:29:39 GMT</pubDate></item><item><title><![CDATA[Obsidian]]></title><description><![CDATA[ 
+ <br><br>Obsidian git仓库]]></description><link>BigSea\后端\linux\启动Linux失败.html</link><guid isPermaLink="false">BigSea/后端/linux/启动Linux失败.md</guid><pubDate>Mon, 09 Jun 2025 01:38:26 GMT</pubDate></item><item><title><![CDATA[Obsidian]]></title><description><![CDATA[ 
+ <br><br>Obsidian git仓库]]></description><link>BigSea\后端\linux\日志.html</link><guid isPermaLink="false">BigSea/后端/linux/日志.md</guid><pubDate>Mon, 09 Jun 2025 01:38:26 GMT</pubDate></item><item><title><![CDATA[Obsidian]]></title><description><![CDATA[ 
+ <br><br>Obsidian git仓库]]></description><link>BigSea\后端\linux\使用find命令查找文件.html</link><guid isPermaLink="false">BigSea/后端/linux/使用find命令查找文件.md</guid><pubDate>Fri, 04 Jul 2025 03:05:55 GMT</pubDate></item><item><title><![CDATA[Obsidian]]></title><description><![CDATA[ 
+ <br><br>Obsidian git仓库]]></description><link>BigSea\后端\linux\压缩解压.html</link><guid isPermaLink="false">BigSea/后端/linux/压缩解压.md</guid><pubDate>Mon, 09 Jun 2025 01:38:26 GMT</pubDate></item><item><title><![CDATA[Obsidian]]></title><description><![CDATA[ 
+ <br><br>Obsidian git仓库]]></description><link>BigSea\后端\linux\dbTool_（GoldenDB提供）.html</link><guid isPermaLink="false">BigSea/后端/linux/dbTool_（GoldenDB提供）.md</guid><pubDate>Mon, 09 Jun 2025 01:38:26 GMT</pubDate></item><item><title><![CDATA[Obsidian]]></title><description><![CDATA[ 
+ <br><br>Obsidian git仓库]]></description><link>BigSea\后端\linux\Linux 根据ascii 分隔符查看指定列.html</link><guid isPermaLink="false">BigSea/后端/linux/Linux 根据ascii 分隔符查看指定列.md</guid><pubDate>Tue, 15 Jul 2025 10:01:37 GMT</pubDate></item><item><title><![CDATA[Obsidian]]></title><description><![CDATA[ 
+ <br><br>Obsidian git仓库]]></description><link>BigSea\后端\linux\linux指令.html</link><guid isPermaLink="false">BigSea/后端/linux/linux指令.md</guid><pubDate>Mon, 30 Jun 2025 06:53:18 GMT</pubDate></item><item><title><![CDATA[Obsidian]]></title><description><![CDATA[ 
+ <br><br>Obsidian git仓库]]></description><link>BigSea\后端\linux\ossutil_阿里云oss工具_.html</link><guid isPermaLink="false">BigSea/后端/linux/ossutil_阿里云oss工具_.md</guid><pubDate>Mon, 09 Jun 2025 01:38:26 GMT</pubDate></item><item><title><![CDATA[Obsidian]]></title><description><![CDATA[ 
+ <br><br>Obsidian git仓库]]></description><link>BigSea\后端\linux\shell.html</link><guid isPermaLink="false">BigSea/后端/linux/shell.md</guid><pubDate>Mon, 09 Jun 2025 01:38:26 GMT</pubDate></item><item><title><![CDATA[Obsidian]]></title><description><![CDATA[ 
+ <br><br>Obsidian git仓库]]></description><link>BigSea\后端\oracle\__的含义.html</link><guid isPermaLink="false">BigSea/后端/oracle/__的含义.md</guid><pubDate>Mon, 09 Jun 2025 01:38:26 GMT</pubDate></item><item><title><![CDATA[Obsidian]]></title><description><![CDATA[ 
+ <br><br>Obsidian git仓库]]></description><link>BigSea\后端\oracle\连接数据库.html</link><guid isPermaLink="false">BigSea/后端/oracle/连接数据库.md</guid><pubDate>Mon, 09 Jun 2025 01:38:26 GMT</pubDate></item><item><title><![CDATA[Obsidian]]></title><description><![CDATA[ 
+ <br><br>Obsidian git仓库]]></description><link>BigSea\后端\oracle\注意.html</link><guid isPermaLink="false">BigSea/后端/oracle/注意.md</guid><pubDate>Mon, 09 Jun 2025 01:38:26 GMT</pubDate></item><item><title><![CDATA[Obsidian]]></title><description><![CDATA[ 
+ <br><br>Obsidian git仓库]]></description><link>BigSea\后端\oracle\A_问题.html</link><guid isPermaLink="false">BigSea/后端/oracle/A_问题.md</guid><pubDate>Mon, 09 Jun 2025 01:38:26 GMT</pubDate></item><item><title><![CDATA[Obsidian]]></title><description><![CDATA[ 
+ <br><br>Obsidian git仓库]]></description><link>BigSea\后端\oracle\ddl、dml、dcl、dql.html</link><guid isPermaLink="false">BigSea/后端/oracle/ddl、dml、dcl、dql.md</guid><pubDate>Mon, 09 Jun 2025 01:38:26 GMT</pubDate></item><item><title><![CDATA[Obsidian]]></title><description><![CDATA[ 
+ <br><br>Obsidian git仓库]]></description><link>BigSea\后端\oracle\schema.html</link><guid isPermaLink="false">BigSea/后端/oracle/schema.md</guid><pubDate>Mon, 09 Jun 2025 01:38:26 GMT</pubDate></item><item><title><![CDATA[Obsidian]]></title><description><![CDATA[ 
+ <br><br>Obsidian git仓库]]></description><link>BigSea\后端\Redis\Resis.html</link><guid isPermaLink="false">BigSea/后端/Redis/Resis.md</guid><pubDate>Mon, 09 Jun 2025 01:38:26 GMT</pubDate></item><item><title><![CDATA[Obsidian]]></title><description><![CDATA[ 
+ <br><br>Obsidian git仓库]]></description><link>BigSea\后端\Word\Docx.html</link><guid isPermaLink="false">BigSea/后端/Word/Docx.md</guid><pubDate>Mon, 09 Jun 2025 01:38:26 GMT</pubDate></item><item><title><![CDATA[Obsidian]]></title><description><![CDATA[ 
+ <br><br>Obsidian git仓库]]></description><link>BigSea\后端\Word\lambda.html</link><guid isPermaLink="false">BigSea/后端/Word/lambda.md</guid><pubDate>Mon, 09 Jun 2025 01:38:26 GMT</pubDate></item><item><title><![CDATA[Obsidian]]></title><description><![CDATA[ 
+ <br><br>Obsidian git仓库]]></description><link>BigSea\后端\合并分支-compare新文件.html</link><guid isPermaLink="false">BigSea/后端/合并分支-compare新文件.md</guid><pubDate>Mon, 09 Jun 2025 01:38:26 GMT</pubDate></item><item><title><![CDATA[Obsidian]]></title><description><![CDATA[ 
+ <br><br>Obsidian git仓库]]></description><link>BigSea\框架\jenkins.html</link><guid isPermaLink="false">BigSea/框架/jenkins.md</guid><pubDate>Mon, 09 Jun 2025 01:38:26 GMT</pubDate></item><item><title><![CDATA[Obsidian]]></title><description><![CDATA[ 
+ <br><br>Obsidian git仓库]]></description><link>BigSea\框架\maven.html</link><guid isPermaLink="false">BigSea/框架/maven.md</guid><pubDate>Mon, 07 Jul 2025 09:59:14 GMT</pubDate></item><item><title><![CDATA[Obsidian]]></title><description><![CDATA[ 
+ <br><br>Obsidian git仓库]]></description><link>BigSea\框架\tk.Mybatis和Mybatis.html</link><guid isPermaLink="false">BigSea/框架/tk.Mybatis和Mybatis.md</guid><pubDate>Mon, 09 Jun 2025 01:38:26 GMT</pubDate></item><item><title><![CDATA[Obsidian]]></title><description><![CDATA[ 
+ <br><br>Obsidian git仓库]]></description><link>BigSea\内网穿透\1、tailscale.html</link><guid isPermaLink="false">BigSea/内网穿透/1、tailscale.md</guid><pubDate>Mon, 09 Jun 2025 01:38:26 GMT</pubDate></item><item><title><![CDATA[Obsidian]]></title><description><![CDATA[ 
+ <br><br>Obsidian git仓库]]></description><link>BigSea\内网穿透\副屏.html</link><guid isPermaLink="false">BigSea/内网穿透/副屏.md</guid><pubDate>Mon, 09 Jun 2025 01:38:26 GMT</pubDate></item><item><title><![CDATA[Obsidian]]></title><description><![CDATA[ 
+ <br><br>Obsidian git仓库]]></description><link>BigSea\前端\vscode\搜索出一堆垃圾.html</link><guid isPermaLink="false">BigSea/前端/vscode/搜索出一堆垃圾.md</guid><pubDate>Mon, 09 Jun 2025 01:38:26 GMT</pubDate></item><item><title><![CDATA[Obsidian]]></title><description><![CDATA[ 
+ <br><br>Obsidian git仓库]]></description><link>BigSea\前端\vscode\修改Terminal名称.html</link><guid isPermaLink="false">BigSea/前端/vscode/修改Terminal名称.md</guid><pubDate>Mon, 09 Jun 2025 01:38:26 GMT</pubDate></item><item><title><![CDATA[Obsidian]]></title><description><![CDATA[ 
+ <br><br>Obsidian git仓库]]></description><link>BigSea\前端\vscode\页面总是被替换.html</link><guid isPermaLink="false">BigSea/前端/vscode/页面总是被替换.md</guid><pubDate>Mon, 09 Jun 2025 01:38:26 GMT</pubDate></item><item><title><![CDATA[Obsidian]]></title><description><![CDATA[ 
+ <br><br>Obsidian git仓库]]></description><link>BigSea\前端\vue\导入静态html.html</link><guid isPermaLink="false">BigSea/前端/vue/导入静态html.md</guid><pubDate>Mon, 09 Jun 2025 01:38:26 GMT</pubDate></item><item><title><![CDATA[Obsidian]]></title><description><![CDATA[ 
+ <br><br>Obsidian git仓库]]></description><link>BigSea\前端\vue\对象遍历.html</link><guid isPermaLink="false">BigSea/前端/vue/对象遍历.md</guid><pubDate>Mon, 09 Jun 2025 01:38:26 GMT</pubDate></item><item><title><![CDATA[Obsidian]]></title><description><![CDATA[ 
+ <br><br>Obsidian git仓库]]></description><link>BigSea\前端\vue\公共路径.html</link><guid isPermaLink="false">BigSea/前端/vue/公共路径.md</guid><pubDate>Mon, 09 Jun 2025 01:38:26 GMT</pubDate></item><item><title><![CDATA[Obsidian]]></title><description><![CDATA[ 
+ <br><br>Obsidian git仓库]]></description><link>BigSea\前端\vue\路由.html</link><guid isPermaLink="false">BigSea/前端/vue/路由.md</guid><pubDate>Mon, 09 Jun 2025 01:38:26 GMT</pubDate></item><item><title><![CDATA[Obsidian]]></title><description><![CDATA[ 
+ <br><br>Obsidian git仓库]]></description><link>BigSea\前端\vue\配置多重环境.html</link><guid isPermaLink="false">BigSea/前端/vue/配置多重环境.md</guid><pubDate>Mon, 09 Jun 2025 01:38:26 GMT</pubDate></item><item><title><![CDATA[Obsidian]]></title><description><![CDATA[ 
+ <br><br>Obsidian git仓库]]></description><link>BigSea\前端\vue\配置启动端口.html</link><guid isPermaLink="false">BigSea/前端/vue/配置启动端口.md</guid><pubDate>Mon, 09 Jun 2025 01:38:26 GMT</pubDate></item><item><title><![CDATA[Obsidian]]></title><description><![CDATA[ 
+ <br><br>Obsidian git仓库]]></description><link>BigSea\前端\vue\无标题文档.html</link><guid isPermaLink="false">BigSea/前端/vue/无标题文档.md</guid><pubDate>Mon, 09 Jun 2025 01:38:26 GMT</pubDate></item><item><title><![CDATA[Obsidian]]></title><description><![CDATA[ 
+ <br><br>Obsidian git仓库]]></description><link>BigSea\前端\vue\组件通信.html</link><guid isPermaLink="false">BigSea/前端/vue/组件通信.md</guid><pubDate>Mon, 09 Jun 2025 01:38:26 GMT</pubDate></item><item><title><![CDATA[Obsidian]]></title><description><![CDATA[ 
+ <br><br>Obsidian git仓库]]></description><link>BigSea\前端\定时任务.html</link><guid isPermaLink="false">BigSea/前端/定时任务.md</guid><pubDate>Mon, 09 Jun 2025 01:38:26 GMT</pubDate></item><item><title><![CDATA[Obsidian]]></title><description><![CDATA[ 
+ <br><br>Obsidian git仓库]]></description><link>BigSea\前端\React.html</link><guid isPermaLink="false">BigSea/前端/React.md</guid><pubDate>Mon, 09 Jun 2025 02:18:42 GMT</pubDate></item><item><title><![CDATA[Obsidian]]></title><description><![CDATA[ 
+ <br><br>Obsidian git仓库]]></description><link>BigSea\前端\TypeScript.html</link><guid isPermaLink="false">BigSea/前端/TypeScript.md</guid><pubDate>Mon, 09 Jun 2025 01:38:26 GMT</pubDate></item><item><title><![CDATA[Obsidian]]></title><description><![CDATA[ 
+ <br><br>Obsidian git仓库]]></description><link>BigSea\设计模式\设计模式.html</link><guid isPermaLink="false">BigSea/设计模式/设计模式.md</guid><pubDate>Mon, 09 Jun 2025 01:38:26 GMT</pubDate></item><item><title><![CDATA[Obsidian]]></title><description><![CDATA[ 
+ <br><br>Obsidian git仓库]]></description><link>BigSea\数据库\存储过程.html</link><guid isPermaLink="false">BigSea/数据库/存储过程.md</guid><pubDate>Mon, 09 Jun 2025 01:38:26 GMT</pubDate></item><item><title><![CDATA[Obsidian]]></title><description><![CDATA[ 
+ <br><br>Obsidian git仓库]]></description><link>BigSea\数据库\读取sql列名.html</link><guid isPermaLink="false">BigSea/数据库/读取sql列名.md</guid><pubDate>Mon, 09 Jun 2025 01:38:26 GMT</pubDate></item><item><title><![CDATA[Obsidian]]></title><description><![CDATA[ 
+ <br><br>Obsidian git仓库]]></description><link>BigSea\数据库\mysql.html</link><guid isPermaLink="false">BigSea/数据库/mysql.md</guid><pubDate>Mon, 09 Jun 2025 01:38:26 GMT</pubDate></item><item><title><![CDATA[Obsidian]]></title><description><![CDATA[ 
+ <br><br>Obsidian git仓库]]></description><link>BigSea\算法\二分法.html</link><guid isPermaLink="false">BigSea/算法/二分法.md</guid><pubDate>Mon, 09 Jun 2025 01:38:26 GMT</pubDate></item><item><title><![CDATA[Obsidian]]></title><description><![CDATA[ 
+ <br><br>Obsidian git仓库]]></description><link>BigSea\问题合集\代理错误.html</link><guid isPermaLink="false">BigSea/问题合集/代理错误.md</guid><pubDate>Mon, 09 Jun 2025 01:38:26 GMT</pubDate></item><item><title><![CDATA[Obsidian]]></title><description><![CDATA[ 
+ <br><br>Obsidian git仓库]]></description><link>BigSea\问题合集\日期类型转换.html</link><guid isPermaLink="false">BigSea/问题合集/日期类型转换.md</guid><pubDate>Mon, 09 Jun 2025 01:38:26 GMT</pubDate></item><item><title><![CDATA[Obsidian]]></title><description><![CDATA[ 
+ <br><br>Obsidian git仓库]]></description><link>BigSea\问题合集\同名同包-不报错.html</link><guid isPermaLink="false">BigSea/问题合集/同名同包-不报错.md</guid><pubDate>Mon, 09 Jun 2025 01:38:26 GMT</pubDate></item><item><title><![CDATA[Obsidian]]></title><description><![CDATA[ 
+ <br><br>Obsidian git仓库]]></description><link>BigSea\问题合集\nacos注册上但是用RestTemplate报错.html</link><guid isPermaLink="false">BigSea/问题合集/nacos注册上但是用RestTemplate报错.md</guid><pubDate>Fri, 25 Jul 2025 02:42:58 GMT</pubDate></item><item><title><![CDATA[Obsidian]]></title><description><![CDATA[ 
+ <br><br>Obsidian git仓库]]></description><link>BigSea\问题合集\Oracle插入.html</link><guid isPermaLink="false">BigSea/问题合集/Oracle插入.md</guid><pubDate>Mon, 09 Jun 2025 01:38:26 GMT</pubDate></item><item><title><![CDATA[Obsidian]]></title><description><![CDATA[ 
+ <br><br>Obsidian git仓库]]></description><link>BigSea\问题合集\vue样式库导入失败.html</link><guid isPermaLink="false">BigSea/问题合集/vue样式库导入失败.md</guid><pubDate>Mon, 09 Jun 2025 01:38:26 GMT</pubDate></item><item><title><![CDATA[Obsidian]]></title><description><![CDATA[ 
+ <br><br>Obsidian git仓库]]></description><link>BigSea\政治\行政区划分（身份证模块）.html</link><guid isPermaLink="false">BigSea/政治/行政区划分（身份证模块）.md</guid><pubDate>Mon, 09 Jun 2025 01:38:26 GMT</pubDate></item><item><title><![CDATA[Obsidian]]></title><description><![CDATA[ 
+ <br><br>Obsidian git仓库]]></description><link>BigSea\windows\查看端口占用并删除.html</link><guid isPermaLink="false">BigSea/windows/查看端口占用并删除.md</guid><pubDate>Mon, 09 Jun 2025 01:38:26 GMT</pubDate></item><item><title><![CDATA[Obsidian]]></title><description><![CDATA[ 
+ <br><br>Obsidian git仓库]]></description><link>BigSea\查看信息.html</link><guid isPermaLink="false">BigSea/查看信息.md</guid><pubDate>Mon, 09 Jun 2025 01:38:26 GMT</pubDate></item></channel></rss>
