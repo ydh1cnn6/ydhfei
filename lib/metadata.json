@@ -1,11 +1,17 @@
 {
   "vaultName": "笔记",
-  "lastExport": 1753460337637,
+  "lastExport": 1753501164231,
   "pluginVersion": "1.8.01",
   "validBodyClasses": "publish css-settings-manager theme-light show-inline-title show-ribbon code-styler code-styler-style-inline code-styler-gutter-highlight AT-row",
   "useCustomHeadContent": false,
   "useCustomFavicon": false,
   "files": [
+    "笔记/梦魇城市.txt",
+    "笔记/markdown教程.md",
+    "笔记/obsidian操作手册.md",
+    "笔记/potplayer.md",
+    "谷粒商城/未命名.md",
+    "计算机网络/数据链路层.md",
     "教程/1.maven.md",
     "教程/2、mybatis课件.md",
     "教程/3、Spring课件.md",
@@ -57,6 +63,229 @@
     "教程/Untitled Diagram.svg",
     "教程/Untitled Diagram 1.svg",
     "教程/Vagrant课件.md",
+    "爬虫/0、爬虫.md",
+    "爬虫/1、添加爬书任务.md",
+    "爬虫/2、暂停或者恢复任务.md",
+    "爬虫/3、跳过当前章节.md",
+    "爬虫/4、保存文件或者删除任务.md",
+    "爬虫/5、截取任务的日志以减小体积（utools 数据库最大只能存一兆的文档）.md",
+    "爬虫/6、输入框 change 事件.md",
+    "爬虫/7、打开关闭等待层.md",
+    "爬虫/8、打开关闭提示气泡.md",
+    "爬虫/9、打开关闭任务日志.md",
+    "爬虫/10、打开关闭使用说明.md",
+    "爬虫/11、展开和收起高级选项.md",
+    "爬虫/12、切换任务自动重试状态.md",
+    "爬虫/13、判断是否为 json 字符串.md",
+    "爬虫/未命名.canvas",
+    "爬虫/Untitled Diagram.svg",
+    "爬虫/Untitled Diagram 1.svg",
+    "书籍/风雨逍遥.md.txt",
+    "书籍/未命名.md",
+    "书籍/Drawing 2023-11-22 12.45.23.excalidraw.md",
+    "图例资料/01.01.同步处理.png",
+    "图例资料/01.01.异步处理.png",
+    "图例资料/01.02.点对点消息.png",
+    "图例资料/01.03.发布订阅模式.png",
+    "图例资料/01.官网创建.png",
+    "图例资料/01.环境变量.png",
+    "图例资料/01.springMVC运行流程.png",
+    "图例资料/01.vue构造以及原型关系.png",
+    "图例资料/02.拦截器运行分析.png",
+    "图例资料/02.类的加载过程.png",
+    "图例资料/02.兄弟参数传递.png",
+    "图例资料/03.01.基本结构.png",
+    "图例资料/03.vuex的组件.png",
+    "图例资料/04.消息队列-基本消息队列l.png",
+    "图例资料/04.消息队列-Fairdispatch.png",
+    "图例资料/04.消息队列-Publish-Subscribe.png",
+    "图例资料/04.消息队列-routing.png",
+    "图例资料/04.消息队列-topic.png",
+    "图例资料/04.消息队列-workqueuel.png",
+    "图例资料/05.死信队列.png",
+    "图例资料/06.交换机比较.png",
+    "图例资料/07.练习-解决方案1.png",
+    "图例资料/07.练习-解决方案2.png",
+    "图例资料/07.练习-解决方案3.png",
+    "图例资料/07.练习-解决方案4-定时任务.png",
+    "图例资料/查看java版本.png",
+    "图例资料/初始化mysql.jpg",
+    "图例资料/发布订阅.png",
+    "图例资料/基础架构.png",
+    "图例资料/目录结构.jpg",
+    "图例资料/桥接设备.jpg",
+    "图例资料/权限1.png",
+    "图例资料/权限2.png",
+    "图例资料/消息队列.png",
+    "图例资料/A01-自动登录密码.png",
+    "图例资料/A02.默认登录页面.png",
+    "图例资料/A03.JdbcDaoImpl关系.jpg",
+    "图例资料/A04.默认的filter.png",
+    "图例资料/B01-过滤器链.png",
+    "图例资料/B02-DelegatingFilterProxy.png",
+    "图例资料/B03-FilterChainProxy.png",
+    "图例资料/B04-debug.png",
+    "图例资料/B04-securityfilterchain.png",
+    "图例资料/B04-securityfilterchain源码.png",
+    "图例资料/B05-exceptiontranslationfilter.png",
+    "图例资料/c01-转入登录页面.png",
+    "图例资料/c02-用户认证流程.png",
+    "图例资料/java代码运行过程.png",
+    "图例资料/shiro.jpg",
+    "图例资料/SPI机制.png",
+    "图例资料/vim常用命令.png",
+    "图例资料/vim工作模式.png",
+    "项目笔记/0、看板.md",
+    "项目笔记/项目笔记.md",
+    "BigSea/工具/导航.md",
+    "BigSea/工具/Beyond_Compare.md",
+    "BigSea/工具/svn忘记密码、查看密码.md",
+    "BigSea/工具/vim.md",
+    "BigSea/后端/微服务/服务调用.md",
+    "BigSea/后端/微服务/负载均衡.md",
+    "BigSea/后端/微服务/容错保护、断路器.md",
+    "BigSea/后端/微服务/注册中心.md",
+    "BigSea/后端/微服务/Nacos.md",
+    "BigSea/后端/微服务/springCloud.md",
+    "BigSea/后端/docker/启动.md",
+    "BigSea/后端/docker/宿主机端口与容器端口.md",
+    "BigSea/后端/easyexcel/导入时-不调用invoke方法.md",
+    "BigSea/后端/easyexcel/读取sql时.md",
+    "BigSea/后端/easyexcel/区分poi、easypoi、easyexcel.md",
+    "BigSea/后端/excel/excel-poi.md",
+    "BigSea/后端/git/登录问题.md",
+    "BigSea/后端/git/使用1.md",
+    "BigSea/后端/git/git.md",
+    "BigSea/后端/git/git放弃当前修改.md",
+    "BigSea/后端/git/git命令.md",
+    "BigSea/后端/git/git提交代码失败汇总.md",
+    "BigSea/后端/git/git中文乱码.md",
+    "BigSea/后端/git/gitLab.md",
+    "BigSea/后端/idea/查看报错信息.md",
+    "BigSea/后端/idea/返回上一步.md",
+    "BigSea/后端/idea/黄色波浪线.md",
+    "BigSea/后端/idea/解决idea在debug模式下变得非常慢的问题.md",
+    "BigSea/后端/idea/拉项目时默认maven仓库设置.md",
+    "BigSea/后端/idea/修改水平移动快捷键为alt+滚轮.md",
+    "BigSea/后端/idea/IntelliJ IDEA 中如何将 POM 中的版本号快速提出为属性.md",
+    "BigSea/后端/idea/Unicode编码.md",
+    "BigSea/后端/java/函数式接口与_Lambda_表达式详细教程/函数式接口与 Lambda 表达式详细教程.md",
+    "BigSea/后端/java/函数式接口与_Lambda_表达式详细教程/Java函数式接口的终极奥义.md",
+    "BigSea/后端/java/问题汇总/查询接口并发量非常高，怎么办_.md",
+    "BigSea/后端/java/问题汇总/InpuStream边界中文乱码问题.md",
+    "BigSea/后端/java/_SneakyThrows.md",
+    "BigSea/后端/java/读取文件.md",
+    "BigSea/后端/java/分页.md",
+    "BigSea/后端/java/过滤器、拦截器、监听器对比与使用笔记.md",
+    "BigSea/后端/java/函数式接口与_Lambda_表达式详细教程.md",
+    "BigSea/后端/java/全局异常处理执行顺序.md",
+    "BigSea/后端/java/锁.md",
+    "BigSea/后端/java/线程共享和线程安全.md",
+    "BigSea/后端/java/异步.md",
+    "BigSea/后端/java/阅览记录.md",
+    "BigSea/后端/java/指定jar启动类.md",
+    "BigSea/后端/java/ascii表（windows特殊字符不展示）.md",
+    "BigSea/后端/java/bat，纯后台运行.md",
+    "BigSea/后端/java/double丢失精度.md",
+    "BigSea/后端/java/dubbo，本地测试运行.md",
+    "BigSea/后端/java/Gradle_build.md",
+    "BigSea/后端/java/groovy.md",
+    "BigSea/后端/java/mybatis查看sql.md",
+    "BigSea/后端/java/mybatis数据库.md",
+    "BigSea/后端/java/mybatisplus___TkMybatis___Hibernate___JPA.md",
+    "BigSea/后端/java/splict陷阱.md",
+    "BigSea/后端/java/springboot接口传参.md",
+    "BigSea/后端/java/springboot启动时执行代码.md",
+    "BigSea/后端/java/String.format.md",
+    "BigSea/后端/java/swagger.md",
+    "BigSea/后端/kafka/无标题文档.md",
+    "BigSea/后端/linux/查看特地程序位置.md",
+    "BigSea/后端/linux/启动Linux失败.md",
+    "BigSea/后端/linux/日志.md",
+    "BigSea/后端/linux/使用find命令查找文件.md",
+    "BigSea/后端/linux/压缩解压.md",
+    "BigSea/后端/linux/dbTool_（GoldenDB提供）.md",
+    "BigSea/后端/linux/Linux 根据ascii 分隔符查看指定列.md",
+    "BigSea/后端/linux/linux指令.md",
+    "BigSea/后端/linux/ossutil_阿里云oss工具_.md",
+    "BigSea/后端/linux/shell.md",
+    "BigSea/后端/oracle/__的含义.md",
+    "BigSea/后端/oracle/连接数据库.md",
+    "BigSea/后端/oracle/注意.md",
+    "BigSea/后端/oracle/A_问题.md",
+    "BigSea/后端/oracle/ddl、dml、dcl、dql.md",
+    "BigSea/后端/oracle/schema.md",
+    "BigSea/后端/Redis/Resis.md",
+    "BigSea/后端/Word/Docx.md",
+    "BigSea/后端/Word/lambda.md",
+    "BigSea/后端/合并分支-compare新文件.md",
+    "BigSea/框架/jenkins.md",
+    "BigSea/框架/maven.md",
+    "BigSea/框架/tk.Mybatis和Mybatis.md",
+    "BigSea/内网穿透/1、tailscale.md",
+    "BigSea/内网穿透/副屏.md",
+    "BigSea/前端/vscode/搜索出一堆垃圾.md",
+    "BigSea/前端/vscode/修改Terminal名称.md",
+    "BigSea/前端/vscode/页面总是被替换.md",
+    "BigSea/前端/vue/导入静态html.md",
+    "BigSea/前端/vue/对象遍历.md",
+    "BigSea/前端/vue/公共路径.md",
+    "BigSea/前端/vue/路由.md",
+    "BigSea/前端/vue/配置多重环境.md",
+    "BigSea/前端/vue/配置启动端口.md",
+    "BigSea/前端/vue/无标题文档.md",
+    "BigSea/前端/vue/组件通信.md",
+    "BigSea/前端/定时任务.md",
+    "BigSea/前端/React.md",
+    "BigSea/前端/TypeScript.md",
+    "BigSea/设计模式/设计模式.md",
+    "BigSea/数据库/存储过程.md",
+    "BigSea/数据库/读取sql列名.md",
+    "BigSea/数据库/mysql.md",
+    "BigSea/算法/二分法.md",
+    "BigSea/问题合集/代理错误.md",
+    "BigSea/问题合集/日期类型转换.md",
+    "BigSea/问题合集/同名同包-不报错.md",
+    "BigSea/问题合集/nacos注册上但是用RestTemplate报错.md",
+    "BigSea/问题合集/Oracle插入.md",
+    "BigSea/问题合集/vue样式库导入失败.md",
+    "BigSea/政治/行政区划分（身份证模块）.md",
+    "BigSea/windows/查看端口占用并删除.md",
+    "BigSea/查看信息.md",
+    "BigSea/下载详情.txt",
+    "images/00.docker.png",
+    "images/01.环境变量.png",
+    "images/01.架构演变.png",
+    "images/01.docker和虚拟机.png",
+    "images/02.docker和虚拟机.png",
+    "images/03.docker架构.jpg",
+    "images/03.docker架构.png",
+    "images/04.docker-filesystems-multilayer.png",
+    "images/05.docker-filesystems-multilayer.png",
+    "images/查看java版本.png",
+    "images/初始化mysql.jpg",
+    "images/流控规则.png",
+    "images/目录结构.jpg",
+    "images/桥接设备.jpg",
+    "images/权限1.png",
+    "images/权限2.png",
+    "images/熔断规则.png",
+    "images/eureka.png",
+    "images/vim常用命令.png",
+    "images/vim工作模式.png",
+    "1.springboot中devtools热部署.lake",
+    "1.springboot中devtools热部署 1.lake",
+    "2.日志文件的配置.md",
+    "梦魇城市.txt",
+    "问题记录.md",
+    "新需求.md",
+    "新专家技术.md",
+    "移位.md",
+    "debug.log",
+    "Nacos.md",
+    "obsidian搭建.md",
+    "Query.md",
+    "SpringCloud.md",
     "lib/fonts/94f2f163d4b698242fef.otf",
     "lib/fonts/72505e6a122c6acd5471.woff2",
     "lib/fonts/2d5198822ab091ce4305.woff2",
@@ -134,85 +363,85 @@
   ],
   "fileInfo": {
     "lib/fonts/94f2f163d4b698242fef.otf": {
-      "modifiedTime": 1753460337637,
+      "modifiedTime": 1753501164231,
       "sourceSize": 66800,
       "exportedPath": "lib/fonts/94f2f163d4b698242fef.otf",
       "dependencies": []
     },
     "lib/fonts/72505e6a122c6acd5471.woff2": {
-      "modifiedTime": 1753460337637,
+      "modifiedTime": 1753501164231,
       "sourceSize": 104232,
       "exportedPath": "lib/fonts/72505e6a122c6acd5471.woff2",
       "dependencies": []
     },
     "lib/fonts/2d5198822ab091ce4305.woff2": {
-      "modifiedTime": 1753460337637,
+      "modifiedTime": 1753501164231,
       "sourceSize": 104332,
       "exportedPath": "lib/fonts/2d5198822ab091ce4305.woff2",
       "dependencies": []
     },
     "lib/fonts/c8ba52b05a9ef10f4758.woff2": {
-      "modifiedTime": 1753460337637,
+      "modifiedTime": 1753501164231,
       "sourceSize": 98868,
       "exportedPath": "lib/fonts/c8ba52b05a9ef10f4758.woff2",
       "dependencies": []
     },
     "lib/fonts/cb10ffd7684cd9836a05.woff2": {
-      "modifiedTime": 1753460337637,
+      "modifiedTime": 1753501164231,
       "sourceSize": 106876,
       "exportedPath": "lib/fonts/cb10ffd7684cd9836a05.woff2",
       "dependencies": []
     },
     "lib/fonts/b5f0f109bc88052d4000.woff2": {
-      "modifiedTime": 1753460337637,
+      "modifiedTime": 1753501164231,
       "sourceSize": 105804,
       "exportedPath": "lib/fonts/b5f0f109bc88052d4000.woff2",
       "dependencies": []
     },
     "lib/fonts/cbe0ae49c52c920fd563.woff2": {
-      "modifiedTime": 1753460337637,
+      "modifiedTime": 1753501164231,
       "sourceSize": 106108,
       "exportedPath": "lib/fonts/cbe0ae49c52c920fd563.woff2",
       "dependencies": []
     },
     "lib/fonts/535a6cf662596b3bd6a6.woff2": {
-      "modifiedTime": 1753460337637,
+      "modifiedTime": 1753501164231,
       "sourceSize": 111708,
       "exportedPath": "lib/fonts/535a6cf662596b3bd6a6.woff2",
       "dependencies": []
     },
     "lib/fonts/70cc7ff27245e82ad414.ttf": {
-      "modifiedTime": 1753460337637,
+      "modifiedTime": 1753501164231,
       "sourceSize": 192740,
       "exportedPath": "lib/fonts/70cc7ff27245e82ad414.ttf",
       "dependencies": []
     },
     "lib/fonts/454577c22304619db035.ttf": {
-      "modifiedTime": 1753460337637,
+      "modifiedTime": 1753501164231,
       "sourceSize": 161376,
       "exportedPath": "lib/fonts/454577c22304619db035.ttf",
       "dependencies": []
     },
     "lib/fonts/52ac8f3034507f1d9e53.ttf": {
-      "modifiedTime": 1753460337637,
+      "modifiedTime": 1753501164231,
       "sourceSize": 191568,
       "exportedPath": "lib/fonts/52ac8f3034507f1d9e53.ttf",
       "dependencies": []
     },
     "lib/fonts/05b618077343fbbd92b7.ttf": {
-      "modifiedTime": 1753460337637,
+      "modifiedTime": 1753501164231,
       "sourceSize": 155288,
       "exportedPath": "lib/fonts/05b618077343fbbd92b7.ttf",
       "dependencies": []
     },
     "lib/fonts/4bb6ac751d1c5478ff3a.woff2": {
-      "modifiedTime": 1753460337637,
+      "modifiedTime": 1753501164231,
       "sourceSize": 7876,
       "exportedPath": "lib/fonts/4bb6ac751d1c5478ff3a.woff2",
       "dependencies": []
     },
     "lib/media/6155340132a851f6089e.svg": {
-      "modifiedTime": 1753460337637,
+      "modifiedTime": 1753501164231,
       "sourceSize": 315,
       "exportedPath": "lib/media/6155340132a851f6089e.svg",
       "dependencies": []
@@ -350,235 +579,235 @@
       "dependencies": []
     },
     "lib/fonts/MathJax_Zero.woff": {
-      "modifiedTime": 1753460337637,
+      "modifiedTime": 1753501164231,
       "sourceSize": 1368,
       "exportedPath": "lib/fonts/MathJax_Zero.woff",
       "dependencies": []
     },
     "lib/fonts/MathJax_Main-Regular.woff": {
-      "modifiedTime": 1753460337637,
+      "modifiedTime": 1753501164231,
       "sourceSize": 34160,
       "exportedPath": "lib/fonts/MathJax_Main-Regular.woff",
       "dependencies": []
     },
     "lib/fonts/MathJax_Main-Bold.woff": {
-      "modifiedTime": 1753460337637,
+      "modifiedTime": 1753501164231,
       "sourceSize": 34464,
       "exportedPath": "lib/fonts/MathJax_Main-Bold.woff",
       "dependencies": []
     },
     "lib/fonts/MathJax_Math-Italic.woff": {
-      "modifiedTime": 1753460337637,
+      "modifiedTime": 1753501164231,
       "sourceSize": 19360,
       "exportedPath": "lib/fonts/MathJax_Math-Italic.woff",
       "dependencies": []
     },
     "lib/fonts/MathJax_Main-Italic.woff": {
-      "modifiedTime": 1753460337637,
+      "modifiedTime": 1753501164231,
       "sourceSize": 20832,
       "exportedPath": "lib/fonts/MathJax_Main-Italic.woff",
       "dependencies": []
     },
     "lib/fonts/MathJax_Math-BoldItalic.woff": {
-      "modifiedTime": 1753460337637,
+      "modifiedTime": 1753501164231,
       "sourceSize": 19776,
       "exportedPath": "lib/fonts/MathJax_Math-BoldItalic.woff",
       "dependencies": []
     },
     "lib/fonts/MathJax_Size1-Regular.woff": {
-      "modifiedTime": 1753460337637,
+      "modifiedTime": 1753501164231,
       "sourceSize": 5792,
       "exportedPath": "lib/fonts/MathJax_Size1-Regular.woff",
       "dependencies": []
     },
     "lib/fonts/MathJax_Size2-Regular.woff": {
-      "modifiedTime": 1753460337637,
+      "modifiedTime": 1753501164231,
       "sourceSize": 5464,
       "exportedPath": "lib/fonts/MathJax_Size2-Regular.woff",
       "dependencies": []
     },
     "lib/fonts/MathJax_Size3-Regular.woff": {
-      "modifiedTime": 1753460337637,
+      "modifiedTime": 1753501164231,
       "sourceSize": 3244,
       "exportedPath": "lib/fonts/MathJax_Size3-Regular.woff",
       "dependencies": []
     },
     "lib/fonts/MathJax_Size4-Regular.woff": {
-      "modifiedTime": 1753460337637,
+      "modifiedTime": 1753501164231,
       "sourceSize": 5148,
       "exportedPath": "lib/fonts/MathJax_Size4-Regular.woff",
       "dependencies": []
     },
     "lib/fonts/MathJax_AMS-Regular.woff": {
-      "modifiedTime": 1753460337637,
+      "modifiedTime": 1753501164231,
       "sourceSize": 40808,
       "exportedPath": "lib/fonts/MathJax_AMS-Regular.woff",
       "dependencies": []
     },
     "lib/fonts/MathJax_Calligraphic-Regular.woff": {
-      "modifiedTime": 1753460337637,
+      "modifiedTime": 1753501164231,
       "sourceSize": 9600,
       "exportedPath": "lib/fonts/MathJax_Calligraphic-Regular.woff",
       "dependencies": []
     },
     "lib/fonts/MathJax_Calligraphic-Bold.woff": {
-      "modifiedTime": 1753460337637,
+      "modifiedTime": 1753501164231,
       "sourceSize": 9908,
       "exportedPath": "lib/fonts/MathJax_Calligraphic-Bold.woff",
       "dependencies": []
     },
     "lib/fonts/MathJax_Fraktur-Regular.woff": {
-      "modifiedTime": 1753460337637,
+      "modifiedTime": 1753501164231,
       "sourceSize": 21480,
       "exportedPath": "lib/fonts/MathJax_Fraktur-Regular.woff",
       "dependencies": []
     },
     "lib/fonts/MathJax_Fraktur-Bold.woff": {
-      "modifiedTime": 1753460337637,
+      "modifiedTime": 1753501164231,
       "sourceSize": 22340,
       "exportedPath": "lib/fonts/MathJax_Fraktur-Bold.woff",
       "dependencies": []
     },
     "lib/fonts/MathJax_SansSerif-Regular.woff": {
-      "modifiedTime": 1753460337637,
+      "modifiedTime": 1753501164231,
       "sourceSize": 12660,
       "exportedPath": "lib/fonts/MathJax_SansSerif-Regular.woff",
       "dependencies": []
     },
     "lib/fonts/MathJax_SansSerif-Bold.woff": {
-      "modifiedTime": 1753460337637,
+      "modifiedTime": 1753501164231,
       "sourceSize": 15944,
       "exportedPath": "lib/fonts/MathJax_SansSerif-Bold.woff",
       "dependencies": []
     },
     "lib/fonts/MathJax_SansSerif-Italic.woff": {
-      "modifiedTime": 1753460337637,
+      "modifiedTime": 1753501164231,
       "sourceSize": 14628,
       "exportedPath": "lib/fonts/MathJax_SansSerif-Italic.woff",
       "dependencies": []
     },
     "lib/fonts/MathJax_Script-Regular.woff": {
-      "modifiedTime": 1753460337637,
+      "modifiedTime": 1753501164231,
       "sourceSize": 11852,
       "exportedPath": "lib/fonts/MathJax_Script-Regular.woff",
       "dependencies": []
     },
     "lib/fonts/MathJax_Typewriter-Regular.woff": {
-      "modifiedTime": 1753460337637,
+      "modifiedTime": 1753501164231,
       "sourceSize": 17604,
       "exportedPath": "lib/fonts/MathJax_Typewriter-Regular.woff",
       "dependencies": []
     },
     "lib/fonts/MathJax_Vector-Regular.woff": {
-      "modifiedTime": 1753460337637,
+      "modifiedTime": 1753501164231,
       "sourceSize": 1136,
       "exportedPath": "lib/fonts/MathJax_Vector-Regular.woff",
       "dependencies": []
     },
     "lib/fonts/MathJax_Vector-Bold.woff": {
-      "modifiedTime": 1753460337637,
+      "modifiedTime": 1753501164231,
       "sourceSize": 1116,
       "exportedPath": "lib/fonts/MathJax_Vector-Bold.woff",
       "dependencies": []
     },
     "lib/scripts/graph-wasm.wasm": {
-      "modifiedTime": 1753430649906,
+      "modifiedTime": 1753469803458,
       "sourceSize": 23377,
       "exportedPath": "lib/scripts/graph-wasm.wasm",
       "dependencies": []
     },
     "lib/html/file-tree.html": {
-      "modifiedTime": 1753430649906,
-      "sourceSize": 245642,
+      "modifiedTime": 1753469803458,
+      "sourceSize": 37834,
       "exportedPath": "lib/html/file-tree.html",
       "dependencies": []
     },
     "lib/scripts/webpage.js": {
-      "modifiedTime": 1753430649906,
+      "modifiedTime": 1753469803458,
       "sourceSize": 47290,
       "exportedPath": "lib/scripts/webpage.js",
       "dependencies": []
     },
     "lib/scripts/graph-view.js": {
-      "modifiedTime": 1753430649906,
+      "modifiedTime": 1753469803458,
       "sourceSize": 15519,
       "exportedPath": "lib/scripts/graph-view.js",
       "dependencies": []
     },
     "lib/scripts/graph-wasm.js": {
-      "modifiedTime": 1753430649906,
+      "modifiedTime": 1753469803458,
       "sourceSize": 14021,
       "exportedPath": "lib/scripts/graph-wasm.js",
       "dependencies": []
     },
     "lib/scripts/graph-render-worker.js": {
-      "modifiedTime": 1753430649906,
+      "modifiedTime": 1753469803458,
       "sourceSize": 5179,
       "exportedPath": "lib/scripts/graph-render-worker.js",
       "dependencies": []
     },
     "lib/scripts/tinycolor.js": {
-      "modifiedTime": 1753430649906,
+      "modifiedTime": 1753469803458,
       "sourceSize": 29832,
       "exportedPath": "lib/scripts/tinycolor.js",
       "dependencies": []
     },
     "lib/scripts/pixi.js": {
-      "modifiedTime": 1753430649906,
+      "modifiedTime": 1753469803458,
       "sourceSize": 449509,
       "exportedPath": "lib/scripts/pixi.js",
       "dependencies": []
     },
     "lib/scripts/minisearch.js": {
-      "modifiedTime": 1753430649906,
+      "modifiedTime": 1753469803458,
       "sourceSize": 29422,
       "exportedPath": "lib/scripts/minisearch.js",
       "dependencies": []
     },
     "lib/media/favicon.png": {
-      "modifiedTime": 1753430649906,
+      "modifiedTime": 1753469803458,
       "sourceSize": 1105,
       "exportedPath": "lib/media/favicon.png",
       "dependencies": []
     },
     "lib/scripts/graph-data.js": {
-      "modifiedTime": 1753430649906,
-      "sourceSize": 8447,
+      "modifiedTime": 1753469803458,
+      "sourceSize": 1902,
       "exportedPath": "lib/scripts/graph-data.js",
       "dependencies": []
     },
     "lib/styles/obsidian.css": {
-      "modifiedTime": 1753430649906,
+      "modifiedTime": 1753469803458,
       "sourceSize": 138258,
       "exportedPath": "lib/styles/obsidian.css",
       "dependencies": []
     },
     "lib/styles/other-plugins.css": {
-      "modifiedTime": 1753430649906,
+      "modifiedTime": 1753469803458,
       "sourceSize": 97019,
       "exportedPath": "lib/styles/other-plugins.css",
       "dependencies": []
     },
     "lib/styles/theme.css": {
-      "modifiedTime": 1753430649906,
+      "modifiedTime": 1753469803458,
       "sourceSize": 250349,
       "exportedPath": "lib/styles/theme.css",
       "dependencies": []
     },
     "lib/styles/global-variable-styles.css": {
-      "modifiedTime": 1753430649906,
+      "modifiedTime": 1753469803458,
       "sourceSize": 438,
       "exportedPath": "lib/styles/global-variable-styles.css",
       "dependencies": []
     },
     "lib/styles/main-styles.css": {
-      "modifiedTime": 1753430649906,
+      "modifiedTime": 1753469803458,
       "sourceSize": 23130,
       "exportedPath": "lib/styles/main-styles.css",
       "dependencies": []
     },
     "lib/styles/snippets.css": {
-      "modifiedTime": 1753430649906,
+      "modifiedTime": 1753469803458,
       "sourceSize": 1013,
       "exportedPath": "lib/styles/snippets.css",
       "dependencies": []
@@ -590,309 +819,1683 @@
       "dependencies": []
     },
     "教程/1.maven.md": {
-      "modifiedTime": 1753460337637,
+      "modifiedTime": 1753501164231,
       "sourceSize": 3744,
       "exportedPath": "教程/1.maven.html",
       "dependencies": []
     },
     "教程/2、mybatis课件.md": {
-      "modifiedTime": 1753460337637,
+      "modifiedTime": 1753501164231,
       "sourceSize": 18630,
       "exportedPath": "教程/2、mybatis课件.html",
       "dependencies": []
     },
     "教程/3、Spring课件.md": {
-      "modifiedTime": 1753460337637,
+      "modifiedTime": 1753501164231,
       "sourceSize": 35943,
       "exportedPath": "教程/3、Spring课件.html",
       "dependencies": []
     },
     "教程/4、SpringMVC.md": {
-      "modifiedTime": 1753460337637,
+      "modifiedTime": 1753501164231,
       "sourceSize": 25125,
       "exportedPath": "教程/4、SpringMVC.html",
       "dependencies": []
     },
     "教程/04.创建版本库.方法二.png.md": {
-      "modifiedTime": 1753460337637,
+      "modifiedTime": 1753501164231,
       "sourceSize": 0,
       "exportedPath": "教程/04.创建版本库.方法二.png.html",
       "dependencies": []
     },
     "教程/04.上传文件.png.md": {
-      "modifiedTime": 1753460337637,
+      "modifiedTime": 1753501164231,
       "sourceSize": 0,
       "exportedPath": "教程/04.上传文件.png.html",
       "dependencies": []
     },
     "教程/04.消息队列-Publish-Subscribe.png.md": {
-      "modifiedTime": 1753460337637,
+      "modifiedTime": 1753501164231,
       "sourceSize": 0,
       "exportedPath": "教程/04.消息队列-Publish-Subscribe.png.html",
       "dependencies": []
     },
     "教程/04.TortoiseGit中文语言包.png.md": {
-      "modifiedTime": 1753460337637,
+      "modifiedTime": 1753501164231,
       "sourceSize": 0,
       "exportedPath": "教程/04.TortoiseGit中文语言包.png.html",
       "dependencies": []
     },
     "教程/5、excel.md": {
-      "modifiedTime": 1753460337637,
+      "modifiedTime": 1753501164231,
       "sourceSize": 3073,
       "exportedPath": "教程/5、excel.html",
       "dependencies": []
     },
     "教程/6、Vue基础.md": {
-      "modifiedTime": 1753460337637,
+      "modifiedTime": 1753501164231,
       "sourceSize": 36450,
       "exportedPath": "教程/6、Vue基础.html",
       "dependencies": []
     },
     "教程/06.string.png.md": {
-      "modifiedTime": 1753460337637,
+      "modifiedTime": 1753501164231,
       "sourceSize": 5909,
       "exportedPath": "教程/06.string.png.html",
       "dependencies": []
     },
     "教程/7、Redis基础.md": {
-      "modifiedTime": 1753460337637,
+      "modifiedTime": 1753501164231,
       "sourceSize": 13671,
       "exportedPath": "教程/7、Redis基础.html",
       "dependencies": []
     },
     "教程/8、shiro.md": {
-      "modifiedTime": 1753460337637,
+      "modifiedTime": 1753501164231,
       "sourceSize": 17347,
       "exportedPath": "教程/8、shiro.html",
       "dependencies": []
     },
     "教程/9、项目文档.md": {
-      "modifiedTime": 1753460337637,
+      "modifiedTime": 1753501164231,
       "sourceSize": 7757,
       "exportedPath": "教程/9、项目文档.html",
       "dependencies": []
     },
     "教程/09.设置公钥01.setting.png.md": {
-      "modifiedTime": 1753460337637,
+      "modifiedTime": 1753501164231,
       "sourceSize": 0,
       "exportedPath": "教程/09.设置公钥01.setting.png.html",
       "dependencies": []
     },
     "教程/10、线程池.md": {
-      "modifiedTime": 1753460337637,
+      "modifiedTime": 1753501164231,
       "sourceSize": 7630,
       "exportedPath": "教程/10、线程池.html",
       "dependencies": []
     },
     "教程/11、Linux课件.md": {
-      "modifiedTime": 1753460337637,
+      "modifiedTime": 1753501164231,
       "sourceSize": 32816,
       "exportedPath": "教程/11、Linux课件.html",
       "dependencies": []
     },
     "教程/11、Vagrant课件.md": {
-      "modifiedTime": 1753460337637,
+      "modifiedTime": 1753501164231,
       "sourceSize": 4751,
       "exportedPath": "教程/11、Vagrant课件.html",
       "dependencies": []
     },
     "教程/12、Quartz.md": {
-      "modifiedTime": 1753460337637,
+      "modifiedTime": 1753501164231,
       "sourceSize": 49357,
       "exportedPath": "教程/12、Quartz.html",
       "dependencies": []
     },
     "教程/13、rabbitMQ.md": {
-      "modifiedTime": 1753460337637,
+      "modifiedTime": 1753501164231,
       "sourceSize": 39816,
       "exportedPath": "教程/13、rabbitMQ.html",
       "dependencies": []
     },
     "教程/14、Nginx.md": {
-      "modifiedTime": 1753460337637,
+      "modifiedTime": 1753501164231,
       "sourceSize": 31530,
       "exportedPath": "教程/14、Nginx.html",
       "dependencies": []
     },
     "教程/15、docker.md": {
-      "modifiedTime": 1753460337637,
+      "modifiedTime": 1753501164231,
       "sourceSize": 19777,
       "exportedPath": "教程/15、docker.html",
       "dependencies": []
     },
     "教程/16、spring security.md": {
-      "modifiedTime": 1753460337637,
+      "modifiedTime": 1753501164231,
       "sourceSize": 52857,
       "exportedPath": "教程/16、spring security.html",
       "dependencies": []
     },
     "教程/17、mybatis-plus笔记.md": {
-      "modifiedTime": 1753460337637,
+      "modifiedTime": 1753501164231,
       "sourceSize": 17417,
       "exportedPath": "教程/17、mybatis-plus笔记.html",
       "dependencies": []
     },
     "教程/18、整合Swagger.md": {
-      "modifiedTime": 1753460337637,
+      "modifiedTime": 1753501164231,
       "sourceSize": 3424,
       "exportedPath": "教程/18、整合Swagger.html",
       "dependencies": []
     },
     "教程/19、OSS对象存储.md": {
-      "modifiedTime": 1753460337637,
+      "modifiedTime": 1753501164231,
       "sourceSize": 2367,
       "exportedPath": "教程/19、OSS对象存储.html",
       "dependencies": []
     },
     "教程/20、ElasticSearch.md": {
-      "modifiedTime": 1753460337637,
+      "modifiedTime": 1753501164231,
       "sourceSize": 9146,
       "exportedPath": "教程/20、ElasticSearch.html",
       "dependencies": []
     },
     "教程/21、spring cloud.md": {
-      "modifiedTime": 1753460337637,
+      "modifiedTime": 1753501164231,
       "sourceSize": 41236,
       "exportedPath": "教程/21、spring cloud.html",
       "dependencies": []
     },
     "教程/22、Git基础.md": {
-      "modifiedTime": 1753460337637,
+      "modifiedTime": 1753501164231,
       "sourceSize": 12649,
       "exportedPath": "教程/22、Git基础.html",
       "dependencies": []
     },
     "教程/23、Mongodb基础.md": {
-      "modifiedTime": 1753460337637,
+      "modifiedTime": 1753501164231,
       "sourceSize": 5193,
       "exportedPath": "教程/23、Mongodb基础.html",
       "dependencies": []
     },
     "教程/批次.svg": {
-      "modifiedTime": 1753460337637,
+      "modifiedTime": 1753501164231,
       "sourceSize": 11317,
       "exportedPath": "教程/批次.svg",
       "dependencies": []
     },
     "教程/未命名.md": {
-      "modifiedTime": 1753460337637,
+      "modifiedTime": 1753501164231,
       "sourceSize": 16,
       "exportedPath": "教程/未命名.html",
       "dependencies": []
     },
     "教程/未命名 1.md": {
-      "modifiedTime": 1753460337637,
+      "modifiedTime": 1753501164231,
       "sourceSize": 5714,
       "exportedPath": "教程/未命名 1.html",
       "dependencies": []
     },
     "教程/未命名 2.md": {
-      "modifiedTime": 1753460337637,
+      "modifiedTime": 1753501164231,
       "sourceSize": 0,
       "exportedPath": "教程/未命名 2.html",
       "dependencies": []
     },
     "教程/docker.md": {
-      "modifiedTime": 1753460337637,
+      "modifiedTime": 1753501164231,
       "sourceSize": 19777,
       "exportedPath": "教程/docker.html",
       "dependencies": []
     },
     "教程/jvm.md": {
-      "modifiedTime": 1753460337637,
+      "modifiedTime": 1753501164231,
       "sourceSize": 2980,
       "exportedPath": "教程/jvm.html",
       "dependencies": []
     },
     "教程/JVM调优.md": {
-      "modifiedTime": 1753460337637,
+      "modifiedTime": 1753501164231,
       "sourceSize": 32623,
       "exportedPath": "教程/JVM调优.html",
       "dependencies": []
     },
     "教程/Linux课件.md": {
-      "modifiedTime": 1753460337637,
+      "modifiedTime": 1753501164231,
       "sourceSize": 32431,
       "exportedPath": "教程/Linux课件.html",
       "dependencies": []
     },
     "教程/Mysql补充.md": {
-      "modifiedTime": 1753460337637,
+      "modifiedTime": 1753501164231,
       "sourceSize": 16719,
       "exportedPath": "教程/Mysql补充.html",
       "dependencies": []
     },
     "教程/Pasted Image 20240129101012_261.png": {
-      "modifiedTime": 1753460337637,
+      "modifiedTime": 1753501164231,
       "sourceSize": 1794,
       "exportedPath": "教程/Pasted Image 20240129101012_261.png",
       "dependencies": []
     },
     "教程/Pasted Image 20240312191035_880.png": {
-      "modifiedTime": 1753460337637,
+      "modifiedTime": 1753501164231,
       "sourceSize": 46939,
       "exportedPath": "教程/Pasted Image 20240312191035_880.png",
       "dependencies": []
     },
     "教程/QQ截图20231123142751.png": {
-      "modifiedTime": 1753460337637,
+      "modifiedTime": 1753501164231,
       "sourceSize": 42885,
       "exportedPath": "教程/QQ截图20231123142751.png",
       "dependencies": []
     },
     "教程/README.md": {
-      "modifiedTime": 1753460337637,
+      "modifiedTime": 1753501164231,
       "sourceSize": 30,
       "exportedPath": "教程/README.html",
       "dependencies": []
     },
     "教程/shardingjdbc.md": {
-      "modifiedTime": 1753460337637,
+      "modifiedTime": 1753501164231,
       "sourceSize": 21339,
       "exportedPath": "教程/shardingjdbc.html",
       "dependencies": []
     },
     "教程/spring cloud.md": {
-      "modifiedTime": 1753460337637,
+      "modifiedTime": 1753501164231,
       "sourceSize": 41412,
       "exportedPath": "教程/spring cloud.html",
       "dependencies": []
     },
     "教程/Springboot基础.md": {
-      "modifiedTime": 1753460337637,
+      "modifiedTime": 1753501164231,
       "sourceSize": 31158,
       "exportedPath": "教程/Springboot基础.html",
       "dependencies": []
     },
     "教程/typora-icon.png": {
-      "modifiedTime": 1753460337637,
+      "modifiedTime": 1753501164231,
       "sourceSize": 1351,
       "exportedPath": "教程/typora-icon.png",
       "dependencies": []
     },
     "教程/typora-icon2.png": {
-      "modifiedTime": 1753460337637,
+      "modifiedTime": 1753501164231,
       "sourceSize": 567,
       "exportedPath": "教程/typora-icon2.png",
       "dependencies": []
     },
     "教程/Untitled Diagram.svg": {
-      "modifiedTime": 1753460337637,
+      "modifiedTime": 1753501164231,
       "sourceSize": 1174,
       "exportedPath": "教程/Untitled Diagram.svg",
       "dependencies": []
     },
     "教程/Untitled Diagram 1.svg": {
-      "modifiedTime": 1753460337637,
+      "modifiedTime": 1753501164231,
       "sourceSize": 453,
       "exportedPath": "教程/Untitled Diagram 1.svg",
       "dependencies": []
     },
     "教程/Vagrant课件.md": {
-      "modifiedTime": 1753460337637,
+      "modifiedTime": 1753501164231,
       "sourceSize": 4735,
       "exportedPath": "教程/Vagrant课件.html",
+      "dependencies": []
+    },
+    "笔记/梦魇城市.txt": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 1575317,
+      "exportedPath": "笔记/梦魇城市.txt",
+      "dependencies": []
+    },
+    "笔记/markdown教程.md": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 49,
+      "exportedPath": "笔记/markdown教程.html",
+      "dependencies": []
+    },
+    "笔记/obsidian操作手册.md": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 488,
+      "exportedPath": "笔记/obsidian操作手册.html",
+      "dependencies": []
+    },
+    "笔记/potplayer.md": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 81,
+      "exportedPath": "笔记/potplayer.html",
+      "dependencies": []
+    },
+    "谷粒商城/未命名.md": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 5,
+      "exportedPath": "谷粒商城/未命名.html",
+      "dependencies": []
+    },
+    "计算机网络/数据链路层.md": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 10406,
+      "exportedPath": "计算机网络/数据链路层.html",
+      "dependencies": []
+    },
+    "爬虫/0、爬虫.md": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 34949,
+      "exportedPath": "爬虫/0、爬虫.html",
+      "dependencies": []
+    },
+    "爬虫/1、添加爬书任务.md": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 1439,
+      "exportedPath": "爬虫/1、添加爬书任务.html",
+      "dependencies": []
+    },
+    "爬虫/2、暂停或者恢复任务.md": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 280,
+      "exportedPath": "爬虫/2、暂停或者恢复任务.html",
+      "dependencies": []
+    },
+    "爬虫/3、跳过当前章节.md": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 44,
+      "exportedPath": "爬虫/3、跳过当前章节.html",
+      "dependencies": []
+    },
+    "爬虫/4、保存文件或者删除任务.md": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 0,
+      "exportedPath": "爬虫/4、保存文件或者删除任务.html",
+      "dependencies": []
+    },
+    "爬虫/5、截取任务的日志以减小体积（utools 数据库最大只能存一兆的文档）.md": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 0,
+      "exportedPath": "爬虫/5、截取任务的日志以减小体积（utools 数据库最大只能存一兆的文档）.html",
+      "dependencies": []
+    },
+    "爬虫/6、输入框 change 事件.md": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 0,
+      "exportedPath": "爬虫/6、输入框 change 事件.html",
+      "dependencies": []
+    },
+    "爬虫/7、打开关闭等待层.md": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 0,
+      "exportedPath": "爬虫/7、打开关闭等待层.html",
+      "dependencies": []
+    },
+    "爬虫/8、打开关闭提示气泡.md": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 0,
+      "exportedPath": "爬虫/8、打开关闭提示气泡.html",
+      "dependencies": []
+    },
+    "爬虫/9、打开关闭任务日志.md": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 0,
+      "exportedPath": "爬虫/9、打开关闭任务日志.html",
+      "dependencies": []
+    },
+    "爬虫/10、打开关闭使用说明.md": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 0,
+      "exportedPath": "爬虫/10、打开关闭使用说明.html",
+      "dependencies": []
+    },
+    "爬虫/11、展开和收起高级选项.md": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 0,
+      "exportedPath": "爬虫/11、展开和收起高级选项.html",
+      "dependencies": []
+    },
+    "爬虫/12、切换任务自动重试状态.md": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 0,
+      "exportedPath": "爬虫/12、切换任务自动重试状态.html",
+      "dependencies": []
+    },
+    "爬虫/13、判断是否为 json 字符串.md": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 0,
+      "exportedPath": "爬虫/13、判断是否为 json 字符串.html",
+      "dependencies": []
+    },
+    "爬虫/未命名.canvas": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 2,
+      "exportedPath": "爬虫/未命名.html",
+      "dependencies": []
+    },
+    "爬虫/Untitled Diagram.svg": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 453,
+      "exportedPath": "爬虫/Untitled Diagram.svg",
+      "dependencies": []
+    },
+    "爬虫/Untitled Diagram 1.svg": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 2023,
+      "exportedPath": "爬虫/Untitled Diagram 1.svg",
+      "dependencies": []
+    },
+    "书籍/风雨逍遥.md.txt": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 632,
+      "exportedPath": "书籍/风雨逍遥.md.txt",
+      "dependencies": []
+    },
+    "书籍/未命名.md": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 8,
+      "exportedPath": "书籍/未命名.html",
+      "dependencies": []
+    },
+    "书籍/Drawing 2023-11-22 12.45.23.excalidraw.md": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 22245,
+      "exportedPath": "书籍/Drawing 2023-11-22 12.45.23.excalidraw.html",
+      "dependencies": []
+    },
+    "图例资料/01.01.同步处理.png": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 36372,
+      "exportedPath": "图例资料/01.01.同步处理.png",
+      "dependencies": []
+    },
+    "图例资料/01.01.异步处理.png": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 40235,
+      "exportedPath": "图例资料/01.01.异步处理.png",
+      "dependencies": []
+    },
+    "图例资料/01.02.点对点消息.png": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 33066,
+      "exportedPath": "图例资料/01.02.点对点消息.png",
+      "dependencies": []
+    },
+    "图例资料/01.03.发布订阅模式.png": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 49672,
+      "exportedPath": "图例资料/01.03.发布订阅模式.png",
+      "dependencies": []
+    },
+    "图例资料/01.官网创建.png": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 74023,
+      "exportedPath": "图例资料/01.官网创建.png",
+      "dependencies": []
+    },
+    "图例资料/01.环境变量.png": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 69587,
+      "exportedPath": "图例资料/01.环境变量.png",
+      "dependencies": []
+    },
+    "图例资料/01.springMVC运行流程.png": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 64297,
+      "exportedPath": "图例资料/01.springMVC运行流程.png",
+      "dependencies": []
+    },
+    "图例资料/01.vue构造以及原型关系.png": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 49308,
+      "exportedPath": "图例资料/01.vue构造以及原型关系.png",
+      "dependencies": []
+    },
+    "图例资料/02.拦截器运行分析.png": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 43005,
+      "exportedPath": "图例资料/02.拦截器运行分析.png",
+      "dependencies": []
+    },
+    "图例资料/02.类的加载过程.png": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 30456,
+      "exportedPath": "图例资料/02.类的加载过程.png",
+      "dependencies": []
+    },
+    "图例资料/02.兄弟参数传递.png": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 55471,
+      "exportedPath": "图例资料/02.兄弟参数传递.png",
+      "dependencies": []
+    },
+    "图例资料/03.01.基本结构.png": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 42654,
+      "exportedPath": "图例资料/03.01.基本结构.png",
+      "dependencies": []
+    },
+    "图例资料/03.vuex的组件.png": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 52099,
+      "exportedPath": "图例资料/03.vuex的组件.png",
+      "dependencies": []
+    },
+    "图例资料/04.消息队列-基本消息队列l.png": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 4274,
+      "exportedPath": "图例资料/04.消息队列-基本消息队列l.png",
+      "dependencies": []
+    },
+    "图例资料/04.消息队列-Fairdispatch.png": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 8418,
+      "exportedPath": "图例资料/04.消息队列-Fairdispatch.png",
+      "dependencies": []
+    },
+    "图例资料/04.消息队列-Publish-Subscribe.png": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 5555,
+      "exportedPath": "图例资料/04.消息队列-Publish-Subscribe.png",
+      "dependencies": []
+    },
+    "图例资料/04.消息队列-routing.png": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 11851,
+      "exportedPath": "图例资料/04.消息队列-routing.png",
+      "dependencies": []
+    },
+    "图例资料/04.消息队列-topic.png": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 11049,
+      "exportedPath": "图例资料/04.消息队列-topic.png",
+      "dependencies": []
+    },
+    "图例资料/04.消息队列-workqueuel.png": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 7450,
+      "exportedPath": "图例资料/04.消息队列-workqueuel.png",
+      "dependencies": []
+    },
+    "图例资料/05.死信队列.png": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 70034,
+      "exportedPath": "图例资料/05.死信队列.png",
+      "dependencies": []
+    },
+    "图例资料/06.交换机比较.png": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 81055,
+      "exportedPath": "图例资料/06.交换机比较.png",
+      "dependencies": []
+    },
+    "图例资料/07.练习-解决方案1.png": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 72725,
+      "exportedPath": "图例资料/07.练习-解决方案1.png",
+      "dependencies": []
+    },
+    "图例资料/07.练习-解决方案2.png": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 67411,
+      "exportedPath": "图例资料/07.练习-解决方案2.png",
+      "dependencies": []
+    },
+    "图例资料/07.练习-解决方案3.png": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 63317,
+      "exportedPath": "图例资料/07.练习-解决方案3.png",
+      "dependencies": []
+    },
+    "图例资料/07.练习-解决方案4-定时任务.png": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 64836,
+      "exportedPath": "图例资料/07.练习-解决方案4-定时任务.png",
+      "dependencies": []
+    },
+    "图例资料/查看java版本.png": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 24860,
+      "exportedPath": "图例资料/查看java版本.png",
+      "dependencies": []
+    },
+    "图例资料/初始化mysql.jpg": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 93138,
+      "exportedPath": "图例资料/初始化mysql.jpg",
+      "dependencies": []
+    },
+    "图例资料/发布订阅.png": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 95082,
+      "exportedPath": "图例资料/发布订阅.png",
+      "dependencies": []
+    },
+    "图例资料/基础架构.png": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 140600,
+      "exportedPath": "图例资料/基础架构.png",
+      "dependencies": []
+    },
+    "图例资料/目录结构.jpg": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 60750,
+      "exportedPath": "图例资料/目录结构.jpg",
+      "dependencies": []
+    },
+    "图例资料/桥接设备.jpg": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 71769,
+      "exportedPath": "图例资料/桥接设备.jpg",
+      "dependencies": []
+    },
+    "图例资料/权限1.png": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 88496,
+      "exportedPath": "图例资料/权限1.png",
+      "dependencies": []
+    },
+    "图例资料/权限2.png": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 40089,
+      "exportedPath": "图例资料/权限2.png",
+      "dependencies": []
+    },
+    "图例资料/消息队列.png": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 76997,
+      "exportedPath": "图例资料/消息队列.png",
+      "dependencies": []
+    },
+    "图例资料/A01-自动登录密码.png": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 7560,
+      "exportedPath": "图例资料/A01-自动登录密码.png",
+      "dependencies": []
+    },
+    "图例资料/A02.默认登录页面.png": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 7681,
+      "exportedPath": "图例资料/A02.默认登录页面.png",
+      "dependencies": []
+    },
+    "图例资料/A03.JdbcDaoImpl关系.jpg": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 30166,
+      "exportedPath": "图例资料/A03.JdbcDaoImpl关系.jpg",
+      "dependencies": []
+    },
+    "图例资料/A04.默认的filter.png": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 43837,
+      "exportedPath": "图例资料/A04.默认的filter.png",
+      "dependencies": []
+    },
+    "图例资料/B01-过滤器链.png": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 13567,
+      "exportedPath": "图例资料/B01-过滤器链.png",
+      "dependencies": []
+    },
+    "图例资料/B02-DelegatingFilterProxy.png": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 19438,
+      "exportedPath": "图例资料/B02-DelegatingFilterProxy.png",
+      "dependencies": []
+    },
+    "图例资料/B03-FilterChainProxy.png": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 28549,
+      "exportedPath": "图例资料/B03-FilterChainProxy.png",
+      "dependencies": []
+    },
+    "图例资料/B04-debug.png": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 115459,
+      "exportedPath": "图例资料/B04-debug.png",
+      "dependencies": []
+    },
+    "图例资料/B04-securityfilterchain.png": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 52324,
+      "exportedPath": "图例资料/B04-securityfilterchain.png",
+      "dependencies": []
+    },
+    "图例资料/B04-securityfilterchain源码.png": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 74184,
+      "exportedPath": "图例资料/B04-securityfilterchain源码.png",
+      "dependencies": []
+    },
+    "图例资料/B05-exceptiontranslationfilter.png": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 82090,
+      "exportedPath": "图例资料/B05-exceptiontranslationfilter.png",
+      "dependencies": []
+    },
+    "图例资料/c01-转入登录页面.png": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 74802,
+      "exportedPath": "图例资料/c01-转入登录页面.png",
+      "dependencies": []
+    },
+    "图例资料/c02-用户认证流程.png": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 107112,
+      "exportedPath": "图例资料/c02-用户认证流程.png",
+      "dependencies": []
+    },
+    "图例资料/java代码运行过程.png": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 71904,
+      "exportedPath": "图例资料/java代码运行过程.png",
+      "dependencies": []
+    },
+    "图例资料/shiro.jpg": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 47136,
+      "exportedPath": "图例资料/shiro.jpg",
+      "dependencies": []
+    },
+    "图例资料/SPI机制.png": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 31334,
+      "exportedPath": "图例资料/SPI机制.png",
+      "dependencies": []
+    },
+    "图例资料/vim常用命令.png": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 155821,
+      "exportedPath": "图例资料/vim常用命令.png",
+      "dependencies": []
+    },
+    "图例资料/vim工作模式.png": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 62780,
+      "exportedPath": "图例资料/vim工作模式.png",
+      "dependencies": []
+    },
+    "项目笔记/0、看板.md": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 784,
+      "exportedPath": "项目笔记/0、看板.html",
+      "dependencies": []
+    },
+    "项目笔记/项目笔记.md": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 20243,
+      "exportedPath": "项目笔记/项目笔记.html",
+      "dependencies": []
+    },
+    "BigSea/工具/导航.md": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 731,
+      "exportedPath": "BigSea/工具/导航.html",
+      "dependencies": []
+    },
+    "BigSea/工具/Beyond_Compare.md": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 32,
+      "exportedPath": "BigSea/工具/Beyond_Compare.html",
+      "dependencies": []
+    },
+    "BigSea/工具/svn忘记密码、查看密码.md": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 279,
+      "exportedPath": "BigSea/工具/svn忘记密码、查看密码.html",
+      "dependencies": []
+    },
+    "BigSea/工具/vim.md": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 804,
+      "exportedPath": "BigSea/工具/vim.html",
+      "dependencies": []
+    },
+    "BigSea/后端/微服务/服务调用.md": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 990,
+      "exportedPath": "BigSea/后端/微服务/服务调用.html",
+      "dependencies": []
+    },
+    "BigSea/后端/微服务/负载均衡.md": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 959,
+      "exportedPath": "BigSea/后端/微服务/负载均衡.html",
+      "dependencies": []
+    },
+    "BigSea/后端/微服务/容错保护、断路器.md": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 2633,
+      "exportedPath": "BigSea/后端/微服务/容错保护、断路器.html",
+      "dependencies": []
+    },
+    "BigSea/后端/微服务/注册中心.md": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 1556,
+      "exportedPath": "BigSea/后端/微服务/注册中心.html",
+      "dependencies": []
+    },
+    "BigSea/后端/微服务/Nacos.md": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 2679,
+      "exportedPath": "BigSea/后端/微服务/Nacos.html",
+      "dependencies": []
+    },
+    "BigSea/后端/微服务/springCloud.md": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 2829,
+      "exportedPath": "BigSea/后端/微服务/springCloud.html",
+      "dependencies": []
+    },
+    "BigSea/后端/docker/启动.md": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 0,
+      "exportedPath": "BigSea/后端/docker/启动.html",
+      "dependencies": []
+    },
+    "BigSea/后端/docker/宿主机端口与容器端口.md": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 1505,
+      "exportedPath": "BigSea/后端/docker/宿主机端口与容器端口.html",
+      "dependencies": []
+    },
+    "BigSea/后端/easyexcel/导入时-不调用invoke方法.md": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 95,
+      "exportedPath": "BigSea/后端/easyexcel/导入时-不调用invoke方法.html",
+      "dependencies": []
+    },
+    "BigSea/后端/easyexcel/读取sql时.md": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 0,
+      "exportedPath": "BigSea/后端/easyexcel/读取sql时.html",
+      "dependencies": []
+    },
+    "BigSea/后端/easyexcel/区分poi、easypoi、easyexcel.md": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 2552,
+      "exportedPath": "BigSea/后端/easyexcel/区分poi、easypoi、easyexcel.html",
+      "dependencies": []
+    },
+    "BigSea/后端/excel/excel-poi.md": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 359,
+      "exportedPath": "BigSea/后端/excel/excel-poi.html",
+      "dependencies": []
+    },
+    "BigSea/后端/git/登录问题.md": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 317,
+      "exportedPath": "BigSea/后端/git/登录问题.html",
+      "dependencies": []
+    },
+    "BigSea/后端/git/使用1.md": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 13408,
+      "exportedPath": "BigSea/后端/git/使用1.html",
+      "dependencies": []
+    },
+    "BigSea/后端/git/git.md": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 38,
+      "exportedPath": "BigSea/后端/git/git.html",
+      "dependencies": []
+    },
+    "BigSea/后端/git/git放弃当前修改.md": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 2006,
+      "exportedPath": "BigSea/后端/git/git放弃当前修改.html",
+      "dependencies": []
+    },
+    "BigSea/后端/git/git命令.md": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 291,
+      "exportedPath": "BigSea/后端/git/git命令.html",
+      "dependencies": []
+    },
+    "BigSea/后端/git/git提交代码失败汇总.md": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 377,
+      "exportedPath": "BigSea/后端/git/git提交代码失败汇总.html",
+      "dependencies": []
+    },
+    "BigSea/后端/git/git中文乱码.md": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 142,
+      "exportedPath": "BigSea/后端/git/git中文乱码.html",
+      "dependencies": []
+    },
+    "BigSea/后端/git/gitLab.md": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 105,
+      "exportedPath": "BigSea/后端/git/gitLab.html",
+      "dependencies": []
+    },
+    "BigSea/后端/idea/查看报错信息.md": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 55,
+      "exportedPath": "BigSea/后端/idea/查看报错信息.html",
+      "dependencies": []
+    },
+    "BigSea/后端/idea/返回上一步.md": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 102,
+      "exportedPath": "BigSea/后端/idea/返回上一步.html",
+      "dependencies": []
+    },
+    "BigSea/后端/idea/黄色波浪线.md": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 1393,
+      "exportedPath": "BigSea/后端/idea/黄色波浪线.html",
+      "dependencies": []
+    },
+    "BigSea/后端/idea/解决idea在debug模式下变得非常慢的问题.md": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 330,
+      "exportedPath": "BigSea/后端/idea/解决idea在debug模式下变得非常慢的问题.html",
+      "dependencies": []
+    },
+    "BigSea/后端/idea/拉项目时默认maven仓库设置.md": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 148,
+      "exportedPath": "BigSea/后端/idea/拉项目时默认maven仓库设置.html",
+      "dependencies": []
+    },
+    "BigSea/后端/idea/修改水平移动快捷键为alt+滚轮.md": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 153,
+      "exportedPath": "BigSea/后端/idea/修改水平移动快捷键为alt+滚轮.html",
+      "dependencies": []
+    },
+    "BigSea/后端/idea/IntelliJ IDEA 中如何将 POM 中的版本号快速提出为属性.md": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 211,
+      "exportedPath": "BigSea/后端/idea/IntelliJ IDEA 中如何将 POM 中的版本号快速提出为属性.html",
+      "dependencies": []
+    },
+    "BigSea/后端/idea/Unicode编码.md": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 513,
+      "exportedPath": "BigSea/后端/idea/Unicode编码.html",
+      "dependencies": []
+    },
+    "BigSea/后端/java/函数式接口与_Lambda_表达式详细教程/函数式接口与 Lambda 表达式详细教程.md": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 4740,
+      "exportedPath": "BigSea/后端/java/函数式接口与_Lambda_表达式详细教程/函数式接口与 Lambda 表达式详细教程.html",
+      "dependencies": []
+    },
+    "BigSea/后端/java/函数式接口与_Lambda_表达式详细教程/Java函数式接口的终极奥义.md": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 90,
+      "exportedPath": "BigSea/后端/java/函数式接口与_Lambda_表达式详细教程/Java函数式接口的终极奥义.html",
+      "dependencies": []
+    },
+    "BigSea/后端/java/问题汇总/查询接口并发量非常高，怎么办_.md": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 15138,
+      "exportedPath": "BigSea/后端/java/问题汇总/查询接口并发量非常高，怎么办_.html",
+      "dependencies": []
+    },
+    "BigSea/后端/java/问题汇总/InpuStream边界中文乱码问题.md": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 779,
+      "exportedPath": "BigSea/后端/java/问题汇总/InpuStream边界中文乱码问题.html",
+      "dependencies": []
+    },
+    "BigSea/后端/java/_SneakyThrows.md": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 267,
+      "exportedPath": "BigSea/后端/java/_SneakyThrows.html",
+      "dependencies": []
+    },
+    "BigSea/后端/java/读取文件.md": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 393,
+      "exportedPath": "BigSea/后端/java/读取文件.html",
+      "dependencies": []
+    },
+    "BigSea/后端/java/分页.md": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 157,
+      "exportedPath": "BigSea/后端/java/分页.html",
+      "dependencies": []
+    },
+    "BigSea/后端/java/过滤器、拦截器、监听器对比与使用笔记.md": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 20541,
+      "exportedPath": "BigSea/后端/java/过滤器、拦截器、监听器对比与使用笔记.html",
+      "dependencies": []
+    },
+    "BigSea/后端/java/函数式接口与_Lambda_表达式详细教程.md": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 4671,
+      "exportedPath": "BigSea/后端/java/函数式接口与_Lambda_表达式详细教程.html",
+      "dependencies": []
+    },
+    "BigSea/后端/java/全局异常处理执行顺序.md": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 70,
+      "exportedPath": "BigSea/后端/java/全局异常处理执行顺序.html",
+      "dependencies": []
+    },
+    "BigSea/后端/java/锁.md": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 6595,
+      "exportedPath": "BigSea/后端/java/锁.html",
+      "dependencies": []
+    },
+    "BigSea/后端/java/线程共享和线程安全.md": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 640,
+      "exportedPath": "BigSea/后端/java/线程共享和线程安全.html",
+      "dependencies": []
+    },
+    "BigSea/后端/java/异步.md": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 5411,
+      "exportedPath": "BigSea/后端/java/异步.html",
+      "dependencies": []
+    },
+    "BigSea/后端/java/阅览记录.md": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 2101,
+      "exportedPath": "BigSea/后端/java/阅览记录.html",
+      "dependencies": []
+    },
+    "BigSea/后端/java/指定jar启动类.md": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 0,
+      "exportedPath": "BigSea/后端/java/指定jar启动类.html",
+      "dependencies": []
+    },
+    "BigSea/后端/java/ascii表（windows特殊字符不展示）.md": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 323,
+      "exportedPath": "BigSea/后端/java/ascii表（windows特殊字符不展示）.html",
+      "dependencies": []
+    },
+    "BigSea/后端/java/bat，纯后台运行.md": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 18,
+      "exportedPath": "BigSea/后端/java/bat，纯后台运行.html",
+      "dependencies": []
+    },
+    "BigSea/后端/java/double丢失精度.md": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 18384,
+      "exportedPath": "BigSea/后端/java/double丢失精度.html",
+      "dependencies": []
+    },
+    "BigSea/后端/java/dubbo，本地测试运行.md": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 353,
+      "exportedPath": "BigSea/后端/java/dubbo，本地测试运行.html",
+      "dependencies": []
+    },
+    "BigSea/后端/java/Gradle_build.md": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 734,
+      "exportedPath": "BigSea/后端/java/Gradle_build.html",
+      "dependencies": []
+    },
+    "BigSea/后端/java/groovy.md": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 554,
+      "exportedPath": "BigSea/后端/java/groovy.html",
+      "dependencies": []
+    },
+    "BigSea/后端/java/mybatis查看sql.md": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 41,
+      "exportedPath": "BigSea/后端/java/mybatis查看sql.html",
+      "dependencies": []
+    },
+    "BigSea/后端/java/mybatis数据库.md": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 437,
+      "exportedPath": "BigSea/后端/java/mybatis数据库.html",
+      "dependencies": []
+    },
+    "BigSea/后端/java/mybatisplus___TkMybatis___Hibernate___JPA.md": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 99,
+      "exportedPath": "BigSea/后端/java/mybatisplus___TkMybatis___Hibernate___JPA.html",
+      "dependencies": []
+    },
+    "BigSea/后端/java/splict陷阱.md": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 106,
+      "exportedPath": "BigSea/后端/java/splict陷阱.html",
+      "dependencies": []
+    },
+    "BigSea/后端/java/springboot接口传参.md": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 1759,
+      "exportedPath": "BigSea/后端/java/springboot接口传参.html",
+      "dependencies": []
+    },
+    "BigSea/后端/java/springboot启动时执行代码.md": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 8944,
+      "exportedPath": "BigSea/后端/java/springboot启动时执行代码.html",
+      "dependencies": []
+    },
+    "BigSea/后端/java/String.format.md": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 1607,
+      "exportedPath": "BigSea/后端/java/String.format.html",
+      "dependencies": []
+    },
+    "BigSea/后端/java/swagger.md": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 1595,
+      "exportedPath": "BigSea/后端/java/swagger.html",
+      "dependencies": []
+    },
+    "BigSea/后端/kafka/无标题文档.md": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 1125,
+      "exportedPath": "BigSea/后端/kafka/无标题文档.html",
+      "dependencies": []
+    },
+    "BigSea/后端/linux/查看特地程序位置.md": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 2485,
+      "exportedPath": "BigSea/后端/linux/查看特地程序位置.html",
+      "dependencies": []
+    },
+    "BigSea/后端/linux/启动Linux失败.md": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 1223,
+      "exportedPath": "BigSea/后端/linux/启动Linux失败.html",
+      "dependencies": []
+    },
+    "BigSea/后端/linux/日志.md": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 102,
+      "exportedPath": "BigSea/后端/linux/日志.html",
+      "dependencies": []
+    },
+    "BigSea/后端/linux/使用find命令查找文件.md": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 711,
+      "exportedPath": "BigSea/后端/linux/使用find命令查找文件.html",
+      "dependencies": []
+    },
+    "BigSea/后端/linux/压缩解压.md": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 49,
+      "exportedPath": "BigSea/后端/linux/压缩解压.html",
+      "dependencies": []
+    },
+    "BigSea/后端/linux/dbTool_（GoldenDB提供）.md": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 119,
+      "exportedPath": "BigSea/后端/linux/dbTool_（GoldenDB提供）.html",
+      "dependencies": []
+    },
+    "BigSea/后端/linux/Linux 根据ascii 分隔符查看指定列.md": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 189,
+      "exportedPath": "BigSea/后端/linux/Linux 根据ascii 分隔符查看指定列.html",
+      "dependencies": []
+    },
+    "BigSea/后端/linux/linux指令.md": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 2914,
+      "exportedPath": "BigSea/后端/linux/linux指令.html",
+      "dependencies": []
+    },
+    "BigSea/后端/linux/ossutil_阿里云oss工具_.md": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 1914,
+      "exportedPath": "BigSea/后端/linux/ossutil_阿里云oss工具_.html",
+      "dependencies": []
+    },
+    "BigSea/后端/linux/shell.md": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 3208,
+      "exportedPath": "BigSea/后端/linux/shell.html",
+      "dependencies": []
+    },
+    "BigSea/后端/oracle/__的含义.md": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 110,
+      "exportedPath": "BigSea/后端/oracle/__的含义.html",
+      "dependencies": []
+    },
+    "BigSea/后端/oracle/连接数据库.md": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 183,
+      "exportedPath": "BigSea/后端/oracle/连接数据库.html",
+      "dependencies": []
+    },
+    "BigSea/后端/oracle/注意.md": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 504,
+      "exportedPath": "BigSea/后端/oracle/注意.html",
+      "dependencies": []
+    },
+    "BigSea/后端/oracle/A_问题.md": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 160,
+      "exportedPath": "BigSea/后端/oracle/A_问题.html",
+      "dependencies": []
+    },
+    "BigSea/后端/oracle/ddl、dml、dcl、dql.md": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 1205,
+      "exportedPath": "BigSea/后端/oracle/ddl、dml、dcl、dql.html",
+      "dependencies": []
+    },
+    "BigSea/后端/oracle/schema.md": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 174,
+      "exportedPath": "BigSea/后端/oracle/schema.html",
+      "dependencies": []
+    },
+    "BigSea/后端/Redis/Resis.md": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 2197,
+      "exportedPath": "BigSea/后端/Redis/Resis.html",
+      "dependencies": []
+    },
+    "BigSea/后端/Word/Docx.md": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 1004,
+      "exportedPath": "BigSea/后端/Word/Docx.html",
+      "dependencies": []
+    },
+    "BigSea/后端/Word/lambda.md": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 695,
+      "exportedPath": "BigSea/后端/Word/lambda.html",
+      "dependencies": []
+    },
+    "BigSea/后端/合并分支-compare新文件.md": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 148,
+      "exportedPath": "BigSea/后端/合并分支-compare新文件.html",
+      "dependencies": []
+    },
+    "BigSea/框架/jenkins.md": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 556,
+      "exportedPath": "BigSea/框架/jenkins.html",
+      "dependencies": []
+    },
+    "BigSea/框架/maven.md": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 3096,
+      "exportedPath": "BigSea/框架/maven.html",
+      "dependencies": []
+    },
+    "BigSea/框架/tk.Mybatis和Mybatis.md": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 1342,
+      "exportedPath": "BigSea/框架/tk.Mybatis和Mybatis.html",
+      "dependencies": []
+    },
+    "BigSea/内网穿透/1、tailscale.md": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 50,
+      "exportedPath": "BigSea/内网穿透/1、tailscale.html",
+      "dependencies": []
+    },
+    "BigSea/内网穿透/副屏.md": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 53,
+      "exportedPath": "BigSea/内网穿透/副屏.html",
+      "dependencies": []
+    },
+    "BigSea/前端/vscode/搜索出一堆垃圾.md": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 179,
+      "exportedPath": "BigSea/前端/vscode/搜索出一堆垃圾.html",
+      "dependencies": []
+    },
+    "BigSea/前端/vscode/修改Terminal名称.md": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 184,
+      "exportedPath": "BigSea/前端/vscode/修改Terminal名称.html",
+      "dependencies": []
+    },
+    "BigSea/前端/vscode/页面总是被替换.md": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 158,
+      "exportedPath": "BigSea/前端/vscode/页面总是被替换.html",
+      "dependencies": []
+    },
+    "BigSea/前端/vue/导入静态html.md": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 715,
+      "exportedPath": "BigSea/前端/vue/导入静态html.html",
+      "dependencies": []
+    },
+    "BigSea/前端/vue/对象遍历.md": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 303,
+      "exportedPath": "BigSea/前端/vue/对象遍历.html",
+      "dependencies": []
+    },
+    "BigSea/前端/vue/公共路径.md": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 429,
+      "exportedPath": "BigSea/前端/vue/公共路径.html",
+      "dependencies": []
+    },
+    "BigSea/前端/vue/路由.md": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 2942,
+      "exportedPath": "BigSea/前端/vue/路由.html",
+      "dependencies": []
+    },
+    "BigSea/前端/vue/配置多重环境.md": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 557,
+      "exportedPath": "BigSea/前端/vue/配置多重环境.html",
+      "dependencies": []
+    },
+    "BigSea/前端/vue/配置启动端口.md": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 406,
+      "exportedPath": "BigSea/前端/vue/配置启动端口.html",
+      "dependencies": []
+    },
+    "BigSea/前端/vue/无标题文档.md": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 186,
+      "exportedPath": "BigSea/前端/vue/无标题文档.html",
+      "dependencies": []
+    },
+    "BigSea/前端/vue/组件通信.md": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 4140,
+      "exportedPath": "BigSea/前端/vue/组件通信.html",
+      "dependencies": []
+    },
+    "BigSea/前端/定时任务.md": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 4354,
+      "exportedPath": "BigSea/前端/定时任务.html",
+      "dependencies": []
+    },
+    "BigSea/前端/React.md": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 4782,
+      "exportedPath": "BigSea/前端/React.html",
+      "dependencies": []
+    },
+    "BigSea/前端/TypeScript.md": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 2583,
+      "exportedPath": "BigSea/前端/TypeScript.html",
+      "dependencies": []
+    },
+    "BigSea/设计模式/设计模式.md": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 2494,
+      "exportedPath": "BigSea/设计模式/设计模式.html",
+      "dependencies": []
+    },
+    "BigSea/数据库/存储过程.md": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 411,
+      "exportedPath": "BigSea/数据库/存储过程.html",
+      "dependencies": []
+    },
+    "BigSea/数据库/读取sql列名.md": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 57,
+      "exportedPath": "BigSea/数据库/读取sql列名.html",
+      "dependencies": []
+    },
+    "BigSea/数据库/mysql.md": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 3140,
+      "exportedPath": "BigSea/数据库/mysql.html",
+      "dependencies": []
+    },
+    "BigSea/算法/二分法.md": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 553,
+      "exportedPath": "BigSea/算法/二分法.html",
+      "dependencies": []
+    },
+    "BigSea/问题合集/代理错误.md": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 771,
+      "exportedPath": "BigSea/问题合集/代理错误.html",
+      "dependencies": []
+    },
+    "BigSea/问题合集/日期类型转换.md": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 73,
+      "exportedPath": "BigSea/问题合集/日期类型转换.html",
+      "dependencies": []
+    },
+    "BigSea/问题合集/同名同包-不报错.md": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 175,
+      "exportedPath": "BigSea/问题合集/同名同包-不报错.html",
+      "dependencies": []
+    },
+    "BigSea/问题合集/nacos注册上但是用RestTemplate报错.md": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 276,
+      "exportedPath": "BigSea/问题合集/nacos注册上但是用RestTemplate报错.html",
+      "dependencies": []
+    },
+    "BigSea/问题合集/Oracle插入.md": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 801,
+      "exportedPath": "BigSea/问题合集/Oracle插入.html",
+      "dependencies": []
+    },
+    "BigSea/问题合集/vue样式库导入失败.md": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 943,
+      "exportedPath": "BigSea/问题合集/vue样式库导入失败.html",
+      "dependencies": []
+    },
+    "BigSea/政治/行政区划分（身份证模块）.md": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 3852,
+      "exportedPath": "BigSea/政治/行政区划分（身份证模块）.html",
+      "dependencies": []
+    },
+    "BigSea/windows/查看端口占用并删除.md": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 114,
+      "exportedPath": "BigSea/windows/查看端口占用并删除.html",
+      "dependencies": []
+    },
+    "BigSea/查看信息.md": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 32,
+      "exportedPath": "BigSea/查看信息.html",
+      "dependencies": []
+    },
+    "BigSea/下载详情.txt": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 6450,
+      "exportedPath": "BigSea/下载详情.txt",
+      "dependencies": []
+    },
+    "images/00.docker.png": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 17228,
+      "exportedPath": "images/00.docker.png",
+      "dependencies": []
+    },
+    "images/01.环境变量.png": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 69587,
+      "exportedPath": "images/01.环境变量.png",
+      "dependencies": []
+    },
+    "images/01.架构演变.png": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 121926,
+      "exportedPath": "images/01.架构演变.png",
+      "dependencies": []
+    },
+    "images/01.docker和虚拟机.png": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 16144,
+      "exportedPath": "images/01.docker和虚拟机.png",
+      "dependencies": []
+    },
+    "images/02.docker和虚拟机.png": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 14171,
+      "exportedPath": "images/02.docker和虚拟机.png",
+      "dependencies": []
+    },
+    "images/03.docker架构.jpg": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 22805,
+      "exportedPath": "images/03.docker架构.jpg",
+      "dependencies": []
+    },
+    "images/03.docker架构.png": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 22805,
+      "exportedPath": "images/03.docker架构.png",
+      "dependencies": []
+    },
+    "images/04.docker-filesystems-multilayer.png": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 64585,
+      "exportedPath": "images/04.docker-filesystems-multilayer.png",
+      "dependencies": []
+    },
+    "images/05.docker-filesystems-multilayer.png": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 118391,
+      "exportedPath": "images/05.docker-filesystems-multilayer.png",
+      "dependencies": []
+    },
+    "images/查看java版本.png": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 24860,
+      "exportedPath": "images/查看java版本.png",
+      "dependencies": []
+    },
+    "images/初始化mysql.jpg": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 93138,
+      "exportedPath": "images/初始化mysql.jpg",
+      "dependencies": []
+    },
+    "images/流控规则.png": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 54057,
+      "exportedPath": "images/流控规则.png",
+      "dependencies": []
+    },
+    "images/目录结构.jpg": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 60750,
+      "exportedPath": "images/目录结构.jpg",
+      "dependencies": []
+    },
+    "images/桥接设备.jpg": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 71769,
+      "exportedPath": "images/桥接设备.jpg",
+      "dependencies": []
+    },
+    "images/权限1.png": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 88496,
+      "exportedPath": "images/权限1.png",
+      "dependencies": []
+    },
+    "images/权限2.png": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 40089,
+      "exportedPath": "images/权限2.png",
+      "dependencies": []
+    },
+    "images/熔断规则.png": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 41297,
+      "exportedPath": "images/熔断规则.png",
+      "dependencies": []
+    },
+    "images/eureka.png": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 16763,
+      "exportedPath": "images/eureka.png",
+      "dependencies": []
+    },
+    "images/vim常用命令.png": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 155821,
+      "exportedPath": "images/vim常用命令.png",
+      "dependencies": []
+    },
+    "images/vim工作模式.png": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 62780,
+      "exportedPath": "images/vim工作模式.png",
+      "dependencies": []
+    },
+    "1.springboot中devtools热部署.lake": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 34703,
+      "exportedPath": "1.springboot中devtools热部署.lake",
+      "dependencies": []
+    },
+    "1.springboot中devtools热部署 1.lake": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 34703,
+      "exportedPath": "1.springboot中devtools热部署 1.lake",
+      "dependencies": []
+    },
+    "2.日志文件的配置.md": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 5220,
+      "exportedPath": "2.日志文件的配置.html",
+      "dependencies": []
+    },
+    "梦魇城市.txt": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 1575317,
+      "exportedPath": "梦魇城市.txt",
+      "dependencies": []
+    },
+    "问题记录.md": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 59,
+      "exportedPath": "问题记录.html",
+      "dependencies": []
+    },
+    "新需求.md": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 250,
+      "exportedPath": "新需求.html",
+      "dependencies": []
+    },
+    "新专家技术.md": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 486,
+      "exportedPath": "新专家技术.html",
+      "dependencies": []
+    },
+    "移位.md": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 1233,
+      "exportedPath": "移位.html",
+      "dependencies": []
+    },
+    "debug.log": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 244,
+      "exportedPath": "debug.log",
+      "dependencies": []
+    },
+    "Nacos.md": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 0,
+      "exportedPath": "Nacos.html",
+      "dependencies": []
+    },
+    "obsidian搭建.md": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 292,
+      "exportedPath": "obsidian搭建.html",
+      "dependencies": []
+    },
+    "Query.md": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 0,
+      "exportedPath": "Query.html",
+      "dependencies": []
+    },
+    "SpringCloud.md": {
+      "modifiedTime": 1753501164231,
+      "sourceSize": 1721,
+      "exportedPath": "SpringCloud.html",
       "dependencies": []
     }
   }
